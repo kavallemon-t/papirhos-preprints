@@ -667,87 +667,127 @@ details > summary { cursor: pointer;
 }
 
 /* =========================
-   Catálogo bonito
+   Catálogo
    ========================= */
 
 .md-typeset h1.catalogo-titulo {
   font-size: 2.8rem;
-  font-weight: 550;
-  line-height: 1.5;
+  font-weight: 600;
+  line-height: 1.15;
   color: #3a332d;
-  margin: .8rem 0 1rem;
+  margin: 0.8rem 0 1.2rem;
 }
 
+/* Hero del catálogo */
 
-.catalogo-colecciones-resumen {
-  margin: 0 0 1rem;
-  padding: 0.25rem 0 2rem;
-  border-bottom: 1px solid #d6d6d6;
+.catalogo-hero {
+  margin: 1rem 0 2.4rem;
+  padding: 2.6rem 2.4rem;
+  background: #f7f7f7;
+  border: 1px solid #e3e3e3;
+  border-radius: 1rem;
 }
 
-.catalogo-colecciones-resumen h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.5rem;
+.catalogo-eyebrow {
+  margin: 0 0 0.5rem 0 !important;
+  color: #8a6a3a !important;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.catalogo-hero h1 {
+  margin: 0 0 1rem 0;
+  font-family: "Avant Garde BT Book", "Century Gothic", "Avenir", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #3a332d;
+  color: #2f2f2f;
+  line-height: 1;
 }
 
-.catalogo-colecciones-nav {
+.catalogo-hero p {
+  max-width: 760px;
+  margin: 0;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.catalogo-hero-colecciones {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  overflow-x: auto;
-  padding: 1rem 0 0;
-  margin-bottom: 0;
+  margin-top: 1.5rem;
 }
 
-.catalogo-coleccion-chip {
-  min-width: 200px;
-  padding: 1rem 1.1rem;
-  background: #f5f5f5;
-  border: 1px solid #e2e2e2;
+.catalogo-hero-chip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+
+  flex: 1 1 260px;
+  min-width: 260px;
+  max-width: 360px;
+
+  padding: 1rem 1.2rem;
+
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
   border-radius: 0.9rem;
-  text-decoration: none !important;
+
   color: #333333 !important;
-  transition: transform 0.2s ease, background 0.2s ease;
+  text-decoration: none !important;
+
+  box-shadow: 0 5px 14px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.catalogo-coleccion-chip:hover {
-  background: #eeeeee;
+.catalogo-hero-chip:hover {
   transform: translateY(-2px);
+  box-shadow: 0 9px 20px rgba(0,0,0,0.08);
 }
 
-.catalogo-coleccion-chip strong {
+.catalogo-hero-chip strong {
   display: block;
   font-weight: 800;
-  margin-bottom: 0.3rem;
+  line-height: 1.2;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
-.catalogo-coleccion-chip span {
+.catalogo-hero-chip span {
   font-size: 0.85rem;
   color: #666666;
+  word-break: normal;
 }
 
+/* Secciones por colección */
+
 .catalogo-seccion {
-  margin: 1rem 0 2rem;
+  margin: 2.5rem 0 3rem;
 }
 
 .catalogo-seccion:not(:last-of-type) {
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
   border-bottom: 1px solid #d6d6d6;
 }
 
 .catalogo-seccion h2 {
-  font-size: 2.1rem;
-  font-weight: 600;
-  color: #222222;
-  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  margin: 0 0 1.5rem;
+  line-height: 1.15;
 }
+
+/* Grid de libros */
 
 .catalogo-libros-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 1.8rem 1.4rem;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1.6rem 1.3rem;
 }
 
 .catalogo-libro {
@@ -766,13 +806,17 @@ details > summary { cursor: pointer;
   box-shadow: 0 10px 24px rgba(0,0,0,0.08);
 }
 
+/* Portadas */
+
 .catalogo-libro-portada {
   aspect-ratio: 3 / 4.2;
   background: #f2f2f2;
   border-radius: 0.8rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   overflow: hidden;
   margin-bottom: 1rem;
   padding: 0.8rem;
@@ -791,6 +835,8 @@ details > summary { cursor: pointer;
   font-size: 0.9rem;
 }
 
+/* Texto de tarjetas */
+
 .catalogo-libro h3 {
   margin: 0 0 0.35rem 0;
   font-size: 1rem;
@@ -800,21 +846,35 @@ details > summary { cursor: pointer;
 }
 
 .catalogo-autores {
-  font-size: 0.86rem;
+  font-size: 0.78rem;
   color: #555555;
   line-height: 1.35;
   margin-bottom: 0.25rem;
 }
 
 .catalogo-serie {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: #777777;
   margin-bottom: 0.25rem;
 }
 
 .catalogo-estado {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #666666;
   margin-top: 0.35rem;
+}
+
+@media screen and (max-width: 760px) {
+  .catalogo-hero {
+    padding: 2rem 1.2rem;
+  }
+
+  .catalogo-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .catalogo-libros-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 }

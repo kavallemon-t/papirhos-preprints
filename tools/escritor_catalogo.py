@@ -50,12 +50,19 @@ def lista_catalogo(lista_datos):
         coleccion = (r.get("coleccion") or "Sin colección").strip()
         colecciones.setdefault(coleccion, []).append(r)
 
+    total_libros = len(lista_datos)
+    total_colecciones = len(colecciones)
+
     lineas = [
-        '<h1 class="catalogo-titulo">Colecciones</h1>',
-        "",
-        '<section class="catalogo-colecciones-resumen" aria-labelledby="catalogo-colecciones-titulo">',
-        '<h2 id="catalogo-colecciones-titulo">Explora por colección</h2>',
-        '<div class="catalogo-colecciones-nav">',
+        '<section class="catalogo-hero">',
+        '<p class="catalogo-eyebrow">Colecciones</p>',
+        "<h1>Explora por colección</h1>",
+        "<p>",
+        "Consulta los títulos disponibles de Papirhos Digital organizados por colección. "
+        "Cada sección reúne libros con sus fichas bibliográficas, metadatos de edición, "
+        "reimpresiones registradas y archivos disponibles.",
+        "</p>",
+        '<div class="catalogo-hero-colecciones">',
     ]
 
     for coleccion in sorted(colecciones):
@@ -63,7 +70,7 @@ def lista_catalogo(lista_datos):
         id_coleccion = slug_simple(coleccion)
 
         lineas.extend([
-            f'<a class="catalogo-coleccion-chip" href="#{id_coleccion}">',
+            f'<a class="catalogo-hero-chip" href="#{id_coleccion}">',
             f"<strong>{coleccion}</strong>",
             f"<span>{len(libros)} {'título' if len(libros) == 1 else 'títulos'}</span>",
             "</a>",

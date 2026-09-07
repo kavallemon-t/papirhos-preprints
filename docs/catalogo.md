@@ -1,12 +1,15 @@
-<h1 class="catalogo-titulo">Catálogo</h1>
-
-<section class="catalogo-colecciones-resumen" aria-labelledby="catalogo-colecciones-titulo">
-<div class="catalogo-colecciones-nav">
-<a class="catalogo-coleccion-chip" href="#cuadernos-de-olimpiadas-de-matematicas">
+<section class="catalogo-hero">
+<p class="catalogo-eyebrow">Colecciones</p>
+<h1>Explora por colección</h1>
+<p>
+Consulta los títulos disponibles de Papirhos Digital organizados por colección. Cada sección reúne libros con sus fichas bibliográficas, metadatos de edición, reimpresiones registradas y archivos disponibles.
+</p>
+<div class="catalogo-hero-colecciones">
+<a class="catalogo-hero-chip" href="#cuadernos-de-olimpiadas-de-matematicas">
 <strong>Cuadernos de olimpiadas de matemáticas</strong>
 <span>1 título</span>
 </a>
-<a class="catalogo-coleccion-chip" href="#papirhos">
+<a class="catalogo-hero-chip" href="#papirhos">
 <strong>Papirhos</strong>
 <span>17 títulos</span>
 </a>
