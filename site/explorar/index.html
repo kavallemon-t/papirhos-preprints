@@ -562,7 +562,10 @@
 
 
 
-  <h1>Búsqueda avanzada</h1>
+<section class="catalogo-hero catalogo-hero-busqueda">
+<p class="catalogo-eyebrow">Búsqueda</p>
+<h1>Búsqueda avanzada</h1>
+</section>
 
 <div id="filtros">
 <label>Colección: <select id="f-coleccion"><option value="">Todas</option></select> </label>
@@ -626,6 +629,10 @@
     const inpTitulo = $('#f-titulo');
     const contador = $('#contador');
     const selOrder = document.querySelector('#f-order')
+    const normalizarTexto = (texto) => String(texto || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
     unique(libros.map(x=> x.coleccion)).sort().forEach(c => selColeccion.insertAdjacentHTML('beforeend',`<option>${c}</option>`));
     unique(libros.map(x=> x.serie)).sort().forEach(s => selSerie.insertAdjacentHTML('beforeend',`<option>${s}</option>`));
 
@@ -706,7 +713,7 @@
         }
     function coincideTitulo(libro, needle){
         if(!needle) return true;
-        return(libro.titulo || '').toLowerCase().includes(needle.toLowerCase());
+        return normalizarTexto(libro.titulo).includes(normalizarTexto(needle));
     }
     function filtrar(){
         const c = selColeccion.value;
