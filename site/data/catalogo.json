@@ -1,266 +1,5 @@
 [
   {
-    "id": "pap-tex-2",
-    "titulo": "Análisis Matemático",
-    "autores": [
-      "Mónica Clapp"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "tomo": "nan",
-    "anio": "2999",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "0",
-    "isbn_col": "000",
-    "isbn_libro": "000",
-    "estado": "Físico"
-  },
-  {
-    "id": "pap-tex-7",
-    "titulo": "Clases características",
-    "autores": [
-      "John Milnor",
-      "James Stasheff"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "tomo": "nan",
-    "anio": "2999",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "0",
-    "isbn_col": "000",
-    "isbn_libro": "000",
-    "estado": "Físico"
-  },
-  {
-    "id": "cuad-x-1",
-    "titulo": "Combinatoria",
-    "autores": [
-      "Maria Luisa Pérez Seguí"
-    ],
-    "coleccion": "Cuadernos de olimpiadas de matemáticas",
-    "serie": "",
-    "tomo": "nan",
-    "anio": "2018",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "2",
-    "isbn_col": "978-968-36-8599-5",
-    "isbn_libro": "978-607-02-85882",
-    "estado": "Publicado"
-  },
-  {
-    "id": "pap-ico-3",
-    "titulo": "Concursos Nacionales de la Olimpiada Mexicana de Matemáticas:1987-2016",
-    "autores": [
-      "Jose Antonio Gómez Ortega",
-      "Carlos Jacob Rubio Barrios",
-      "Rogelio Valdez Delgado"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Icosaedro",
-    "tomo": "nan",
-    "anio": "2999",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "0",
-    "isbn_col": "000",
-    "isbn_libro": "000",
-    "estado": "Físico"
-  },
-  {
-    "id": "pap-tex-11",
-    "titulo": "Curso breve de geometría proyectiva",
-    "autores": [
-      "Felipe Cano",
-      "Beatriz Molina-Samper",
-      "Fernando Sanz"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "tomo": "nan",
-    "anio": "2999",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "0",
-    "isbn_col": "000",
-    "isbn_libro": "000",
-    "estado": "Físico"
-  },
-  {
-    "id": "pap-tex-6",
-    "titulo": "Curso introductorio de álgebra I",
-    "autores": [
-      "Diana Avella",
-      "Gabriela Campero"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "tomo": "1",
-    "anio": "2017",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "1",
-    "isbn_col": "978-607-02-5149-8",
-    "isbn_libro": "978-607-02-8824-1",
-    "estado": "Publicado"
-  },
-  {
-    "id": "pap-tex-10",
-    "titulo": "Curso introductorio de álgebra II",
-    "autores": [
-      "Diana Avella",
-      "Gabriela Campero",
-      "Edith Corina Saenz Valadez"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "tomo": "2",
-    "anio": "2020",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "1",
-    "isbn_col": "978-607-02-5149-8",
-    "isbn_libro": "978-607-30-3681-8",
-    "estado": "Publicado"
-  },
-  {
-    "id": "pap-tex-5",
-    "titulo": "Geometría euclidiana bidimensional y su grupo de transformaciones",
-    "autores": [
-      "Manuel Cruz",
-      "Montserrat García"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "tomo": "nan",
-    "anio": "2999",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "0",
-    "isbn_col": "000",
-    "isbn_libro": "000",
-    "estado": "Físico"
-  },
-  {
-    "id": "pap-tex-1",
-    "titulo": "Grupos I",
-    "autores": [
-      "Diana Avella",
-      "Octavio Mendoza",
-      "Edith Corina Saenz Valadez",
-      "María José Souto"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "tomo": "1",
-    "anio": "2014",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "3",
-    "isbn_col": "978-607-02-9375-7",
-    "isbn_libro": "978-607-02-9435-8",
-    "estado": "Publicado"
-  },
-  {
-    "id": "pap-tex-4",
-    "titulo": "Grupos II",
-    "autores": [
-      "Diana Avella",
-      "Octavio Mendoza",
-      "Edith Corina Saenz Valadez",
-      "María José Souto"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "tomo": "2",
-    "anio": "2016",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "1",
-    "isbn_col": "978-607-02-5149-8",
-    "isbn_libro": "978-607-02-7814-3",
-    "estado": "Publicado"
-  },
-  {
-    "id": "pap-tex-9",
-    "titulo": "Introducción al álgebra lineal",
-    "autores": [
-      "Felipe Zaldivar"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "tomo": "nan",
-    "anio": "2999",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "0",
-    "isbn_col": "000",
-    "isbn_libro": "000",
-    "estado": "Físico"
-  },
-  {
-    "id": "pap-tex-12",
-    "titulo": "Métodos topológicos en el estudio de las ecuaciones diferenciales no lineales",
-    "autores": [
-      "Pablo Amster"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "tomo": "nan",
-    "anio": "2999",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "0",
-    "isbn_col": "000",
-    "isbn_libro": "000",
-    "estado": "Físico"
-  },
-  {
-    "id": "pap-mix-1",
-    "titulo": "Por la senda de los círculos",
-    "autores": [
-      "Cecilia Neve Jimenez",
-      "Laura Rosales Ortiz"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Mixbaal",
-    "tomo": "nan",
-    "anio": "nan",
-    "editorial": "",
-    "edicion": "nan",
-    "isbn_col": "",
-    "isbn_libro": "",
-    "estado": "por_recibir"
-  },
-  {
-    "id": "pap-act-1",
-    "titulo": "Proceedings of the Workshop on Holomorphic Dynamics",
-    "autores": [
-      "Patricia Dominguez Soto",
-      "Peter Makienko",
-      "Carlos Cabrera Ocañas"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Actas",
-    "tomo": "nan",
-    "anio": "2999",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "0",
-    "isbn_col": "000",
-    "isbn_libro": "000",
-    "estado": "Físico"
-  },
-  {
-    "id": "pap-not-3",
-    "titulo": "Teoría de las gráficas: algunas aportaciones desde México",
-    "autores": [
-      "Julian Fresán",
-      "Ilán Goldfeder",
-      "Nahid Javier",
-      "Rita Zuazua"
-    ],
-    "coleccion": "Papirhos",
-    "serie": "Notas",
-    "tomo": "nan",
-    "anio": "2999",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "0",
-    "isbn_col": "000",
-    "isbn_libro": "000",
-    "estado": "Físico"
-  },
-  {
     "id": "pap-not-1",
     "titulo": "Teoría de singularidades en topología, geometría y foliaciones I",
     "autores": [
@@ -275,13 +14,419 @@
     ],
     "coleccion": "Papirhos",
     "serie": "Notas",
-    "tomo": "nan",
+    "tomo": "",
+    "isbn_col": "978-607-02-5149-8",
+    "resumen": "Resumen proximamente",
+    "estado": "Publicado",
     "anio": "2017",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "1",
-    "isbn_col": "978-607-02-5149-8",
     "isbn_libro": "978-607-02-9845-5",
-    "estado": "Publicado"
+    "ediciones": [
+      {
+        "id_edicion": "ed-001",
+        "edicion": "1",
+        "anio": "2017",
+        "isbn_libro": "978-607-02-9845-5",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "cuad-x-1",
+    "titulo": "Combinatoria",
+    "autores": [
+      "Maria Luisa Pérez Seguí"
+    ],
+    "coleccion": "Cuadernos de olimpiadas de matemáticas",
+    "serie": "",
+    "tomo": "",
+    "isbn_col": "978-968-36-8599-5",
+    "resumen": "Resumen 2",
+    "estado": "Publicado",
+    "anio": "2018",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "2",
+    "isbn_libro": "978-607-02-85882",
+    "ediciones": [
+      {
+        "id_edicion": "ed-002",
+        "edicion": "2",
+        "anio": "2018",
+        "isbn_libro": "978-607-02-85882",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-tex-6",
+    "titulo": "Curso introductorio de álgebra I",
+    "autores": [
+      "Diana Avella",
+      "Gabriela Campero"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "tomo": "1",
+    "isbn_col": "978-607-02-5149-8",
+    "resumen": "Resumen 3",
+    "estado": "Publicado",
+    "anio": "2017",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "1",
+    "isbn_libro": "978-607-02-8824-1",
+    "ediciones": [
+      {
+        "id_edicion": "ed-003",
+        "edicion": "1",
+        "anio": "2017",
+        "isbn_libro": "978-607-02-8824-1",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-tex-10",
+    "titulo": "Curso introductorio de álgebra II",
+    "autores": [
+      "Diana Avella",
+      "Gabriela Campero",
+      "Edith Corina Saenz Valadez"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "tomo": "2",
+    "isbn_col": "978-607-02-5149-8",
+    "resumen": "Resumen proximamente",
+    "estado": "Publicado",
+    "anio": "2020",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "1",
+    "isbn_libro": "978-607-30-3681-8",
+    "ediciones": [
+      {
+        "id_edicion": "ed-004",
+        "edicion": "1",
+        "anio": "2020",
+        "isbn_libro": "978-607-30-3681-8",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-tex-1",
+    "titulo": "Grupos I",
+    "autores": [
+      "Diana Avella",
+      "Octavio Mendoza",
+      "Edith Corina Saenz Valadez",
+      "María José Souto"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "tomo": "1",
+    "isbn_col": "978-607-02-9375-7",
+    "resumen": "Resumen 5",
+    "estado": "Publicado",
+    "anio": "2014",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "3",
+    "isbn_libro": "978-607-02-9435-8",
+    "ediciones": [
+      {
+        "id_edicion": "ed-005",
+        "edicion": "3",
+        "anio": "2014",
+        "isbn_libro": "978-607-02-9435-8",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-tex-4",
+    "titulo": "Grupos II",
+    "autores": [
+      "Diana Avella",
+      "Octavio Mendoza",
+      "Edith Corina Saenz Valadez",
+      "María José Souto"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "tomo": "2",
+    "isbn_col": "978-607-02-5149-8",
+    "resumen": "Resuemn 6",
+    "estado": "Publicado",
+    "anio": "2016",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "1",
+    "isbn_libro": "978-607-02-7814-3",
+    "ediciones": [
+      {
+        "id_edicion": "ed-006",
+        "edicion": "1",
+        "anio": "2016",
+        "isbn_libro": "978-607-02-7814-3",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-mix-1",
+    "titulo": "Por la senda de los círculos",
+    "autores": [
+      "Cecilia Neve Jimenez",
+      "Laura Rosales Ortiz"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Mixbaal",
+    "tomo": "",
+    "isbn_col": "",
+    "resumen": "Resumen proximamente",
+    "estado": "por_recibir",
+    "anio": "",
+    "editorial": "",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-007",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-ico-3",
+    "titulo": "Concursos Nacionales de la Olimpiada Mexicana de Matemáticas:1987-2016",
+    "autores": [
+      "Jose Antonio Gómez Ortega",
+      "Carlos Jacob Rubio Barrios",
+      "Rogelio Valdez Delgado"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Icosaedro",
+    "tomo": "",
+    "isbn_col": "000",
+    "resumen": "Resumen proximamente",
+    "estado": "Físico",
+    "anio": "",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-008",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-tex-2",
+    "titulo": "Análisis Matemático",
+    "autores": [
+      "Mónica Clapp"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "tomo": "",
+    "isbn_col": "000",
+    "resumen": "Resumen proximamente",
+    "estado": "Físico",
+    "anio": "",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-009",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-tex-3",
+    "titulo": "Topología Diferencial",
+    "autores": [
+      "Victor Guillemin",
+      "Allan Pollack"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "tomo": "",
+    "isbn_col": "000",
+    "resumen": "Resumen proximamente",
+    "estado": "Físico",
+    "anio": "",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-010",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-tex-5",
+    "titulo": "Geometría euclidiana bidimensional y su grupo de transformaciones",
+    "autores": [
+      "Manuel Cruz",
+      "Montserrat García"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "tomo": "",
+    "isbn_col": "000",
+    "resumen": "Resumen proximamente",
+    "estado": "Físico",
+    "anio": "",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-011",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-tex-7",
+    "titulo": "Clases características",
+    "autores": [
+      "John Milnor",
+      "James Stasheff"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "tomo": "",
+    "isbn_col": "000",
+    "resumen": "Resumen proximamente",
+    "estado": "Físico",
+    "anio": "",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-012",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-tex-9",
+    "titulo": "Introducción al álgebra lineal",
+    "autores": [
+      "Felipe Zaldivar"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "tomo": "",
+    "isbn_col": "000",
+    "resumen": "Resumen proximamente",
+    "estado": "Físico",
+    "anio": "",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-013",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-tex-11",
+    "titulo": "Curso breve de geometría proyectiva",
+    "autores": [
+      "Felipe Cano",
+      "Beatriz Molina-Samper",
+      "Fernando Sanz"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "tomo": "",
+    "isbn_col": "000",
+    "resumen": "Resumen proximamente",
+    "estado": "Físico",
+    "anio": "",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-014",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-tex-12",
+    "titulo": "Métodos topológicos en el estudio de las ecuaciones diferenciales no lineales",
+    "autores": [
+      "Pablo Amster"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "tomo": "",
+    "isbn_col": "000",
+    "resumen": "Resumen proximamente",
+    "estado": "Físico",
+    "anio": "",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-015",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
   },
   {
     "id": "pap-not-2",
@@ -298,29 +443,82 @@
     ],
     "coleccion": "Papirhos",
     "serie": "Notas",
-    "tomo": "nan",
-    "anio": "2999",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "0",
+    "tomo": "",
     "isbn_col": "000",
-    "isbn_libro": "000",
-    "estado": "Físico"
+    "resumen": "Resumen proximamente",
+    "estado": "Físico",
+    "anio": "",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-016",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
   },
   {
-    "id": "pap-tex-3",
-    "titulo": "Topología Diferencial",
+    "id": "pap-not-3",
+    "titulo": "Teoría de las gráficas: algunas aportaciones desde México",
     "autores": [
-      "Victor Guillemin",
-      "Allan Pollack"
+      "Julian Fresán",
+      "Ilán Goldfeder",
+      "Nahid Javier",
+      "Rita Zuazua"
     ],
     "coleccion": "Papirhos",
-    "serie": "Textos",
-    "tomo": "nan",
-    "anio": "2999",
-    "editorial": "Instituto de Matemáticas, UNAM",
-    "edicion": "0",
+    "serie": "Notas",
+    "tomo": "",
     "isbn_col": "000",
-    "isbn_libro": "000",
-    "estado": "Físico"
+    "resumen": "Resumen proximamente",
+    "estado": "Físico",
+    "anio": "",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-017",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
+  },
+  {
+    "id": "pap-act-1",
+    "titulo": "Proceedings of the Workshop on Holomorphic Dynamics",
+    "autores": [
+      "Patricia Dominguez Soto",
+      "Peter Makienko",
+      "Carlos Cabrera Ocañas"
+    ],
+    "coleccion": "Papirhos",
+    "serie": "Actas",
+    "tomo": "",
+    "isbn_col": "000",
+    "resumen": "Resumen proximamente",
+    "estado": "Físico",
+    "anio": "",
+    "editorial": "Instituto de Matemáticas, UNAM",
+    "edicion": "",
+    "isbn_libro": "",
+    "ediciones": [
+      {
+        "id_edicion": "ed-018",
+        "edicion": "",
+        "anio": "",
+        "isbn_libro": "",
+        "editorial": "Instituto de Matemáticas, UNAM",
+        "reimpresiones": []
+      }
+    ]
   }
 ]

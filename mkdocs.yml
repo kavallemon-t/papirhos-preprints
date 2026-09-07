@@ -1,17 +1,19 @@
 site_name: IMbeta
 theme:
- name: material
- custom_dir : docs/overrides 
- language: es
- favicon: assets/favicon.svg
- logo: assets/logo.svg
- palette:
-  - scheme: default
-    primary: custom
-    accent: custom
-  - scheme: slate
-    primary: custom
-    accent: custom
+  name: material
+  custom_dir: docs/overrides
+  language: es
+  favicon: assets/favicon.svg
+  logo: assets/logo.svg
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+    - scheme: slate
+      primary: custom
+      accent: custom
+  features:
+    - navigation.tabs
 extra_css:
  - stylesheets/extra.css
  - stylesheets/media.css

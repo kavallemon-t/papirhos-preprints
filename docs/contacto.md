@@ -57,5 +57,5 @@ Viernes, sábado, domingo y días festivos: 09:00 a 15:00 y 17:00 a 19:30
 
 Para revisar los títulos disponibles en este sitio, puedes consultar el catálogo o utilizar la página de exploración.
 
-[Ver catálogo](catalogo.md)
-[Explorar libros](explorar.md)
+[Ver catálogo](catalogo.md){ .md-button .md-button--primary }
+[Explorar libros](explorar.md){ .md-button }
