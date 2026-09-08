@@ -67,11 +67,17 @@ def fila_a_obj(filas_libro):
               bloque_descargas = "Aún no hay archivos digitales disponibles para este título."
               bloque_aviso = ""
 
-       #Escritor de chip para la página de ficha
-       def chip(label, val, emoji):
-              return f'<span class ="chip"></span class ="icon">{emoji}</span> {val}</span>' if val else ""
-       chips = " ".join(x for x in [chip("Serie", serie, "🏷"), chip("Colección", coleccion, "📚"), chip("Estado", estado.replace("_", " "), "ℹ️") ] if x
-                        )
+       # Datos breves que identifican la ficha en el encabezado.
+       def chip(val):
+              return f'<span class="chip">{val}</span>' if val else ""
+
+       chips = " ".join(
+              x for x in [
+                     chip(serie),
+                     chip(coleccion),
+                     chip(estado.replace("_", " ")),
+              ] if x
+       )
 
        # Selector de ediciones
        
@@ -202,10 +208,13 @@ def fila_a_obj(filas_libro):
 
               paneles_ediciones.append(
                      f'<div id="{id_panel}" class="edition-panel"{oculto}>'
-                     f'<h3>{etiqueta}</h3>'
-                     f'<h4>Metadatos</h4>'
+                     f'<h3 class="edition-panel-title">{etiqueta}</h3>'
+                     f'<section class="libro-subseccion libro-metadatos">'
+                     f'<h3>Metadatos</h3>'
                      f'{metadatos_edicion}'
-                     f'<h4 class="citation-title">Cómo citar</h4>'
+                     f'</section>'
+                     f'<section class="libro-subseccion libro-cita">'
+                     f'<h3>Cómo citar</h3>'
                      f'<div class="citation-box">'
                      f'<blockquote id="{id_cita}">{cita_edicion}</blockquote>'
                      f'<button type="button" class="citation-copy-button" '
@@ -224,6 +233,7 @@ def fila_a_obj(filas_libro):
                      f'Copiar BibTeX'
                      f'</button>'
                      f'</details>'
+                     f'</section>'
                      f'</div>'
         )
 
@@ -323,25 +333,38 @@ def fila_a_obj(filas_libro):
        ---
        """)
        #Contenido de la ficha en MARKDOWN. Nota que quité la sangría porque estoy dentro del entorno con tres comillas, entonces no importa la indentación. Si esto no se hace así, la ficha no se genera correctamente.
-       contenido = front_matter + dedent(f"""# {titulo}
-<div class = "chips">{chips}</div>
+       contenido = front_matter + dedent(f"""<section class="libro-hero">
+<div class="libro-hero-portada">
+<img src={cover_file} alt="Portada de {titulo}">
+</div>
+<div class="libro-hero-contenido">
+<p class="libro-eyebrow">Ficha bibliográfica</p>
+<h1 class="libro-titulo">{titulo}</h1>
+<div class="chips">{chips}</div>
+</div>
+</section>
 
-<p align = "left"> <img src = {cover_file} width="500" height="600"></p>
-
-
-
-## Resumen
+<section class="libro-seccion libro-resumen">
+<h2>Resumen</h2>
 {(resumen if resumen else "_Resumen próximamente._")}
+</section>
 
-## Ediciones disponibles
+<section class="libro-seccion libro-ediciones">
+<h2>Ediciones disponibles</h2>
 {selector_ediciones}
+</section>
 
-## Descargas
+<section class="libro-seccion libro-seccion-descargas">
+<h2>Descargas</h2>
+<div class="libro-descargas">
 {bloque_descargas}
+</div>
+</section>
 
-[Volver al catálogo](../catalogo.md)
-
-[Explorar](../explorar.md)
+<div class="libro-navegacion">
+<a href="../catalogo/" class="md-button md-button--primary">Volver al catálogo</a>
+<a href="../explorar/" class="md-button">Explorar libros</a>
+</div>
 """)
        #Crear el archivo con los datos
        out_path = os.path.join(os.path.join(BASE,"docs","libros"), f"{_id}.md")

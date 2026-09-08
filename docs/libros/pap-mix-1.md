@@ -3,17 +3,24 @@ title: "Por la senda de los círculos"
 authors: [[['Cecilia'], ['Neve', 'Jimenez']], [['Laura'], ['Rosales', 'Ortiz']]]
 tags: [Papirhos, Mixbaal]
 ---
-# Por la senda de los círculos
-<div class = "chips"><span class ="chip"></span class ="icon">🏷</span> Mixbaal</span> <span class ="chip"></span class ="icon">📚</span> Papirhos</span> <span class ="chip"></span class ="icon">ℹ️</span> por recibir</span></div>
+<section class="libro-hero">
+<div class="libro-hero-portada">
+<img src="../../assets/covers/pap-mix-1.jpg" alt="Portada de Por la senda de los círculos">
+</div>
+<div class="libro-hero-contenido">
+<p class="libro-eyebrow">Ficha bibliográfica</p>
+<h1 class="libro-titulo">Por la senda de los círculos</h1>
+<div class="chips"><span class="chip">Mixbaal</span> <span class="chip">Papirhos</span> <span class="chip">por recibir</span></div>
+</div>
+</section>
 
-<p align = "left"> <img src = "../../assets/covers/pap-mix-1.jpg" width="500" height="600"></p>
-
-
-
-## Resumen
+<section class="libro-seccion libro-resumen">
+<h2>Resumen</h2>
 Resumen proximamente
+</section>
 
-## Ediciones disponibles
+<section class="libro-seccion libro-ediciones">
+<h2>Ediciones disponibles</h2>
 
 <div class="edition-selector" id="edition-selector-pap-mix-1">
     <div class="edition-buttons">
@@ -21,17 +28,17 @@ Resumen proximamente
     </div>
 
     <div class="edition-content">
-        <div id="edicion-pap-mix-1-0" class="edition-panel"><h3>Edición sin especificar</h3><h4>Metadatos</h4>
+        <div id="edicion-pap-mix-1-0" class="edition-panel"><h3 class="edition-panel-title">Edición sin especificar</h3><section class="libro-subseccion libro-metadatos"><h3>Metadatos</h3>
 <table>
     <tbody>
         <tr><th>Autores</th><td>Cecilia Neve Jimenez, Laura Rosales Ortiz</td></tr><tr><th>Colección</th><td>Papirhos</td></tr><tr><th>Serie</th><td>Mixbaal</td></tr>
     </tbody>
 </table>
-<h4 class="citation-title">Cómo citar</h4><div class="citation-box"><blockquote id="cita-ed-007">Cecilia Neve Jimenez, Laura Rosales Ortiz. <em>Por la senda de los círculos</em>.</blockquote><button type="button" class="citation-copy-button" data-target="cita-ed-007">Copiar cita</button></div><details><summary>BibTeX</summary><textarea id="bibtex-ed-007" rows="9" cols="80" class="verbatim">@BOOK{ed-007,
+</section><section class="libro-subseccion libro-cita"><h3>Cómo citar</h3><div class="citation-box"><blockquote id="cita-ed-007">Cecilia Neve Jimenez, Laura Rosales Ortiz. <em>Por la senda de los círculos</em>.</blockquote><button type="button" class="citation-copy-button" data-target="cita-ed-007">Copiar cita</button></div><details><summary>BibTeX</summary><textarea id="bibtex-ed-007" rows="9" cols="80" class="verbatim">@BOOK{ed-007,
 title = {Por la senda de los círculos},
 author = {Neve, Cecilia and Rosales, Laura},
 address = {México}
-}</textarea><br><button type="button" class="bibtex-copy-button" data-target="bibtex-ed-007">Copiar BibTeX</button></details></div>
+}</textarea><br><button type="button" class="bibtex-copy-button" data-target="bibtex-ed-007">Copiar BibTeX</button></details></section></div>
     </div>
 </div>
 
@@ -110,8 +117,11 @@ address = {México}
 })();
 </script>
 
+</section>
 
-## Descargas
+<section class="libro-seccion libro-seccion-descargas">
+<h2>Descargas</h2>
+<div class="libro-descargas">
 <a class="md-button data-book-id=pap-mix-1 download-link" data-book-id="pap-mix-1" href = "pap-mix-1_mark.pdf" target = "_blank" rel ="noopener" > Abrir PDF </a>
 <a class="md-button  data-book-id=pap-mix-1 download-link" data-book-id="pap-mix-1" href ="pap-mix-1_mark.pdf" download> Descargar</a>
 <details>
@@ -120,7 +130,10 @@ address = {México}
 <p> Tu navegador no puede mostrar PDF incrustado <a href="pap-mix-1_mark.pdf" target="_blank" rel ="noopener"> Abrir PDF </a> o usa el botón "Descargar".</p>
 </object>
 </details>
+</div>
+</section>
 
-[Volver al catálogo](../catalogo.md)
-
-[Explorar](../explorar.md)
+<div class="libro-navegacion">
+<a href="../catalogo/" class="md-button md-button--primary">Volver al catálogo</a>
+<a href="../explorar/" class="md-button">Explorar libros</a>
+</div>

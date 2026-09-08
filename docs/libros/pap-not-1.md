@@ -3,17 +3,24 @@ title: "Teoría de singularidades en topología, geometría y foliaciones I"
 authors: [[['Jean-Paul'], ['Brasselet']], [['Felipe'], ['Cano']], [['Dominique'], ['Cerveau']], [['Dung', 'Tráng'], ['Lê']], [['Frank'], ['Loray']], [['Mutsuo'], ['Oka']], [['José'], ['Seade']], [['Mark'], ['Spivakovsky']]]
 tags: [Papirhos, Notas]
 ---
-# Teoría de singularidades en topología, geometría y foliaciones I
-<div class = "chips"><span class ="chip"></span class ="icon">🏷</span> Notas</span> <span class ="chip"></span class ="icon">📚</span> Papirhos</span> <span class ="chip"></span class ="icon">ℹ️</span> Publicado</span></div>
+<section class="libro-hero">
+<div class="libro-hero-portada">
+<img src="../../assets/covers/pap-not-1.jpg" alt="Portada de Teoría de singularidades en topología, geometría y foliaciones I">
+</div>
+<div class="libro-hero-contenido">
+<p class="libro-eyebrow">Ficha bibliográfica</p>
+<h1 class="libro-titulo">Teoría de singularidades en topología, geometría y foliaciones I</h1>
+<div class="chips"><span class="chip">Notas</span> <span class="chip">Papirhos</span> <span class="chip">Publicado</span></div>
+</div>
+</section>
 
-<p align = "left"> <img src = "../../assets/covers/pap-not-1.jpg" width="500" height="600"></p>
-
-
-
-## Resumen
+<section class="libro-seccion libro-resumen">
+<h2>Resumen</h2>
 Resumen proximamente
+</section>
 
-## Ediciones disponibles
+<section class="libro-seccion libro-ediciones">
+<h2>Ediciones disponibles</h2>
 
 <div class="edition-selector" id="edition-selector-pap-not-1">
     <div class="edition-buttons">
@@ -21,13 +28,13 @@ Resumen proximamente
     </div>
 
     <div class="edition-content">
-        <div id="edicion-pap-not-1-0" class="edition-panel"><h3>Edición 1</h3><h4>Metadatos</h4>
+        <div id="edicion-pap-not-1-0" class="edition-panel"><h3 class="edition-panel-title">Edición 1</h3><section class="libro-subseccion libro-metadatos"><h3>Metadatos</h3>
 <table>
     <tbody>
         <tr><th>Autores</th><td>Jean-Paul Brasselet, Felipe Cano, Dominique Cerveau, Dung Tráng Lê, Frank Loray, Mutsuo Oka, José Seade, Mark Spivakovsky</td></tr><tr><th>Colección</th><td>Papirhos</td></tr><tr><th>Serie</th><td>Notas</td></tr><tr><th>Año</th><td>2017</td></tr><tr><th>Editorial</th><td>Instituto de Matemáticas, UNAM</td></tr><tr><th>Edición</th><td>1</td></tr><tr><th>ISBN (Colección)</th><td>978-607-02-5149-8</td></tr><tr><th>ISBN (Texto)</th><td>978-607-02-9845-5</td></tr>
     </tbody>
 </table>
-<h4 class="citation-title">Cómo citar</h4><div class="citation-box"><blockquote id="cita-ed-001">Jean-Paul Brasselet, Felipe Cano, Dominique Cerveau, Dung Tráng Lê, Frank Loray, Mutsuo Oka, José Seade, Mark Spivakovsky. (2017). <em>Teoría de singularidades en topología, geometría y foliaciones I</em>. Instituto de Matemáticas, UNAM. Edición 1.</blockquote><button type="button" class="citation-copy-button" data-target="cita-ed-001">Copiar cita</button></div><details><summary>BibTeX</summary><textarea id="bibtex-ed-001" rows="9" cols="80" class="verbatim">@BOOK{ed-001,
+</section><section class="libro-subseccion libro-cita"><h3>Cómo citar</h3><div class="citation-box"><blockquote id="cita-ed-001">Jean-Paul Brasselet, Felipe Cano, Dominique Cerveau, Dung Tráng Lê, Frank Loray, Mutsuo Oka, José Seade, Mark Spivakovsky. (2017). <em>Teoría de singularidades en topología, geometría y foliaciones I</em>. Instituto de Matemáticas, UNAM. Edición 1.</blockquote><button type="button" class="citation-copy-button" data-target="cita-ed-001">Copiar cita</button></div><details><summary>BibTeX</summary><textarea id="bibtex-ed-001" rows="9" cols="80" class="verbatim">@BOOK{ed-001,
 title = {Teoría de singularidades en topología, geometría y foliaciones I},
 author = {Brasselet, Jean-Paul and Cano, Felipe and Cerveau, Dominique and Lê, Dung and Loray, Frank and Oka, Mutsuo and Seade, José and Spivakovsky, Mark},
 year = {2017},
@@ -35,7 +42,7 @@ publisher = {Instituto de Matemáticas, UNAM},
 edition = {1},
 isbn = {978-607-02-9845-5},
 address = {México}
-}</textarea><br><button type="button" class="bibtex-copy-button" data-target="bibtex-ed-001">Copiar BibTeX</button></details></div>
+}</textarea><br><button type="button" class="bibtex-copy-button" data-target="bibtex-ed-001">Copiar BibTeX</button></details></section></div>
     </div>
 </div>
 
@@ -114,8 +121,11 @@ address = {México}
 })();
 </script>
 
+</section>
 
-## Descargas
+<section class="libro-seccion libro-seccion-descargas">
+<h2>Descargas</h2>
+<div class="libro-descargas">
 <a class="md-button data-book-id=pap-not-1 download-link" data-book-id="pap-not-1" href = "pap-not-1_mark.pdf" target = "_blank" rel ="noopener" > Abrir PDF </a>
 <a class="md-button  data-book-id=pap-not-1 download-link" data-book-id="pap-not-1" href ="pap-not-1_mark.pdf" download> Descargar</a>
 <details>
@@ -124,7 +134,10 @@ address = {México}
 <p> Tu navegador no puede mostrar PDF incrustado <a href="pap-not-1_mark.pdf" target="_blank" rel ="noopener"> Abrir PDF </a> o usa el botón "Descargar".</p>
 </object>
 </details>
+</div>
+</section>
 
-[Volver al catálogo](../catalogo.md)
-
-[Explorar](../explorar.md)
+<div class="libro-navegacion">
+<a href="../catalogo/" class="md-button md-button--primary">Volver al catálogo</a>
+<a href="../explorar/" class="md-button">Explorar libros</a>
+</div>
