@@ -135,6 +135,6 @@ address = {México}
 </section>
 
 <div class="libro-navegacion">
-<a href="../catalogo/" class="md-button md-button--primary">Volver al catálogo</a>
-<a href="../explorar/" class="md-button">Explorar libros</a>
+<a href="../../catalogo/" class="md-button md-button--primary">Volver al catálogo</a>
+<a href="../../explorar/" class="md-button">Explorar libros</a>
 </div>
