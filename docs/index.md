@@ -2,19 +2,19 @@
 
 <div class="home-hero-text">
 
-<h1 class="home-title">Papirhos Digital</h1>
+<h1 class="home-title">Papirhos Preprints</h1>
 
 <p class="home-lead">
-Catálogo digital de libros y materiales académicos de matemáticas publicados por la Editorial de Matemáticas del Instituto de Matemáticas, UNAM.
+Repositorio de prepublicaciones y materiales académicos de matemáticas del Instituto de Matemáticas, UNAM.
 </p>
 
 <p>
-Consulta fichas bibliográficas, explora títulos por autor, colección o año, y accede a los archivos digitales disponibles.
+Consulta trabajos disponibles antes de su publicación editorial definitiva, accede a sus archivos digitales y revisa las distintas versiones disponibles.
 </p>
 
 <div class="home-actions">
-<a href="explorar/" class="md-button md-button--primary">Explorar libros</a>
-<a href="catalogo/" class="md-button">Ver catálogo</a>
+<a href="explorar/" class="md-button md-button--primary">Explorar prepublicaciones</a>
+<a href="preprints/" class="md-button">Ver prepublicaciones</a>
 </div>
 
 </div>
@@ -42,10 +42,10 @@ Consulta fichas bibliográficas, explora títulos por autor, colección o año, 
 
 <section class="page-section">
 
-<h2>Información bibliográfica</h2>
+<h2>Información de cada prepublicación</h2>
 
 <p>
-Cada ficha puede incluir metadatos de edición, cita bibliográfica, BibTeX, reimpresiones registradas y archivos disponibles para consulta o descarga.
+Cada ficha puede incluir información sobre los autores, resumen, fecha de publicación, versión actual, historial de versiones, cita bibliográfica, BibTeX y archivos disponibles para consulta o descarga.
 </p>
 
 </section>

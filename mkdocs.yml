@@ -1,4 +1,4 @@
-site_name: IMbeta
+site_name: Papirhos Preprints
 theme:
   name: material
   custom_dir: docs/overrides
@@ -19,7 +19,7 @@ extra_css:
  - stylesheets/media.css
 nav:
  - Inicio: index.md
- - Catálogo: catalogo.md
+ - Preprints: preprints.md
  - Búsqueda avanzada: explorar.md
  - Acerca de: acerca.md
  - TUL: tul.md
