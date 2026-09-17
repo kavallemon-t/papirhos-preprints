@@ -19,7 +19,6 @@ body{
 
 .md-content{
   background-color: whitesmoke;
-  height: 100%;
   display: flex;
   flex-direction: column;
   /* padding: 0; */
@@ -96,6 +95,7 @@ body{
   position: relative;
   max-width: none;
   width: 100%;
+  margin: 0;
   height: 80px !important;
 }
 
@@ -141,7 +141,7 @@ body{
   width: 220px;
   display: block;
   position: absolute;
-  right: -2rem !important;
+  right: 1rem !important;
   background-image: url("../assets/logos/im-cropped.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -1004,6 +1004,126 @@ body:has(.home-hero) .md-top {
   }
 }
 
+@media screen and (min-width: 76.25em) {
+  #encabezado {
+    width: 100% !important;
+  }
+
+  .md-main__inner {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .md-sidebar--secondary {
+    display: none !important;
+  }
+
+  #encabezado > div#logoizq {
+    left: -0.55rem;
+  }
+
+  .md-content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .md-content__inner {
+    max-width: none;
+  }
+
+  .md-sidebar--primary .md-nav__list > .md-nav__item {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .md-sidebar--primary .md-nav__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 8.75rem;
+    min-height: 0;
+    padding: 1rem;
+    background: #555555;
+    box-shadow: none !important;
+  }
+
+  .md-sidebar--primary .md-nav__title .md-logo {
+    display: flex !important;
+    position: static !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .md-sidebar--primary .md-nav__title .md-logo img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+
+  .md-sidebar--primary .md-sidebar__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: #ffffff;
+  }
+
+  .md-sidebar--primary .md-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+  }
+
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    position: absolute;
+    inset: 0;
+    height: 100% !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .md-sidebar--primary .md-nav__list {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .md-sidebar--primary .md-nav__list > .md-nav__item > .md-nav__link {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0 1rem;
+    border-bottom: 1px solid #e5e5e5;
+    border-radius: 0;
+    pointer-events: auto !important;
+  }
+
+  .md-sidebar--primary .md-nav__list > .md-nav__item {
+    width: 100%;
+  }
+
+  .md-sidebar--primary .md-nav__link--active {
+    background: #3f3f3f !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+  }
+}
+
 /* =========================
    Catálogo
    ========================= */
@@ -1356,4 +1476,51 @@ body:has(.home-hero) .md-top {
 #resultados .card a {
   text-decoration: none !important;
   color: inherit !important;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-header__button[for="__drawer"] {
+    display: inline-flex;
+  }
+
+  .md-sidebar--primary {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -15rem;
+    width: 15rem;
+    height: 100dvh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transform: translateX(0);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s, visibility 0s linear 0.25s;
+    z-index: 20;
+    background: var(--md-default-bg-color);
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary {
+    transform: translateX(15rem);
+    box-shadow: var(--md-shadow-z3);
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+
+  .md-overlay {
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+  }
+
+  [data-md-toggle="drawer"]:checked ~ .md-overlay {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
 }
