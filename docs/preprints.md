@@ -14,4 +14,21 @@ Los documentos pueden contar con distintas versiones a medida que se realizan co
 
 Documento utilizado para probar el sistema de prepublicaciones.
 
+**Versión actual:** v2 — 2026-09-17
+
 [Ver ficha](preprints/pap-pre-001.md)
+
+---
+
+### Segundo preprint de prueba
+
+**Autores:** Jean-Paul Brasselet
+
+Segundo documento utilizado para probar el sistema de prepublicaciones.
+
+**Versión actual:** v1 — 2026-09-17
+
+[Ver ficha](preprints/pap-pre-002.md)
+
+---
+

@@ -117,3 +117,79 @@ for preprint in preprints:
 
 
     print(f"Ficha generada: {OUTPUT_PATH}")
+
+# Generamos la página principal de preprints
+contenido_indice = """# Preprints
+
+Consulta las prepublicaciones y materiales académicos disponibles antes de su publicación editorial definitiva.
+
+Los documentos pueden contar con distintas versiones a medida que se realizan correcciones o actualizaciones.
+
+---
+
+## Prepublicaciones disponibles
+
+"""
+
+
+for preprint in preprints:
+
+    id_preprint = preprint["id_preprint"]
+    titulo = preprint["titulo"]
+    resumen = preprint["resumen"]
+
+    autores = preprint.get("autores", [])
+    versiones = preprint.get("versiones", [])
+
+    autores_texto = ", ".join(autores)
+
+    # Buscamos la versión más reciente
+    versiones_ordenadas = sorted(
+        versiones,
+        key=lambda v: int(v["version"]),
+        reverse=True
+    )
+
+    version_actual = (
+        versiones_ordenadas[0]
+        if versiones_ordenadas
+        else None
+    )
+
+
+    contenido_indice += f"""### {titulo}
+
+**Autores:** {autores_texto}
+
+{resumen}
+
+"""
+
+    if version_actual:
+        contenido_indice += (
+            f"**Versión actual:** "
+            f"v{version_actual['version']} "
+            f"— {version_actual['fecha']}\n\n"
+        )
+
+    contenido_indice += (
+        f"[Ver ficha](preprints/{id_preprint}.md)\n\n"
+        "---\n\n"
+    )
+
+
+# Guardamos la página principal
+INDICE_PATH = os.path.join(
+    PROJECT_DIR,
+    "docs",
+    "preprints.md"
+)
+
+with open(
+    INDICE_PATH,
+    "w",
+    encoding="utf-8"
+) as archivo:
+    archivo.write(contenido_indice)
+
+print(f"Índice de preprints generado: {INDICE_PATH}")

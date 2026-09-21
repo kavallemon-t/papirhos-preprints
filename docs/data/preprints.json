@@ -27,5 +27,26 @@
         "nota_version": "Correcciones menores"
       }
     ]
+  },
+  {
+    "id_preprint": "pap-pre-002",
+    "titulo": "Segundo preprint de prueba",
+    "coleccion": "Papirhos",
+    "serie": "Preprints",
+    "num_serie": "2",
+    "resumen": "Segundo documento utilizado para probar el sistema de prepublicaciones.",
+    "estado": "Activo",
+    "autores": [
+      "Jean-Paul Brasselet"
+    ],
+    "versiones": [
+      {
+        "id_version": "pap-pre-002-v1",
+        "version": "1",
+        "fecha": "2026-09-17",
+        "archivo": "pap-pre-002-v1.pdf",
+        "nota_version": "Correcciones menores"
+      }
+    ]
   }
 ]
