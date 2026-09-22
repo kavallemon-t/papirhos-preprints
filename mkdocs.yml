@@ -1,4 +1,5 @@
 site_name: Papirhos Preprints
+site_url: https://kavallemon-t.github.io/papirhos-preprints
 theme:
   name: material
   custom_dir: docs/overrides
