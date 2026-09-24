@@ -11,6 +11,19 @@ preprints = pd.read_csv(
     dtype=str
 )
 
+# Limpiamos posibles espacios en los nombres de las columnas
+preprints.columns = preprints.columns.str.strip()
+
+# Normalizamos la columna de portada
+if "portada" not in preprints.columns:
+    preprints["portada"] = ""
+else:
+    preprints["portada"] = (
+        preprints["portada"]
+        .fillna("")
+        .str.strip()
+    )
+
 autores = pd.read_csv(
     os.path.join(BASE_DIR, "autores.csv"),
     dtype=str

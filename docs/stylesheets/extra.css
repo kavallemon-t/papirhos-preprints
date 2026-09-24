@@ -1524,3 +1524,311 @@ body:has(.home-hero) .md-top {
     transition-delay: 0s;
   }
 }
+
+/* =========================
+   Preprints
+   ========================= */
+
+.preprints-page {
+  margin-top: 1rem;
+}
+
+
+/* Hero */
+
+.preprints-hero {
+  margin: 1rem 0 2.4rem;
+  padding: 2.6rem 2.4rem;
+
+  background: #f7f7f7;
+  border: 1px solid #e3e3e3;
+  border-radius: 1rem;
+}
+
+.preprints-eyebrow {
+  margin: 0 0 0.5rem 0 !important;
+
+  color: #8a6a3a !important;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.preprints-hero h1 {
+  margin: 0 0 1rem 0;
+
+  font-family: "Avant Garde BT Book", "Century Gothic", "Avenir", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+
+  color: #2f2f2f;
+}
+
+.preprints-lead {
+  max-width: 760px;
+  margin: 0 0 0.6rem 0 !important;
+
+  color: #444444;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.preprints-description {
+  max-width: 760px;
+  margin: 0 !important;
+
+  color: #666666;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+
+/* Encabezado de la lista */
+
+.preprints-list {
+  margin: 0 0 3rem;
+}
+
+.preprints-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  margin-bottom: 1.4rem;
+}
+
+.preprints-section-label {
+  margin: 0 0 0.25rem 0 !important;
+
+  color: #8a6a3a !important;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.preprints-list-header h2 {
+  margin: 0;
+
+  color: #2f2f2f;
+
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+/* Tarjeta de cada preprint */
+
+.preprint-card {
+  margin-bottom: 1.25rem;
+  padding: 1.5rem 1.6rem;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e4e4;
+  border-radius: 1rem;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.035);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.preprint-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #d8d8d8;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Parte superior: ID + fecha */
+
+.preprint-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 0.8rem;
+}
+
+.preprint-id {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.28rem 0.65rem;
+
+  background: #efefef;
+  border-radius: 999px;
+
+  color: #4e4e4e;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.preprint-date {
+  color: #777777;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+
+/* Contenido */
+
+.preprint-card-content {
+  max-width: 820px;
+}
+
+.preprint-title {
+  margin: 0 0 0.35rem 0 !important;
+
+  font-size: 1.35rem !important;
+  line-height: 1.25;
+  font-weight: 800 !important;
+}
+
+.preprint-title a {
+  color: #2f2f2f !important;
+  text-decoration: none !important;
+}
+
+.preprint-title a:hover {
+  color: #555555 !important;
+}
+
+.preprint-authors {
+  margin: 0 0 0.8rem 0 !important;
+
+  color: #6b625a;
+
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.preprint-summary {
+  margin: 0 !important;
+
+  color: #555555;
+
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+
+/* Parte inferior */
+
+.preprint-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+
+  border-top: 1px solid #eeeeee;
+}
+
+.preprint-version-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.preprint-version-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 2.2rem;
+  padding: 0.28rem 0.6rem;
+
+  background: #505050;
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.preprint-version-count {
+  color: #777777;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+
+/* Botones */
+
+.preprint-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.preprint-actions .md-button {
+  margin: 0 !important;
+}
+
+.preprint-secondary-button {
+  background: #ffffff !important;
+  border-color: #cfcfcf !important;
+
+  color: #444444 !important;
+}
+
+.preprint-secondary-button:hover {
+  background: #f1f1f1 !important;
+  border-color: #bdbdbd !important;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 760px) {
+
+  .preprints-hero {
+    padding: 2rem 1.2rem;
+  }
+
+  .preprints-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .preprint-card {
+    padding: 1.2rem;
+  }
+
+  .preprint-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .preprint-card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .preprint-actions {
+    width: 100%;
+  }
+
+  .preprint-actions .md-button {
+    flex: 1;
+    text-align: center;
+  }
+}

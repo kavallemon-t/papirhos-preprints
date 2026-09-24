@@ -23,6 +23,7 @@ OUTPUT_DIR = os.path.join(
 
 SITE_URL = "https://kavallemon-t.github.io/papirhos-preprints"
 
+
 # Nos aseguramos de que exista la carpeta de salida
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -32,11 +33,15 @@ with open(JSON_PATH, "r", encoding="utf-8") as archivo:
     preprints = json.load(archivo)
 
 
-# Generamos una ficha para cada preprint
+# =========================================================
+# GENERAMOS UNA FICHA PARA CADA PREPRINT
+# =========================================================
+
 for preprint in preprints:
 
     id_preprint = preprint["id_preprint"]
     url_preprint = f"{SITE_URL}/preprints/{id_preprint}/"
+
     titulo = preprint["titulo"]
     resumen = preprint["resumen"]
 
@@ -352,16 +357,51 @@ for preprint in preprints:
     print(f"Ficha generada: {OUTPUT_PATH}")
 
 
-# Generamos la página principal de preprints
-contenido_indice = """# Preprints
+# =========================================================
+# GENERAMOS LA PÁGINA PRINCIPAL DE PREPRINTS
+# =========================================================
 
-Consulta las prepublicaciones y materiales académicos disponibles antes de su publicación editorial definitiva.
+contenido_indice = """
+<div class="preprints-page">
 
-Los documentos pueden contar con distintas versiones a medida que se realizan correcciones o actualizaciones.
+    <section class="preprints-hero">
 
----
+        <p class="preprints-eyebrow">
+            Repositorio académico
+        </p>
 
-## Prepublicaciones disponibles
+        <h1>Preprints</h1>
+
+        <p class="preprints-lead">
+            Consulta prepublicaciones y materiales académicos disponibles
+            antes de su publicación editorial definitiva.
+        </p>
+
+        <p class="preprints-description">
+            Cada trabajo puede contar con distintas versiones a medida que
+            se realizan correcciones o actualizaciones.
+        </p>
+
+    </section>
+
+
+    <section class="preprints-list">
+
+        <div class="preprints-list-header">
+
+            <div>
+
+                <p class="preprints-section-label">
+                    Papirhos Preprints
+                </p>
+
+                <h2>
+                    Prepublicaciones recientes
+                </h2>
+
+            </div>
+
+        </div>
 
 """
 
@@ -372,10 +412,15 @@ for preprint in preprints:
     titulo = preprint["titulo"]
     resumen = preprint["resumen"]
 
+    # Portada: puede existir o estar vacía
+    portada = (
+        preprint.get("portada") or ""
+    ).strip()
+
     autores = preprint.get("autores", [])
     versiones = preprint.get("versiones", [])
 
-    autores_texto = ", ".join(autores)
+    autores_texto = " · ".join(autores)
 
 
     # Buscamos la versión más reciente
@@ -392,28 +437,156 @@ for preprint in preprints:
     )
 
 
-    contenido_indice += f"""### {titulo}
+    # Información de la versión actual
+    if version_actual:
 
-**Autores:** {autores_texto}
+        numero_version = version_actual["version"]
+        fecha_actual = version_actual["fecha"]
+        archivo_actual = version_actual["archivo"]
 
-{resumen}
+        texto_versiones = (
+            f"{len(versiones)} versión"
+            if len(versiones) == 1
+            else f"{len(versiones)} versiones"
+        )
 
+        boton_pdf = (
+            f'<a href="../archivos_preprints/{archivo_actual}" '
+            f'class="md-button preprint-secondary-button">'
+            f'Ver PDF</a>'
+        )
+
+    else:
+
+        numero_version = "—"
+        fecha_actual = "Sin versión disponible"
+        texto_versiones = "Sin versiones"
+        boton_pdf = ""
+
+
+    # Generamos la portada o un placeholder
+    if portada:
+
+        bloque_portada = f"""
+            <div class="preprint-cover">
+
+                <img
+                    src="../portadas_preprints/{portada}"
+                    alt="Portada de {titulo}"
+                    loading="lazy">
+
+            </div>
+        """
+
+    else:
+
+        bloque_portada = f"""
+            <div class="preprint-cover preprint-cover-placeholder">
+
+                <span>
+                    {id_preprint}
+                </span>
+
+                <small>
+                    Preprint
+                </small>
+
+            </div>
+        """
+
+
+    # Generamos la tarjeta
+    contenido_indice += f"""
+        <article class="preprint-card">
+
+            <div class="preprint-card-layout">
+
+                {bloque_portada}
+
+
+                <div class="preprint-card-main">
+
+
+                    <div class="preprint-card-top">
+
+                        <span class="preprint-id">
+                            {id_preprint}
+                        </span>
+
+                        <span class="preprint-date">
+                            Actualizado {fecha_actual}
+                        </span>
+
+                    </div>
+
+
+                    <div class="preprint-card-content">
+
+                        <h3 class="preprint-title">
+
+                            <a href="{id_preprint}/">
+                                {titulo}
+                            </a>
+
+                        </h3>
+
+
+                        <p class="preprint-authors">
+                            {autores_texto}
+                        </p>
+
+
+                        <p class="preprint-summary">
+                            {resumen}
+                        </p>
+
+                    </div>
+
+
+                    <div class="preprint-card-footer">
+
+                        <div class="preprint-version-info">
+
+                            <span class="preprint-version-badge">
+                                v{numero_version}
+                            </span>
+
+                            <span class="preprint-version-count">
+                                {texto_versiones}
+                            </span>
+
+                        </div>
+
+
+                        <div class="preprint-actions">
+
+                            <a
+                                href="{id_preprint}/"
+                                class="md-button md-button--primary">
+                                Ver ficha
+                            </a>
+
+                            {boton_pdf}
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </article>
 """
 
 
-    if version_actual:
+# Cerramos las secciones principales
+contenido_indice += """
+    </section>
 
-        contenido_indice += (
-            f"**Versión actual:** "
-            f"v{version_actual['version']} "
-            f"— {version_actual['fecha']}\n\n"
-        )
-
-
-    contenido_indice += (
-        f"[Ver ficha](preprints/{id_preprint}.md)\n\n"
-        "---\n\n"
-    )
+</div>
+"""
 
 
 # Guardamos la página principal

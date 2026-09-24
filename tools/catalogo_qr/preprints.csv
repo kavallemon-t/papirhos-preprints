@@ -1,3 +1,3 @@
-id_preprint,titulo,coleccion,serie,num_serie,resumen,estado
-pap-pre-001,"Preprint de prueba","Papirhos","Preprints",1,"Documento utilizado para probar el sistema de prepublicaciones.","Activo"
-pap-pre-002,"Segundo preprint de prueba","Papirhos","Preprints",2,"Segundo documento utilizado para probar el sistema de prepublicaciones.","Activo"
+id_preprint,titulo,coleccion,serie,num_serie,resumen,estado, portada
+pap-pre-001,"Preprint de prueba","Papirhos","Preprints",1,"Documento utilizado para probar el sistema de prepublicaciones.","Activo","pap-pre-001.jpg"
+pap-pre-002,"Segundo preprint de prueba","Papirhos","Preprints",2,"Segundo documento utilizado para probar el sistema de prepublicaciones.","Activo",
