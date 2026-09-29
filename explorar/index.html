@@ -565,223 +565,1023 @@
 
 
 <section class="catalogo-hero catalogo-hero-busqueda">
-<p class="catalogo-eyebrow">Explorar</p>
-<h1>Búsqueda avanzada</h1>
+    <p class="catalogo-eyebrow">Explorar</p>
+    <h1>Búsqueda avanzada</h1>
+
+    <p>
+        Combina distintos criterios para localizar prepublicaciones
+        por título, autor, colección, serie, estado o fecha de actualización.
+    </p>
 </section>
 
 <div id="filtros">
-<label>Colección: <select id="f-coleccion"><option value="">Todas</option></select> </label>
-<label>Serie: <select id="f-serie"><option value="">Todas</option></select> </label>
-<label>Año:<select id="f-anio"><option value ="">Todos</option></select></label>
-<label>Autor: <input id="f-autor" type="text" placeholder ="Ej. Pérez"></label>
-<label>Título: <input id="f-titulo" type="text" placeholder ="Buscar por título"></label>
-<span id="contador" style="margin-left:.6rem;"></span>
-<button id="btn-clear" type = "button" class = "md-button">Limpiar filtros</button>
 
-<label> Ordenar por:
-    <select id="f-order">
-        <option value="titulo-asc">Título (A -> Z)</option>
-        <option value="titulo-desc">Título (Z-> A)</option>
-        <option value="anio-asc">Año (asc)</option>
-        <option value="anio-desc">Año (desc)</option>
-    </select>
-</label>
+    <label>
+        Colección:
+        <select id="f-coleccion">
+            <option value="">Todas</option>
+        </select>
+    </label>
+
+
+    <label>
+        Serie:
+        <select id="f-serie">
+            <option value="">Todas</option>
+        </select>
+    </label>
+
+
+    <label>
+        Estado:
+        <select id="f-estado">
+            <option value="">Todos</option>
+        </select>
+    </label>
+
+
+    <label>
+        Año de actualización:
+        <select id="f-anio">
+            <option value="">Todos</option>
+        </select>
+    </label>
+
+
+    <label>
+        Autor:
+        <input
+            id="f-autor"
+            type="text"
+            placeholder="Ej. Brasselet">
+    </label>
+
+
+    <label>
+        Título:
+        <input
+            id="f-titulo"
+            type="text"
+            placeholder="Buscar por título">
+    </label>
+
+
+    <label>
+        Palabra clave:
+        <input
+            id="f-palabra"
+            type="text"
+            placeholder="ID, resumen, autor...">
+    </label>
+
+
+    <label>
+        Ordenar por:
+        <select id="f-order">
+            <option value="fecha-desc">
+                Más recientes
+            </option>
+
+            <option value="fecha-asc">
+                Más antiguos
+            </option>
+
+            <option value="titulo-asc">
+                Título (A → Z)
+            </option>
+
+            <option value="titulo-desc">
+                Título (Z → A)
+            </option>
+        </select>
+    </label>
+
+
+    <button
+        id="btn-clear"
+        type="button"
+        class="md-button">
+        Limpiar filtros
+    </button>
+
+</div>
+
+<div class="busqueda-resultados-header">
+    <span id="contador"></span>
 </div>
 
 <div id="resultados"></div>
+
 <script>
 
-(async function() {
-    const { origin, hostname, pathname} = window.location;
+(async function () {
 
-    // Calcula la ruta base para desarrollo local y GitHub Pages
+    /*
+     * Calculamos la raíz del sitio a partir de la página actual.
+     *
+     * Ejemplos:
+     *
+     * Local:
+     * /papirhos-preprints/explorar/
+     *          ↓
+     * /papirhos-preprints/
+     *
+     * GitHub Pages:
+     * /papirhos-preprints/explorar/
+     *          ↓
+     * /papirhos-preprints/
+     */
+    const BASE = new URL(
+        "../",
+        window.location.href
+    ).href;
 
-    let BASE = origin + "/";
 
-    if (hostname.endsWith(".github.io")) {
-        const segs = pathname.split("/").filter(Boolean);
+    // Leemos la base de datos de preprints.
+    const respuesta = await fetch(
+        `${BASE}data/preprints.json`
+    );
 
-        if (segs.length> 0) {
-            BASE = `${origin}/${segs[0]}/`;
-        }
+
+    // Si el archivo no pudo cargarse,
+    // mostramos un error claro en la consola.
+    if (!respuesta.ok) {
+
+        throw new Error(
+            `No se pudo cargar preprints.json: ${respuesta.status}`
+        );
+
     }
 
-    const resp = await fetch(`${BASE}data/catalogo.json`);
-    const libros = await resp.json();
-    const $ = (sel) => document.querySelector(sel);
-    const unique = (arr) => Array.from(new Set(arr.filter(Boolean)));
-    const aniosLibro = (libro) => (libro.ediciones || []).map(edicion => String(edicion.anio || '').trim()).filter(Boolean);
-    const estadoLegible = (estado) => {
-        const estados = {
-            "Publicado": "Disponible en línea",
-            "publicado": "Disponible en línea",
-            "Físico": "Disponible en formato físico",
-            "Fisico": "Disponible en formato físico",
-            "fisico": "Disponible en formato físico",
-            "Por recibir": "Pendiente de recibir",
-            "por_recibir": "Pendiente de recibir"
-        };
 
-        return estados[estado] || estado;
-    };
-    const selColeccion = $('#f-coleccion');
-    const selSerie = $('#f-serie');
-    const selAnio = $('#f-anio');
-    const inpAutor = $('#f-autor');
-    const inpTitulo = $('#f-titulo');
-    const contador = $('#contador');
-    const selOrder = document.querySelector('#f-order')
-    const normalizarTexto = (texto) => String(texto || '')
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .toLowerCase();
-    unique(libros.map(x=> x.coleccion)).sort().forEach(c => selColeccion.insertAdjacentHTML('beforeend',`<option>${c}</option>`));
-    unique(libros.map(x=> x.serie)).sort().forEach(s => selSerie.insertAdjacentHTML('beforeend',`<option>${s}</option>`));
+    const preprints =
+        await respuesta.json();
 
-    unique(libros.flatMap(libro => aniosLibro(libro))).sort().forEach(anio => selAnio.insertAdjacentHTML('beforeend',`<option>${anio}</option>`));
 
-    const cont = document.querySelector('#resultados');
+    // Verificamos que el JSON tenga la estructura esperada.
+    if (!Array.isArray(preprints)) {
+
+        throw new Error(
+            "preprints.json no contiene una lista válida."
+        );
+
+    }
+
+
+    // Atajo para querySelector.
+    const $ = (selector) =>
+        document.querySelector(selector);
+
+
+    // Quitamos duplicados y valores vacíos.
+    const unique = (lista) =>
+        Array.from(
+            new Set(
+                lista.filter(Boolean)
+            )
+        );
+
+
+    // Normalizamos texto para que las búsquedas
+    // no dependan de mayúsculas ni acentos.
+    const normalizarTexto = (texto) =>
+
+        String(texto || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .trim();
+
+
+    // Ordenamos las versiones de un preprint.
+    function versionesOrdenadas(preprint) {
+
+        return [...(preprint.versiones || [])]
+            .sort(
+                (a, b) =>
+                    Number(b.version) -
+                    Number(a.version)
+            );
+
+    }
+
+
+    // Obtenemos la versión más reciente.
+    function versionActual(preprint) {
+
+        const versiones =
+            versionesOrdenadas(preprint);
+
+        return versiones.length
+            ? versiones[0]
+            : null;
+
+    }
+
+
+    // Obtenemos el año de la actualización más reciente.
+    function anioActualizacion(preprint) {
+
+        const version =
+            versionActual(preprint);
+
+        if (!version || !version.fecha) {
+            return "";
+        }
+
+        return String(version.fecha)
+            .slice(0, 4);
+
+    }
+
+
+    // Referencias a los controles.
+    const selColeccion = $("#f-coleccion");
+    const selSerie = $("#f-serie");
+    const selEstado = $("#f-estado");
+    const selAnio = $("#f-anio");
+
+    const inpAutor = $("#f-autor");
+    const inpTitulo = $("#f-titulo");
+    const inpPalabra = $("#f-palabra");
+
+    const selOrder = $("#f-order");
+
+    const contador = $("#contador");
+    const contenedor = $("#resultados");
+
+    const btnClear = $("#btn-clear");
+
+
+    // =====================================================
+    // LLENAMOS LOS SELECTS
+    // =====================================================
+
+    unique(
+        preprints.map(
+            preprint => preprint.coleccion
+        )
+    )
+        .sort()
+        .forEach(
+            coleccion => {
+
+                selColeccion.insertAdjacentHTML(
+                    "beforeend",
+                    `<option>${coleccion}</option>`
+                );
+
+            }
+        );
+
+
+    unique(
+        preprints.map(
+            preprint => preprint.serie
+        )
+    )
+        .sort()
+        .forEach(
+            serie => {
+
+                selSerie.insertAdjacentHTML(
+                    "beforeend",
+                    `<option>${serie}</option>`
+                );
+
+            }
+        );
+
+
+    unique(
+        preprints.map(
+            preprint => preprint.estado
+        )
+    )
+        .sort()
+        .forEach(
+            estado => {
+
+                selEstado.insertAdjacentHTML(
+                    "beforeend",
+                    `<option>${estado}</option>`
+                );
+
+            }
+        );
+
+
+    unique(
+        preprints.map(
+            preprint =>
+                anioActualizacion(preprint)
+        )
+    )
+        .sort(
+            (a, b) =>
+                Number(b) - Number(a)
+        )
+        .forEach(
+            anio => {
+
+                selAnio.insertAdjacentHTML(
+                    "beforeend",
+                    `<option>${anio}</option>`
+                );
+
+            }
+        );
+
+
+    // =====================================================
+    // COINCIDENCIAS
+    // =====================================================
+
+    function coincideAutor(
+        preprint,
+        busqueda
+    ) {
+
+        if (!busqueda) {
+            return true;
+        }
+
+        const needle =
+            normalizarTexto(busqueda);
+
+        return (
+            preprint.autores || []
+        ).some(
+            autor =>
+                normalizarTexto(autor)
+                    .includes(needle)
+        );
+
+    }
+
+
+    function coincideTitulo(
+        preprint,
+        busqueda
+    ) {
+
+        if (!busqueda) {
+            return true;
+        }
+
+        return normalizarTexto(
+            preprint.titulo
+        ).includes(
+            normalizarTexto(busqueda)
+        );
+
+    }
+
+
+    function coincidePalabra(
+        preprint,
+        busqueda
+    ) {
+
+        if (!busqueda) {
+            return true;
+        }
+
+        const needle =
+            normalizarTexto(busqueda);
+
+
+        const textoCompleto = normalizarTexto(
+            [
+                preprint.id_preprint,
+                preprint.titulo,
+                preprint.resumen,
+                preprint.coleccion,
+                preprint.serie,
+                preprint.estado,
+                ...(preprint.autores || [])
+            ].join(" ")
+        );
+
+
+        return textoCompleto.includes(
+            needle
+        );
+
+    }
+
+
+    // =====================================================
+    // ORDEN
+    // =====================================================
+
+    function compararTituloAsc(a, b) {
+
+        return String(
+            a.titulo || ""
+        ).localeCompare(
+            String(b.titulo || ""),
+            "es",
+            {
+                sensitivity: "base"
+            }
+        );
+
+    }
+
+
+    function compararTituloDesc(a, b) {
+
+        return -compararTituloAsc(a, b);
+
+    }
+
+
+    function fechaActualizacion(preprint) {
+
+        const version =
+            versionActual(preprint);
+
+        if (!version) {
+            return "";
+        }
+
+        return version.fecha || "";
+
+    }
+
+
+    function compararFechaDesc(a, b) {
+
+        const fechaA =
+            fechaActualizacion(a);
+
+        const fechaB =
+            fechaActualizacion(b);
+
+
+        if (
+            fechaA === "" &&
+            fechaB === ""
+        ) {
+
+            return compararTituloAsc(a, b);
+
+        }
+
+
+        if (fechaA === "") {
+            return 1;
+        }
+
+
+        if (fechaB === "") {
+            return -1;
+        }
+
+
+        const comparacion =
+            fechaB.localeCompare(fechaA);
+
+
+        if (comparacion !== 0) {
+            return comparacion;
+        }
+
+
+        return compararTituloAsc(a, b);
+
+    }
+
+
+    function compararFechaAsc(a, b) {
+
+        const fechaA =
+            fechaActualizacion(a);
+
+        const fechaB =
+            fechaActualizacion(b);
+
+
+        if (
+            fechaA === "" &&
+            fechaB === ""
+        ) {
+
+            return compararTituloAsc(a, b);
+
+        }
+
+
+        if (fechaA === "") {
+            return 1;
+        }
+
+
+        if (fechaB === "") {
+            return -1;
+        }
+
+
+        const comparacion =
+            fechaA.localeCompare(fechaB);
+
+
+        if (comparacion !== 0) {
+            return comparacion;
+        }
+
+
+        return compararTituloAsc(a, b);
+
+    }
+
+
+    function getComparator(modo) {
+
+        switch (modo) {
+
+            case "titulo-asc":
+                return compararTituloAsc;
+
+            case "titulo-desc":
+                return compararTituloDesc;
+
+            case "fecha-asc":
+                return compararFechaAsc;
+
+            case "fecha-desc":
+                return compararFechaDesc;
+
+            default:
+                return compararFechaDesc;
+
+        }
+
+    }
+
+
+    // =====================================================
+    // RENDER
+    // =====================================================
 
     function render(lista) {
+
         if (!Array.isArray(lista)) {
-            cont.textContent = 'Error: datos inválidos';
-            contador.textContent = '';
+
+            contenedor.textContent =
+                "Error: datos inválidos.";
+
+            contador.textContent = "";
+
             return;
+
         }
+
 
         contador.textContent =
-            `${lista.length} ${lista.length === 1 ? 'resultado' : 'resultados'}`;
+            `${lista.length} ${
+                lista.length === 1
+                    ? "resultado"
+                    : "resultados"
+            }`;
+
 
         if (!lista.length) {
-            cont.innerHTML = '<p><em>Sin resultados.</em></p>';
+
+            contenedor.innerHTML = `
+                <div class="preprints-no-results">
+
+                    <strong>
+                        No se encontraron preprints.
+                    </strong>
+
+                    <span>
+                        Intenta modificar o limpiar
+                        alguno de los filtros.
+                    </span>
+
+                </div>
+            `;
+
             return;
+
         }
 
-        cont.innerHTML = lista.map(x => `
-            <div class="card">
-                <a href="${BASE}libros/${x.id}/">
-                    <div class="libro-portada">
-                        <img
-                            src="${BASE}assets/covers/${x.id}.jpg"
-                            style="display: none"
-                            onload="this.style.display=''"
-                        >
-                        <img
-                            src="${BASE}assets/covers/${x.id}.png"
-                            style="display: none"
-                            onload="this.style.display=''"
-                        >
-                    </div>
 
-                    <div class="libro-datos">
-                        <h3>${x.titulo}</h3>
+        contenedor.innerHTML =
+            lista.map(
+                preprint => {
 
-                        <div class="autores">
-                            <strong>Autores:</strong>
-                            ${(x.autores && x.autores.length
-                                ? x.autores.join(', ')
-                                : '_')}
-                        </div>
+                    const versiones =
+                        versionesOrdenadas(
+                            preprint
+                        );
 
-                        <div class="meta">
-                            ${[
-                                x.coleccion
-                                    ? `<b>Colección:</b> ${x.coleccion}`
-                                    : '',
-                                x.serie
-                                    ? `<b>Serie:</b> ${x.serie}`
-                                    : '',
-                                x.anio
-                                    ? `<b>Año:</b> ${x.anio}`
-                                    : '',
-                                x.estado
-                                    ? `<b>Estado:</b> ${estadoLegible(x.estado)}`
-                                    : ''    
-                            ].filter(Boolean).join(' | ')}
 
-                            ${x.isbn_libro 
-                                ? `<br><b>ISBN:</b> ${x.isbn_libro}` : ''}
-                        </div>
-                    </div>
-                </a>
-           </div>
-       `).join('');
-}
+                    const actual =
+                        versiones.length
+                            ? versiones[0]
+                            : null;
 
-    function coincideAutor(libro, needle){
-        if(!needle) return true;
-        const n = needle.toLowerCase();
-        return (libro.autores || []).some(a => a.toLowerCase().includes(n));
-        }
-    function coincideTitulo(libro, needle){
-        if(!needle) return true;
-        return normalizarTexto(libro.titulo).includes(normalizarTexto(needle));
+
+                    const numeroVersion =
+                        actual
+                            ? actual.version
+                            : "—";
+
+
+                    const fecha =
+                        actual
+                            ? actual.fecha
+                            : "Sin versión disponible";
+
+
+                    const textoVersiones =
+                        versiones.length === 1
+                            ? "1 versión"
+                            : `${versiones.length} versiones`;
+
+
+                    // Portada real o placeholder.
+                    let portadaHTML;
+
+
+                    if (preprint.portada) {
+
+                        portadaHTML = `
+                            <div class="preprint-cover">
+
+                                <img
+                                    src="${BASE}portadas_preprints/${preprint.portada}"
+                                    alt="Portada de ${preprint.titulo}"
+                                    loading="lazy">
+
+                            </div>
+                        `;
+
+                    } else {
+
+                        portadaHTML = `
+                            <div
+                                class="preprint-cover
+                                       preprint-cover-placeholder">
+
+                                <span>
+                                    ${preprint.id_preprint}
+                                </span>
+
+                                <small>
+                                    Preprint
+                                </small>
+
+                            </div>
+                        `;
+
+                    }
+
+
+                    // Botón del PDF actual.
+                    let botonPDF = "";
+
+
+                    if (
+                        actual &&
+                        actual.archivo
+                    ) {
+
+                        botonPDF = `
+                            <a
+                                href="${BASE}archivos_preprints/${actual.archivo}"
+                                class="md-button
+                                       preprint-secondary-button">
+                                Ver PDF
+                            </a>
+                        `;
+
+                    }
+
+
+                    return `
+                        <article class="preprint-card">
+
+                            <div class="preprint-card-layout">
+
+                                ${portadaHTML}
+
+
+                                <div class="preprint-card-main">
+
+
+                                    <div class="preprint-card-top">
+
+                                        <span class="preprint-id">
+                                            ${preprint.id_preprint}
+                                        </span>
+
+                                        <span class="preprint-date">
+                                            Actualizado ${fecha}
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="preprint-card-content">
+
+                                        <h3 class="preprint-title">
+
+                                            <a
+                                                href="${BASE}preprints/${preprint.id_preprint}/">
+
+                                                ${preprint.titulo}
+
+                                            </a>
+
+                                        </h3>
+
+
+                                        <p class="preprint-authors">
+
+                                            ${
+                                                (
+                                                    preprint.autores ||
+                                                    []
+                                                ).join(" · ")
+                                            }
+
+                                        </p>
+
+
+                                        <p class="preprint-summary">
+
+                                            ${preprint.resumen || ""}
+
+                                        </p>
+
+
+                                        <div class="busqueda-preprint-meta">
+
+                                            ${
+                                                preprint.coleccion
+                                                    ? `<span>
+                                                        <strong>Colección:</strong>
+                                                        ${preprint.coleccion}
+                                                       </span>`
+                                                    : ""
+                                            }
+
+                                            ${
+                                                preprint.serie
+                                                    ? `<span>
+                                                        <strong>Serie:</strong>
+                                                        ${preprint.serie}
+                                                       </span>`
+                                                    : ""
+                                            }
+
+                                            ${
+                                                preprint.estado
+                                                    ? `<span>
+                                                        <strong>Estado:</strong>
+                                                        ${preprint.estado}
+                                                       </span>`
+                                                    : ""
+                                            }
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="preprint-card-footer">
+
+                                        <div class="preprint-version-info">
+
+                                            <span class="preprint-version-badge">
+                                                v${numeroVersion}
+                                            </span>
+
+                                            <span class="preprint-version-count">
+                                                ${textoVersiones}
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="preprint-actions">
+
+                                            <a
+                                                href="${BASE}preprints/${preprint.id_preprint}/"
+                                                class="md-button
+                                                       md-button--primary">
+
+                                                Ver ficha
+
+                                            </a>
+
+                                            ${botonPDF}
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </article>
+                    `;
+
+                }
+            ).join("");
+
     }
-    function filtrar(){
-        const c = selColeccion.value;
-        const s = selSerie.value;
-        const a = selAnio.value;
-        const au = inpAutor.value.trim();
-        const ti = inpTitulo.value.trim();
-        const comparator = getComparator(selOrder.value || 'titulo-asc');
-        const out = libros
-            .filter(x => 
-            (!c || x.coleccion === c) && 
-            (!s || String(x.serie || '') === String(s)) && 
-            (!a || aniosLibro(x).includes(a)) && 
-            coincideAutor(x, au) &&
-            coincideTitulo(x,ti)
-            ).sort(comparator);
-        render(out);
+
+
+    // =====================================================
+    // FILTROS
+    // =====================================================
+
+    function filtrar() {
+
+        const coleccion =
+            selColeccion.value;
+
+        const serie =
+            selSerie.value;
+
+        const estado =
+            selEstado.value;
+
+        const anio =
+            selAnio.value;
+
+        const autor =
+            inpAutor.value.trim();
+
+        const titulo =
+            inpTitulo.value.trim();
+
+        const palabra =
+            inpPalabra.value.trim();
+
+
+        const comparador =
+            getComparator(
+                selOrder.value ||
+                "fecha-desc"
+            );
+
+
+        const resultado =
+            preprints
+
+                .filter(
+                    preprint =>
+
+                        (
+                            !coleccion ||
+                            preprint.coleccion ===
+                                coleccion
+                        )
+
+                        &&
+
+                        (
+                            !serie ||
+                            String(
+                                preprint.serie || ""
+                            ) === String(serie)
+                        )
+
+                        &&
+
+                        (
+                            !estado ||
+                            preprint.estado ===
+                                estado
+                        )
+
+                        &&
+
+                        (
+                            !anio ||
+                            anioActualizacion(
+                                preprint
+                            ) === anio
+                        )
+
+                        &&
+
+                        coincideAutor(
+                            preprint,
+                            autor
+                        )
+
+                        &&
+
+                        coincideTitulo(
+                            preprint,
+                            titulo
+                        )
+
+                        &&
+
+                        coincidePalabra(
+                            preprint,
+                            palabra
+                        )
+
+                )
+
+                .sort(comparador);
+
+
+        render(resultado);
+
     }
-    selColeccion.addEventListener('change', filtrar);
-    selSerie.addEventListener('change', filtrar);
-    selAnio.addEventListener('change', filtrar);
-    inpAutor.addEventListener('input', filtrar);
-    inpTitulo.addEventListener('input', filtrar);
-    selOrder.addEventListener('change',filtrar);
-        const btnClear = document.querySelector('#btn-clear');
-    function limpiar(){
-        selColeccion.value = '';
-        selSerie.value = '';
-        selAnio.value = '';
-        inpAutor.value = '';
-        inpTitulo.value = '';
+
+
+    // =====================================================
+    // EVENTOS
+    // =====================================================
+
+    selColeccion.addEventListener(
+        "change",
+        filtrar
+    );
+
+    selSerie.addEventListener(
+        "change",
+        filtrar
+    );
+
+    selEstado.addEventListener(
+        "change",
+        filtrar
+    );
+
+    selAnio.addEventListener(
+        "change",
+        filtrar
+    );
+
+    inpAutor.addEventListener(
+        "input",
+        filtrar
+    );
+
+    inpTitulo.addEventListener(
+        "input",
+        filtrar
+    );
+
+    inpPalabra.addEventListener(
+        "input",
+        filtrar
+    );
+
+    selOrder.addEventListener(
+        "change",
+        filtrar
+    );
+
+
+    // =====================================================
+    // LIMPIAR
+    // =====================================================
+
+    function limpiar() {
+
+        selColeccion.value = "";
+        selSerie.value = "";
+        selEstado.value = "";
+        selAnio.value = "";
+
+        inpAutor.value = "";
+        inpTitulo.value = "";
+        inpPalabra.value = "";
+
+        selOrder.value =
+            "fecha-desc";
+
         filtrar();
-        inpTitulo.focus();
+
+        inpPalabra.focus();
+
     }
-    btnClear.addEventListener('click',limpiar);
-    const yearNum = (val) => {
-        const m = String (val ?? '').match(/\b(19|20)\d{2}\b/);
-        return m ? Number(m[0]) : NaN;};
-    const cmpTituloAsc = (a,b) => String(a.titulo).localeCompare(String(b.titulo));
-    const cmpTituloDesc = (a,b) => -cmpTituloAsc(a,b);
-    const cmpAnioAsc = (a,b) => {
-        const A = yearNum(a.anio), B = yearNum(b.anio);
-        if (isNaN(A) && isNaN(B)) return cmpTituloAsc(a,b);
-        if (isNaN(A)) return 1;
-        if (isNaN(B)) return -1;
-        if (A !== B) return A-B;
-        return cmpTituloAsc(a,b);
-    };
-    const cmpAnioDesc = (a,b) => {
-        const A = yearNum(a.anio), B = yearNum(b.anio);
-        if (isNaN(A) && isNaN(B)) return cmpTituloAsc(a,b);
-        if (isNaN(A)) return 1;
-        if (isNaN(B)) return -1;
-        if (A !== B) return B-A;
-        return cmpTituloAsc(a,b);
-    };
-    function getComparator(mode){
-        switch(mode) {
-            case 'titulo-asc': return cmpTituloAsc;
-            case 'titulo-desc': return cmpTituloDesc;
-            case 'anio-asc': return cmpAnioAsc;
-            case 'anio-desc': return cmpAnioDesc;
-            default: return cmpTituloAsc;
-        }
-    }
+
+
+    btnClear.addEventListener(
+        "click",
+        limpiar
+    );
+
+
+    // Primera carga.
     filtrar();
+
 })();
 
 </script>
