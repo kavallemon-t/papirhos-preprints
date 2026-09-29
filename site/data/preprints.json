@@ -7,6 +7,7 @@
     "num_serie": "1",
     "resumen": "Documento utilizado para probar el sistema de prepublicaciones.",
     "estado": "Activo",
+    "portada": "pap-pre-001.jpg",
     "autores": [
       "Jean-Paul Brasselet",
       "Felipe Cano"
@@ -36,6 +37,7 @@
     "num_serie": "2",
     "resumen": "Segundo documento utilizado para probar el sistema de prepublicaciones.",
     "estado": "Activo",
+    "portada": "",
     "autores": [
       "Jean-Paul Brasselet"
     ],

@@ -1525,7 +1525,6 @@ body:has(.home-hero) .md-top {
   }
 }
 
-
 /* =========================
    Preprints
    ========================= */
@@ -1835,85 +1834,109 @@ body:has(.home-hero) .md-top {
 }
 
 /* =========================
-   Portadas de preprints
+   Buscador rápido de preprints
    ========================= */
 
-.preprint-card-layout {
-  display: grid;
-  grid-template-columns: 125px minmax(0, 1fr);
-  gap: 1.5rem;
-  align-items: stretch;
+.preprints-search {
+  margin: 0 0 1.6rem;
+  padding: 1.2rem 1.3rem;
+
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 1rem;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
 }
 
-.preprint-card-main {
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-
-/* Contenedor de portada */
-
-.preprint-cover {
-  width: 125px;
-  aspect-ratio: 2 / 3;
-
-  border-radius: 0.65rem;
-  overflow: hidden;
-
-  background: #f1f1f1;
-  border: 1px solid #e0e0e0;
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.preprint-cover img {
+.preprints-search-label {
   display: block;
 
+  margin-bottom: 0.55rem;
+
+  color: #4a4a4a;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.preprints-search-box {
+  position: relative;
+}
+
+.preprints-search-box input {
   width: 100%;
-  height: 100%;
+  box-sizing: border-box;
 
-  object-fit: cover;
+  padding: 0.85rem 1rem;
+
+  background: #f8f8f8;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 0.7rem;
+
+  color: #333333;
+
+  font: inherit;
+  font-size: 0.9rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.preprints-search-box input::placeholder {
+  color: #909090;
+}
+
+.preprints-search-box input:focus {
+  background: #ffffff;
+
+  border-color: #8a6a3a;
+
+  box-shadow: 0 0 0 3px rgba(138, 106, 58, 0.1);
+}
+
+.preprints-results-count {
+  min-height: 1.1rem;
+
+  margin: 0.6rem 0 0 !important;
+
+  color: #777777;
+
+  font-size: 0.76rem;
+  font-weight: 600;
 }
 
 
-/* Placeholder cuando todavía no hay portada */
+/* Sin resultados */
 
-.preprint-cover-placeholder {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.preprints-no-results {
+  margin: 1rem 0 1.6rem;
+  padding: 1.4rem;
 
-  padding: 0.8rem;
+  background: #f7f7f7;
 
-  text-align: center;
+  border: 1px dashed #cccccc;
+  border-radius: 0.8rem;
 
-  background: linear-gradient(
-    145deg,
-    #f5f5f5,
-    #e9e9e9
-  );
-}
-
-.preprint-cover-placeholder span {
   color: #555555;
 
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-
-  overflow-wrap: anywhere;
+  text-align: center;
 }
 
-.preprint-cover-placeholder small {
-  margin-top: 0.4rem;
+.preprints-no-results strong {
+  display: block;
 
-  color: #888888;
+  margin-bottom: 0.3rem;
 
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  color: #3f3f3f;
+}
+
+.preprints-no-results span {
+  font-size: 0.85rem;
 }
 
 
@@ -1921,26 +1944,32 @@ body:has(.home-hero) .md-top {
 
 @media screen and (max-width: 760px) {
 
-  .preprint-card-layout {
-    grid-template-columns: 85px minmax(0, 1fr);
-    gap: 1rem;
+  .preprints-search {
+    padding: 1rem;
   }
 
-  .preprint-cover {
-    width: 85px;
+  .preprints-search-box input {
+    padding: 0.8rem 0.9rem;
+    font-size: 0.85rem;
   }
+
 }
 
+/* Enlace a búsqueda avanzada */
 
-@media screen and (max-width: 520px) {
+.preprints-advanced-link {
+  margin-top: 0.45rem;
+  text-align: right;
+}
 
-  .preprint-card-layout {
-    display: block;
-  }
+.preprints-advanced-link a {
+  color: #6b625a !important;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none !important;
+}
 
-  .preprint-cover {
-    width: 105px;
-    margin: 0 auto 1.2rem;
-  }
-
+.preprints-advanced-link a:hover {
+  color: #8a6a3a !important;
+  text-decoration: underline !important;
 }

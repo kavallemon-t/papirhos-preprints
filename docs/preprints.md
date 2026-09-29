@@ -41,6 +41,55 @@
         </div>
 
 
+        <div class="preprints-search">
+
+            <label
+                for="preprints-search-input"
+                class="preprints-search-label">
+                Buscar preprints
+            </label>
+
+            <div class="preprints-search-box">
+
+                <input
+                    type="search"
+                    id="preprints-search-input"
+                    placeholder="Buscar por título, autor, identificador o palabra clave..."
+                    autocomplete="off">
+
+            </div>
+
+            <p
+                id="preprints-results-count"
+                class="preprints-results-count">
+            </p>
+
+            <div class="preprints-advanced-link">
+                <a href="../explorar/">
+                    Búsqueda avanzada →
+                </a>
+            </div>
+
+        </div>
+
+
+        <div
+            id="preprints-no-results"
+            class="preprints-no-results"
+            hidden>
+
+            <strong>
+                No se encontraron preprints.
+            </strong>
+
+            <span>
+                Intenta con otro título, autor,
+                identificador o palabra clave.
+            </span>
+
+        </div>
+
+
         <article class="preprint-card">
 
             <div class="preprint-card-layout">
@@ -229,3 +278,114 @@
     </section>
 
 </div>
+
+<script>
+(() => {
+
+    const input = document.getElementById(
+        "preprints-search-input"
+    );
+
+    const cards = Array.from(
+        document.querySelectorAll(".preprint-card")
+    );
+
+    const count = document.getElementById(
+        "preprints-results-count"
+    );
+
+    const noResults = document.getElementById(
+        "preprints-no-results"
+    );
+
+
+    function normalizar(texto) {
+
+        return texto
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .trim();
+
+    }
+
+
+    function actualizarContador(visibles) {
+
+        if (!count) return;
+
+
+        if (visibles === 1) {
+
+            count.textContent =
+                "1 preprint encontrado";
+
+        } else {
+
+            count.textContent =
+                `${visibles} preprints encontrados`;
+
+        }
+
+    }
+
+
+    function filtrarPreprints() {
+
+        const consulta = normalizar(
+            input.value
+        );
+
+        let visibles = 0;
+
+
+        cards.forEach((card) => {
+
+            const contenido = normalizar(
+                card.textContent
+            );
+
+            const coincide =
+                consulta === "" ||
+                contenido.includes(consulta);
+
+
+            card.hidden = !coincide;
+
+
+            if (coincide) {
+                visibles += 1;
+            }
+
+        });
+
+
+        actualizarContador(visibles);
+
+
+        if (noResults) {
+
+            noResults.hidden =
+                visibles !== 0;
+
+        }
+
+    }
+
+
+    if (input) {
+
+        input.addEventListener(
+            "input",
+            filtrarPreprints
+        );
+
+    }
+
+
+    actualizarContador(
+        cards.length
+    );
+
+})();
+</script>

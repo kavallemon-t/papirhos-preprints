@@ -1832,3 +1832,373 @@ body:has(.home-hero) .md-top {
     text-align: center;
   }
 }
+
+/* =========================
+   Buscador rápido de preprints
+   ========================= */
+
+.preprints-search {
+  margin: 0 0 1.6rem;
+  padding: 1.2rem 1.3rem;
+
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 1rem;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.preprints-search-label {
+  display: block;
+
+  margin-bottom: 0.55rem;
+
+  color: #4a4a4a;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.preprints-search-box {
+  position: relative;
+}
+
+.preprints-search-box input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0.85rem 1rem;
+
+  background: #f8f8f8;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 0.7rem;
+
+  color: #333333;
+
+  font: inherit;
+  font-size: 0.9rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.preprints-search-box input::placeholder {
+  color: #909090;
+}
+
+.preprints-search-box input:focus {
+  background: #ffffff;
+
+  border-color: #8a6a3a;
+
+  box-shadow: 0 0 0 3px rgba(138, 106, 58, 0.1);
+}
+
+.preprints-results-count {
+  min-height: 1.1rem;
+
+  margin: 0.6rem 0 0 !important;
+
+  color: #777777;
+
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+
+/* Sin resultados */
+
+.preprints-no-results {
+  margin: 1rem 0 1.6rem;
+  padding: 1.4rem;
+
+  background: #f7f7f7;
+
+  border: 1px dashed #cccccc;
+  border-radius: 0.8rem;
+
+  color: #555555;
+
+  text-align: center;
+}
+
+.preprints-no-results strong {
+  display: block;
+
+  margin-bottom: 0.3rem;
+
+  color: #3f3f3f;
+}
+
+.preprints-no-results span {
+  font-size: 0.85rem;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 760px) {
+
+  .preprints-search {
+    padding: 1rem;
+  }
+
+  .preprints-search-box input {
+    padding: 0.8rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+}
+
+/* Enlace a búsqueda avanzada */
+
+.preprints-advanced-link {
+  margin-top: 0.45rem;
+  text-align: right;
+}
+
+.preprints-advanced-link a {
+  color: #6b625a !important;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.preprints-advanced-link a:hover {
+  color: #8a6a3a !important;
+  text-decoration: underline !important;
+}
+
+/* =========================================================
+   BÚSQUEDA AVANZADA DE PREPRINTS
+   ========================================================= */
+
+
+/* Hero de búsqueda avanzada */
+
+.catalogo-hero-busqueda {
+  margin-bottom: 2rem;
+}
+
+
+/* Contenedor principal de filtros */
+
+#filtros {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem 1.2rem;
+
+  margin: 0 0 1.8rem;
+  padding: 1.5rem;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e3e3;
+  border-radius: 1rem;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+
+/* Cada filtro */
+
+#filtros label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+
+  margin: 0;
+
+  color: #3f3f3f;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+
+/* Inputs y selects */
+
+#filtros input,
+#filtros select {
+  width: 100%;
+  box-sizing: border-box;
+
+  min-height: 2.7rem;
+
+  padding: 0.7rem 0.8rem;
+
+  background: #f8f8f8;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 0.65rem;
+
+  color: #333333;
+
+  font: inherit;
+  font-size: 0.87rem;
+  font-weight: 400;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+#filtros input::placeholder {
+  color: #929292;
+}
+
+
+/* Estado activo */
+
+#filtros input:focus,
+#filtros select:focus {
+  background: #ffffff;
+
+  border-color: #8a6a3a;
+
+  box-shadow: 0 0 0 3px rgba(138, 106, 58, 0.1);
+}
+
+
+/* Botón limpiar */
+
+#btn-clear {
+  width: 100%;
+  min-height: 2.7rem;
+
+  align-self: end;
+
+  margin: 0 !important;
+
+  background: #ffffff !important;
+
+  border: 1px solid #bdbdbd !important;
+  border-radius: 0.65rem !important;
+
+  color: #444444 !important;
+
+  font-size: 0.83rem;
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+#btn-clear:hover {
+  background: #f1f1f1 !important;
+  border-color: #9f9f9f !important;
+}
+
+
+/* =========================================================
+   CABECERA DE RESULTADOS
+   ========================================================= */
+
+.busqueda-resultados-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 2rem;
+
+  margin: 0 0 1rem;
+}
+
+
+#contador {
+  color: #777777;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   METADATOS EXTRA DE LAS TARJETAS
+   ========================================================= */
+
+.busqueda-preprint-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+
+  margin-top: 0.85rem;
+}
+
+
+.busqueda-preprint-meta span {
+  display: inline-flex;
+
+  padding: 0.25rem 0.55rem;
+
+  background: #f4f4f4;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 999px;
+
+  color: #666666;
+
+  font-size: 0.7rem;
+  line-height: 1.3;
+}
+
+
+.busqueda-preprint-meta strong {
+  margin-right: 0.25rem;
+
+  color: #4b4b4b;
+}
+
+
+/* =========================================================
+   RESULTADOS
+   ========================================================= */
+
+#resultados {
+  margin-bottom: 3rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 950px) {
+
+  #filtros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media screen and (max-width: 620px) {
+
+  #filtros {
+    grid-template-columns: 1fr;
+
+    padding: 1.1rem;
+  }
+
+
+  #btn-clear {
+    width: 100%;
+  }
+
+
+  .busqueda-preprint-meta {
+    gap: 0.4rem;
+  }
+
+}
