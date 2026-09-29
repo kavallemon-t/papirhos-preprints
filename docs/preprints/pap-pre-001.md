@@ -1,51 +1,205 @@
-# Preprint de prueba
-
-**Autores:** Jean-Paul Brasselet, Felipe Cano
-
-**Identificador:** `pap-pre-001`
-
+---
+title: "pap-pre-001"
 ---
 
-## Resumen
+<section class="preprint-detail-hero">
 
-Documento utilizado para probar el sistema de prepublicaciones.
+    
+            <div
+                class="preprint-detail-cover
+                       preprint-detail-cover-placeholder">
 
-## Versión actual
+                <span>
+                    pap-pre-001
+                </span>
 
-**v2**
+                <small>
+                    Preprint
+                </small>
 
-**Fecha:** 2026-09-17
+            </div>
+        
 
-**Cambios:** Correcciones menores
 
-[Ver PDF](../archivos_preprints/pap-pre-001-v2.pdf)
+    <div class="preprint-detail-main">
 
-## Cómo citar
+        <p class="preprint-detail-eyebrow">
+            Preprint · pap-pre-001
+        </p>
 
-<div class="citation-box">
 
-<blockquote id="cita-actual-pap-pre-001">
-Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints, pap-pre-001, v2. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/
-</blockquote>
+        <h1>
+            Preprint de prueba
+        </h1>
 
-<button
-    type="button"
-    class="citation-copy-button"
-    data-target="cita-actual-pap-pre-001">
-    Copiar cita
-</button>
 
-</div>
+        <p class="preprint-detail-authors">
+            Jean-Paul Brasselet · Felipe Cano
+        </p>
 
-<details>
 
-<summary>BibTeX</summary>
+        <div class="preprint-detail-version">
 
-<textarea
-    id="bibtex-actual-pap-pre-001"
-    rows="7"
-    cols="80"
-    class="verbatim">@misc{pap-pre-001v2,
+            <span class="preprint-version-badge">
+                v2 actual
+            </span>
+
+            <span class="preprint-detail-date">
+                2026-09-17
+            </span>
+
+        </div>
+
+
+        <div class="preprint-detail-actions">
+
+            
+            <a
+                href="../../archivos_preprints/pap-pre-001-v2.pdf"
+                class="md-button md-button--primary">
+
+                Ver PDF
+
+            </a>
+        
+
+            <a
+                href="../"
+                class="md-button preprint-secondary-button">
+
+                Volver a Preprints
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="libro-seccion libro-resumen preprint-resumen">
+
+    <h2>
+        Resumen
+    </h2>
+
+    <p>
+        Documento utilizado para probar el sistema de prepublicaciones.
+    </p>
+
+</section>
+
+
+<section class="libro-seccion preprint-version-section">
+
+    <h2>
+        Versión actual
+    </h2>
+
+
+    <div class="preprint-current-version-card">
+
+        <div class="preprint-current-version-header">
+
+            <div>
+
+                <p class="preprint-current-version-label">
+                    Versión vigente
+                </p>
+
+
+                <div class="preprint-current-version-number">
+
+                    <span class="preprint-version-badge">
+                        v2
+                    </span>
+
+                    <span class="preprint-current-version-date">
+                        2026-09-17
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="../../archivos_preprints/pap-pre-001-v2.pdf"
+                class="md-button md-button--primary">
+
+                Ver PDF
+
+            </a>
+
+        </div>
+
+
+        <div class="preprint-current-version-change">
+
+            <span class="preprint-version-meta-label">
+                Cambios en esta versión
+            </span>
+
+            <p>
+                Correcciones menores
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="libro-seccion preprint-citation-section">
+
+    <h2>
+        Cómo citar
+    </h2>
+
+
+    <div class="citation-box citation-box-featured">
+
+        <div class="citation-box-main">
+
+            <p
+                id="cita-actual-pap-pre-001"
+                class="citation-text">
+
+                Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints, pap-pre-001, v2. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/
+
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="citation-copy-button"
+            data-target="cita-actual-pap-pre-001">
+
+            Copiar cita
+
+        </button>
+
+    </div>
+
+
+    <details class="preprint-bibtex-details">
+
+        <summary>
+            BibTeX
+        </summary>
+
+
+        <div class="preprint-bibtex-content">
+
+            <textarea
+                id="bibtex-actual-pap-pre-001"
+                rows="7"
+                cols="80"
+                class="verbatim preprint-bibtex-area">@misc{pap-pre-001v2,
   author = {Jean-Paul Brasselet and Felipe Cano},
   title = {Preprint de prueba},
   year = {2026},
@@ -53,51 +207,135 @@ Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints
   url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/}
 }</textarea>
 
-<br>
 
-<button
-    type="button"
-    class="bibtex-copy-button"
-    data-target="bibtex-actual-pap-pre-001">
-    Copiar BibTeX
-</button>
+            <button
+                type="button"
+                class="bibtex-copy-button"
+                data-target="bibtex-actual-pap-pre-001">
 
-</details>
+                Copiar BibTeX
 
-## Historial de versiones
+            </button>
 
-### v2
+        </div>
 
-- **Fecha:** 2026-09-17
-- **Cambios:** Correcciones menores
-- [Ver PDF](../archivos_preprints/pap-pre-001-v2.pdf)
+    </details>
 
-**Cómo citar esta versión**
+</section>
 
-<div class="citation-box">
 
-<blockquote id="cita-pap-pre-001-v2">
-Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints, pap-pre-001, v2. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/
-</blockquote>
+<section class="libro-seccion preprint-history-section">
 
-<button
-    type="button"
-    class="citation-copy-button"
-    data-target="cita-pap-pre-001-v2">
-    Copiar cita
-</button>
+    <h2>
+        Historial de versiones
+    </h2>
 
-</div>
 
-<details>
+    <p class="preprint-history-intro">
+        Consulta las versiones anteriores de este preprint,
+        sus fechas de publicación y los cambios realizados.
+    </p>
 
-<summary>BibTeX</summary>
 
-<textarea
-    id="bibtex-pap-pre-001-v2"
-    rows="7"
-    cols="80"
-    class="verbatim">@misc{pap-pre-001v2,
+    <div class="preprint-history-list">
+
+
+        <article class="preprint-history-card">
+
+            <div class="preprint-history-card-header">
+
+                <div class="preprint-history-version">
+
+                    <span class="preprint-history-number">
+                        v2
+                    </span>
+
+                    <span class="preprint-history-current">Actual</span>
+
+                </div>
+
+
+                <span class="preprint-history-date">
+                    2026-09-17
+                </span>
+
+            </div>
+
+
+            <div class="preprint-history-card-body">
+
+                <div class="preprint-history-change">
+
+                    <span class="preprint-version-meta-label">
+                        Cambios
+                    </span>
+
+                    <p>
+                        Correcciones menores
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="../../archivos_preprints/pap-pre-001-v2.pdf"
+                    class="md-button preprint-secondary-button">
+
+                    Ver PDF
+
+                </a>
+
+            </div>
+
+
+            <details class="preprint-history-details">
+
+                <summary>
+                    Citación y BibTeX
+                </summary>
+
+
+                <div class="preprint-history-citation-content">
+
+                    <div class="citation-box">
+
+                        <div class="citation-box-main">
+
+                            <p
+                                id="cita-pap-pre-001-v2"
+                                class="citation-text">
+
+                                Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints, pap-pre-001, v2. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/
+
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="citation-copy-button"
+                            data-target="cita-pap-pre-001-v2">
+
+                            Copiar cita
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="preprint-history-bibtex">
+
+                        <p class="preprint-history-bibtex-title">
+                            BibTeX
+                        </p>
+
+
+                        <textarea
+                            id="bibtex-pap-pre-001-v2"
+                            rows="7"
+                            cols="80"
+                            class="verbatim preprint-bibtex-area">@misc{pap-pre-001v2,
   author = {Jean-Paul Brasselet and Felipe Cano},
   title = {Preprint de prueba},
   year = {2026},
@@ -105,49 +343,121 @@ Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints
   url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/}
 }</textarea>
 
-<br>
 
-<button
-    type="button"
-    class="bibtex-copy-button"
-    data-target="bibtex-pap-pre-001-v2">
-    Copiar BibTeX
-</button>
+                        <button
+                            type="button"
+                            class="bibtex-copy-button"
+                            data-target="bibtex-pap-pre-001-v2">
 
-</details>
+                            Copiar BibTeX
 
-### v1
+                        </button>
 
-- **Fecha:** 2026-09-01
-- **Cambios:** Primera versión
-- [Ver PDF](../archivos_preprints/pap-pre-001-v1.pdf)
+                    </div>
 
-**Cómo citar esta versión**
+                </div>
 
-<div class="citation-box">
+            </details>
 
-<blockquote id="cita-pap-pre-001-v1">
-Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints, pap-pre-001, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/
-</blockquote>
+        </article>
 
-<button
-    type="button"
-    class="citation-copy-button"
-    data-target="cita-pap-pre-001-v1">
-    Copiar cita
-</button>
 
-</div>
+        <article class="preprint-history-card">
 
-<details>
+            <div class="preprint-history-card-header">
 
-<summary>BibTeX</summary>
+                <div class="preprint-history-version">
 
-<textarea
-    id="bibtex-pap-pre-001-v1"
-    rows="7"
-    cols="80"
-    class="verbatim">@misc{pap-pre-001v1,
+                    <span class="preprint-history-number">
+                        v1
+                    </span>
+
+                    
+
+                </div>
+
+
+                <span class="preprint-history-date">
+                    2026-09-01
+                </span>
+
+            </div>
+
+
+            <div class="preprint-history-card-body">
+
+                <div class="preprint-history-change">
+
+                    <span class="preprint-version-meta-label">
+                        Cambios
+                    </span>
+
+                    <p>
+                        Primera versión
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="../../archivos_preprints/pap-pre-001-v1.pdf"
+                    class="md-button preprint-secondary-button">
+
+                    Ver PDF
+
+                </a>
+
+            </div>
+
+
+            <details class="preprint-history-details">
+
+                <summary>
+                    Citación y BibTeX
+                </summary>
+
+
+                <div class="preprint-history-citation-content">
+
+                    <div class="citation-box">
+
+                        <div class="citation-box-main">
+
+                            <p
+                                id="cita-pap-pre-001-v1"
+                                class="citation-text">
+
+                                Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints, pap-pre-001, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/
+
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="citation-copy-button"
+                            data-target="cita-pap-pre-001-v1">
+
+                            Copiar cita
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="preprint-history-bibtex">
+
+                        <p class="preprint-history-bibtex-title">
+                            BibTeX
+                        </p>
+
+
+                        <textarea
+                            id="bibtex-pap-pre-001-v1"
+                            rows="7"
+                            cols="80"
+                            class="verbatim preprint-bibtex-area">@misc{pap-pre-001v1,
   author = {Jean-Paul Brasselet and Felipe Cano},
   title = {Preprint de prueba},
   year = {2026},
@@ -155,16 +465,28 @@ Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints
   url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/}
 }</textarea>
 
-<br>
 
-<button
-    type="button"
-    class="bibtex-copy-button"
-    data-target="bibtex-pap-pre-001-v1">
-    Copiar BibTeX
-</button>
+                        <button
+                            type="button"
+                            class="bibtex-copy-button"
+                            data-target="bibtex-pap-pre-001-v1">
 
-</details>
+                            Copiar BibTeX
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </details>
+
+        </article>
+
+
+    </div>
+
+</section>
 
 
 <script>

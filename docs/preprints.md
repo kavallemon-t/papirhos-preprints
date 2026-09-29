@@ -95,12 +95,15 @@
             <div class="preprint-card-layout">
 
                 
-            <div class="preprint-cover">
+            <div class="preprint-cover preprint-cover-placeholder">
 
-                <img
-                    src="../portadas_preprints/pap-pre-001.jpg"
-                    alt="Portada de Preprint de prueba"
-                    loading="lazy">
+                <span>
+                    pap-pre-001
+                </span>
+
+                <small>
+                    Preprint
+                </small>
 
             </div>
         

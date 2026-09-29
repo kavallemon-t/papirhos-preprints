@@ -1975,198 +1975,652 @@ body:has(.home-hero) .md-top {
 }
 
 /* =========================================================
-   BÚSQUEDA AVANZADA DE PREPRINTS
+   FICHA INDIVIDUAL DE PREPRINT
    ========================================================= */
 
-
-/* Hero de búsqueda avanzada */
-
-.catalogo-hero-busqueda {
-  margin-bottom: 2rem;
-}
-
-
-/* Contenedor principal de filtros */
-
-#filtros {
+.preprint-detail-hero {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem 1.2rem;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
 
-  margin: 0 0 1.8rem;
-  padding: 1.5rem;
+  margin: 1rem 0 2.3rem;
+  padding: 2rem;
 
   background: #ffffff;
 
   border: 1px solid #e3e3e3;
   border-radius: 1rem;
 
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
 }
 
 
-/* Cada filtro */
+/* =========================================================
+   PORTADA
+   ========================================================= */
 
-#filtros label {
+.preprint-detail-cover {
+  width: 180px;
+  aspect-ratio: 2 / 3;
+
+  overflow: hidden;
+
+  background: #f1f1f1;
+
+  border: 1px solid #dedede;
+  border-radius: 0.7rem;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+
+.preprint-detail-cover img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   PLACEHOLDER CUANDO NO HAY PORTADA
+   ========================================================= */
+
+.preprint-detail-cover-placeholder {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  justify-content: center;
+  align-items: center;
 
-  margin: 0;
+  box-sizing: border-box;
 
-  color: #3f3f3f;
+  padding: 1rem;
+
+  text-align: center;
+
+  background: linear-gradient(
+    145deg,
+    #f5f5f5,
+    #e8e8e8
+  );
+}
+
+
+.preprint-detail-cover-placeholder span {
+  color: #555555;
 
   font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+
+  overflow-wrap: anywhere;
+}
+
+
+.preprint-detail-cover-placeholder small {
+  margin-top: 0.5rem;
+
+  color: #888888;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   INFORMACIÓN PRINCIPAL
+   ========================================================= */
+
+.preprint-detail-main {
+  min-width: 0;
+}
+
+
+.preprint-detail-eyebrow {
+  margin: 0 0 0.55rem !important;
+
+  color: #8a6a3a !important;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+
+.preprint-detail-main h1 {
+  margin: 0 0 0.7rem !important;
+
+  color: #2f2f2f;
+
+  font-size: 2.2rem;
+  line-height: 1.15;
   font-weight: 800;
 }
 
 
-/* Inputs y selects */
+.preprint-detail-authors {
+  margin: 0 0 1.2rem !important;
 
-#filtros input,
-#filtros select {
-  width: 100%;
-  box-sizing: border-box;
+  color: #6b625a;
 
-  min-height: 2.7rem;
-
-  padding: 0.7rem 0.8rem;
-
-  background: #f8f8f8;
-
-  border: 1px solid #d6d6d6;
-  border-radius: 0.65rem;
-
-  color: #333333;
-
-  font: inherit;
-  font-size: 0.87rem;
-  font-weight: 400;
-
-  outline: none;
-
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-
-#filtros input::placeholder {
-  color: #929292;
-}
-
-
-/* Estado activo */
-
-#filtros input:focus,
-#filtros select:focus {
-  background: #ffffff;
-
-  border-color: #8a6a3a;
-
-  box-shadow: 0 0 0 3px rgba(138, 106, 58, 0.1);
-}
-
-
-/* Botón limpiar */
-
-#btn-clear {
-  width: 100%;
-  min-height: 2.7rem;
-
-  align-self: end;
-
-  margin: 0 !important;
-
-  background: #ffffff !important;
-
-  border: 1px solid #bdbdbd !important;
-  border-radius: 0.65rem !important;
-
-  color: #444444 !important;
-
-  font-size: 0.83rem;
+  font-size: 0.95rem;
   font-weight: 700;
-
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease;
-}
-
-
-#btn-clear:hover {
-  background: #f1f1f1 !important;
-  border-color: #9f9f9f !important;
 }
 
 
 /* =========================================================
-   CABECERA DE RESULTADOS
+   VERSIÓN ACTUAL EN EL ENCABEZADO
    ========================================================= */
 
-.busqueda-resultados-header {
+.preprint-detail-version {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 0.7rem;
 
-  min-height: 2rem;
-
-  margin: 0 0 1rem;
+  margin-bottom: 1.3rem;
 }
 
 
-#contador {
+.preprint-detail-date {
   color: #777777;
 
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 
 /* =========================================================
-   METADATOS EXTRA DE LAS TARJETAS
+   BOTONES
    ========================================================= */
 
-.busqueda-preprint-meta {
+.preprint-detail-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 0.8rem;
-
-  margin-top: 0.85rem;
+  gap: 0.7rem;
 }
 
 
-.busqueda-preprint-meta span {
+.preprint-detail-actions .md-button {
+  margin: 0 !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 760px) {
+
+  .preprint-detail-hero {
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 1.3rem;
+
+    padding: 1.3rem;
+  }
+
+
+  .preprint-detail-cover {
+    width: 120px;
+  }
+
+
+  .preprint-detail-main h1 {
+    font-size: 1.65rem;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media screen and (max-width: 520px) {
+
+  .preprint-detail-hero {
+    display: block;
+
+    padding: 1.2rem;
+  }
+
+
+  .preprint-detail-cover {
+    width: 130px;
+
+    margin: 0 auto 1.4rem;
+  }
+
+
+  .preprint-detail-main {
+    text-align: center;
+  }
+
+
+  .preprint-detail-version {
+    justify-content: center;
+  }
+
+
+  .preprint-detail-actions {
+    justify-content: center;
+  }
+
+
+  .preprint-detail-actions .md-button {
+    flex: 1;
+
+    text-align: center;
+  }
+
+}
+
+/* =========================================================
+   VERSIÓN ACTUAL
+   ========================================================= */
+
+.preprint-current-version-card {
+  margin: 1rem 0 2rem;
+  padding: 1.4rem 1.5rem;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e3e3;
+  border-radius: 0.9rem;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+
+.preprint-current-version-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.preprint-current-version-label {
+  margin: 0 0 0.45rem !important;
+
+  color: #777777;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+.preprint-current-version-number {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+
+.preprint-current-version-date {
+  color: #777777;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+
+.preprint-current-version-change {
+  padding-top: 1rem;
+}
+
+
+.preprint-version-meta-label {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  color: #777777;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+
+.preprint-current-version-change p {
+  margin: 0 !important;
+
+  color: #444444;
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CAJA DE CITACIÓN
+   ========================================================= */
+
+.citation-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  margin: 1rem 0;
+  padding: 1rem 1.1rem;
+
+  background: #f8f8f8;
+
+  border: 1px solid #e2e2e2;
+  border-radius: 0.75rem;
+}
+
+
+.citation-box-featured {
+  background: #ffffff;
+
+  border-left: 4px solid #8a6a3a;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+
+.citation-box-main {
+  min-width: 0;
+  flex: 1;
+}
+
+
+.citation-text {
+  margin: 0 !important;
+
+  color: #444444;
+
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+
+.citation-copy-button,
+.bibtex-copy-button {
+  flex-shrink: 0;
+
+  padding: 0.55rem 0.8rem;
+
+  background: #ffffff;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 0.55rem;
+
+  color: #4a4a4a;
+
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.citation-copy-button:hover,
+.bibtex-copy-button:hover {
+  background: #f0f0f0;
+  border-color: #a9a9a9;
+}
+
+
+.citation-copy-button.copied,
+.bibtex-copy-button.copied {
+  border-color: #8a6a3a;
+
+  color: #8a6a3a;
+}
+
+
+/* =========================================================
+   BIBTEX DE LA VERSIÓN ACTUAL
+   ========================================================= */
+
+.preprint-bibtex-details {
+  margin: 0 0 2rem;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e3e3;
+  border-radius: 0.75rem;
+}
+
+
+.preprint-bibtex-details summary {
+  padding: 0.85rem 1rem;
+
+  color: #555555;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+.preprint-bibtex-details[open] summary {
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.preprint-bibtex-content {
+  padding: 1rem;
+}
+
+
+.preprint-bibtex-area {
+  display: block;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  margin: 0 0 0.8rem;
+  padding: 0.9rem;
+
+  resize: vertical;
+
+  background: #f7f7f7;
+
+  border: 1px solid #dddddd;
+  border-radius: 0.55rem;
+
+  color: #444444;
+
+  font-family: monospace;
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   HISTORIAL
+   ========================================================= */
+
+.preprint-history-intro {
+  margin: -0.3rem 0 1.3rem !important;
+
+  color: #777777;
+
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+
+.preprint-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin-bottom: 3rem;
+}
+
+
+.preprint-history-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e3e3;
+  border-radius: 0.85rem;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.025);
+}
+
+
+.preprint-history-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem 1.2rem;
+
+  background: #f8f8f8;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.preprint-history-version {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+
+.preprint-history-number {
+  color: #3e3e3e;
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+
+.preprint-history-current {
   display: inline-flex;
 
-  padding: 0.25rem 0.55rem;
+  padding: 0.2rem 0.5rem;
 
-  background: #f4f4f4;
+  background: #ece8e1;
 
-  border: 1px solid #e5e5e5;
   border-radius: 999px;
+
+  color: #6b5840;
+
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
+.preprint-history-date {
+  color: #777777;
+
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+
+.preprint-history-card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+
+  padding: 1rem 1.2rem;
+}
+
+
+.preprint-history-change {
+  min-width: 0;
+  flex: 1;
+}
+
+
+.preprint-history-change p {
+  margin: 0 !important;
+
+  color: #4d4d4d;
+
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CITACIÓN DE CADA VERSIÓN
+   ========================================================= */
+
+.preprint-history-details {
+  border-top: 1px solid #eeeeee;
+}
+
+
+.preprint-history-details summary {
+  padding: 0.8rem 1.2rem;
 
   color: #666666;
 
-  font-size: 0.7rem;
-  line-height: 1.3;
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  cursor: pointer;
 }
 
 
-.busqueda-preprint-meta strong {
-  margin-right: 0.25rem;
+.preprint-history-details[open] summary {
+  background: #fafafa;
 
-  color: #4b4b4b;
+  border-bottom: 1px solid #eeeeee;
 }
 
 
-/* =========================================================
-   RESULTADOS
-   ========================================================= */
+.preprint-history-citation-content {
+  padding: 0.2rem 1.2rem 1.2rem;
+}
 
-#resultados {
-  margin-bottom: 3rem;
+
+.preprint-history-bibtex {
+  margin-top: 1rem;
+}
+
+
+.preprint-history-bibtex-title {
+  margin: 0 0 0.5rem !important;
+
+  color: #666666;
+
+  font-size: 0.74rem;
+  font-weight: 800;
 }
 
 
@@ -2174,31 +2628,39 @@ body:has(.home-hero) .md-top {
    RESPONSIVE
    ========================================================= */
 
-@media screen and (max-width: 950px) {
-
-  #filtros {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-}
-
-
 @media screen and (max-width: 620px) {
 
-  #filtros {
-    grid-template-columns: 1fr;
-
-    padding: 1.1rem;
+  .preprint-current-version-header,
+  .preprint-history-card-body {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
 
-  #btn-clear {
+  .preprint-current-version-header .md-button,
+  .preprint-history-card-body .md-button {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+  }
+
+
+  .citation-box {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+
+  .citation-copy-button,
+  .bibtex-copy-button {
     width: 100%;
   }
 
 
-  .busqueda-preprint-meta {
-    gap: 0.4rem;
+  .preprint-history-card-header {
+    align-items: flex-start;
   }
 
 }

@@ -45,13 +45,23 @@ for preprint in preprints:
     titulo = preprint["titulo"]
     resumen = preprint["resumen"]
 
+    # Portada: puede existir o estar vacía
+    portada = (
+        preprint.get("portada") or ""
+    ).strip()
+
     autores = preprint.get("autores", [])
     versiones = preprint.get("versiones", [])
 
+    # Para las citas usamos comas
     autores_texto = ", ".join(autores)
 
+    # Para el encabezado visual usamos puntos medios
+    autores_header = " · ".join(autores)
 
-    # Ordenamos las versiones de la más reciente a la más antigua
+
+    # Ordenamos las versiones de la más reciente
+    # a la más antigua
     versiones_ordenadas = sorted(
         versiones,
         key=lambda v: int(v["version"]),
@@ -67,22 +77,152 @@ for preprint in preprints:
     )
 
 
-    contenido = f"""# {titulo}
+    # =====================================================
+    # PORTADA DE LA FICHA
+    # =====================================================
 
-**Autores:** {autores_texto}
+    if portada:
 
-**Identificador:** `{id_preprint}`
+        portada_ficha = f"""
+            <div class="preprint-detail-cover">
 
+                <img
+                    src="../../portadas_preprints/{portada}"
+                    alt="Portada de {titulo}"
+                    loading="lazy">
+
+            </div>
+        """
+
+    else:
+
+        portada_ficha = f"""
+            <div
+                class="preprint-detail-cover
+                       preprint-detail-cover-placeholder">
+
+                <span>
+                    {id_preprint}
+                </span>
+
+                <small>
+                    Preprint
+                </small>
+
+            </div>
+        """
+
+
+    # =====================================================
+    # INFORMACIÓN RÁPIDA DE LA VERSIÓN ACTUAL
+    # =====================================================
+
+    if version_actual:
+
+        version_header = (
+            f'v{version_actual["version"]} actual'
+        )
+
+        fecha_header = version_actual["fecha"]
+
+        boton_pdf_header = f"""
+            <a
+                href="../../archivos_preprints/{version_actual["archivo"]}"
+                class="md-button md-button--primary">
+
+                Ver PDF
+
+            </a>
+        """
+
+    else:
+
+        version_header = "Sin versión"
+        fecha_header = "Sin fecha"
+        boton_pdf_header = ""
+
+
+    # =====================================================
+    # ENCABEZADO VISUAL DE LA FICHA
+    # =====================================================
+
+    contenido = f"""---
+title: "{id_preprint}"
 ---
 
-## Resumen
+<section class="preprint-detail-hero">
 
-{resumen}
+    {portada_ficha}
+
+
+    <div class="preprint-detail-main">
+
+        <p class="preprint-detail-eyebrow">
+            Preprint · {id_preprint}
+        </p>
+
+
+        <h1>
+            {titulo}
+        </h1>
+
+
+        <p class="preprint-detail-authors">
+            {autores_header}
+        </p>
+
+
+        <div class="preprint-detail-version">
+
+            <span class="preprint-version-badge">
+                {version_header}
+            </span>
+
+            <span class="preprint-detail-date">
+                {fecha_header}
+            </span>
+
+        </div>
+
+
+        <div class="preprint-detail-actions">
+
+            {boton_pdf_header}
+
+            <a
+                href="../"
+                class="md-button preprint-secondary-button">
+
+                Volver a Preprints
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="libro-seccion libro-resumen preprint-resumen">
+
+    <h2>
+        Resumen
+    </h2>
+
+    <p>
+        {resumen}
+    </p>
+
+</section>
 
 """
 
 
-    # Información de la versión actual
+    # =====================================================
+    # INFORMACIÓN DE LA VERSIÓN ACTUAL
+    # =====================================================
+
     if version_actual:
 
         # Obtenemos el año a partir de la fecha
@@ -120,59 +260,159 @@ for preprint in preprints:
         id_bibtex_actual = f"bibtex-actual-{id_preprint}"
 
 
-        contenido += f"""## Versión actual
+        # =================================================
+        # VERSIÓN ACTUAL
+        # =================================================
 
-**v{version_actual["version"]}**
+        contenido += f"""
+<section class="libro-seccion preprint-version-section">
 
-**Fecha:** {version_actual["fecha"]}
+    <h2>
+        Versión actual
+    </h2>
 
-**Cambios:** {version_actual["nota_version"]}
 
-[Ver PDF](../archivos_preprints/{version_actual["archivo"]})
+    <div class="preprint-current-version-card">
 
-## Cómo citar
+        <div class="preprint-current-version-header">
 
-<div class="citation-box">
+            <div>
 
-<blockquote id="{id_cita_actual}">
-{cita}
-</blockquote>
+                <p class="preprint-current-version-label">
+                    Versión vigente
+                </p>
 
-<button
-    type="button"
-    class="citation-copy-button"
-    data-target="{id_cita_actual}">
-    Copiar cita
-</button>
 
-</div>
+                <div class="preprint-current-version-number">
 
-<details>
+                    <span class="preprint-version-badge">
+                        v{version_actual["version"]}
+                    </span>
 
-<summary>BibTeX</summary>
+                    <span class="preprint-current-version-date">
+                        {version_actual["fecha"]}
+                    </span>
 
-<textarea
-    id="{id_bibtex_actual}"
-    rows="7"
-    cols="80"
-    class="verbatim">{bibtex}</textarea>
+                </div>
 
-<br>
+            </div>
 
-<button
-    type="button"
-    class="bibtex-copy-button"
-    data-target="{id_bibtex_actual}">
-    Copiar BibTeX
-</button>
 
-</details>
+            <a
+                href="../../archivos_preprints/{version_actual["archivo"]}"
+                class="md-button md-button--primary">
+
+                Ver PDF
+
+            </a>
+
+        </div>
+
+
+        <div class="preprint-current-version-change">
+
+            <span class="preprint-version-meta-label">
+                Cambios en esta versión
+            </span>
+
+            <p>
+                {version_actual.get("nota_version") or "Sin nota de cambios."}
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="libro-seccion preprint-citation-section">
+
+    <h2>
+        Cómo citar
+    </h2>
+
+
+    <div class="citation-box citation-box-featured">
+
+        <div class="citation-box-main">
+
+            <p
+                id="{id_cita_actual}"
+                class="citation-text">
+
+                {cita}
+
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="citation-copy-button"
+            data-target="{id_cita_actual}">
+
+            Copiar cita
+
+        </button>
+
+    </div>
+
+
+    <details class="preprint-bibtex-details">
+
+        <summary>
+            BibTeX
+        </summary>
+
+
+        <div class="preprint-bibtex-content">
+
+            <textarea
+                id="{id_bibtex_actual}"
+                rows="7"
+                cols="80"
+                class="verbatim preprint-bibtex-area">{bibtex}</textarea>
+
+
+            <button
+                type="button"
+                class="bibtex-copy-button"
+                data-target="{id_bibtex_actual}">
+
+                Copiar BibTeX
+
+            </button>
+
+        </div>
+
+    </details>
+
+</section>
 
 """
 
 
-    # Historial de versiones
-    contenido += """## Historial de versiones
+    # =====================================================
+    # HISTORIAL DE VERSIONES
+    # =====================================================
+
+    contenido += """
+<section class="libro-seccion preprint-history-section">
+
+    <h2>
+        Historial de versiones
+    </h2>
+
+
+    <p class="preprint-history-intro">
+        Consulta las versiones anteriores de este preprint,
+        sus fechas de publicación y los cambios realizados.
+    </p>
+
+
+    <div class="preprint-history-list">
 
 """
 
@@ -217,52 +457,150 @@ for preprint in preprints:
         )
 
 
-        contenido += f"""### v{version["version"]}
+        # Indicamos visualmente cuál es la versión actual
+        es_actual = (
+            version_actual
+            and version["version"] == version_actual["version"]
+        )
 
-- **Fecha:** {version["fecha"]}
-- **Cambios:** {version["nota_version"]}
-- [Ver PDF](../archivos_preprints/{version["archivo"]})
+        etiqueta_actual = (
+            '<span class="preprint-history-current">Actual</span>'
+            if es_actual
+            else ""
+        )
 
-**Cómo citar esta versión**
 
-<div class="citation-box">
+        nota_version = (
+            version.get("nota_version")
+            or "Sin nota de cambios."
+        )
 
-<blockquote id="{id_cita_version}">
-{cita_version}
-</blockquote>
 
-<button
-    type="button"
-    class="citation-copy-button"
-    data-target="{id_cita_version}">
-    Copiar cita
-</button>
+        contenido += f"""
+        <article class="preprint-history-card">
 
-</div>
+            <div class="preprint-history-card-header">
 
-<details>
+                <div class="preprint-history-version">
 
-<summary>BibTeX</summary>
+                    <span class="preprint-history-number">
+                        v{version["version"]}
+                    </span>
 
-<textarea
-    id="{id_bibtex_version}"
-    rows="7"
-    cols="80"
-    class="verbatim">{bibtex_version}</textarea>
+                    {etiqueta_actual}
 
-<br>
+                </div>
 
-<button
-    type="button"
-    class="bibtex-copy-button"
-    data-target="{id_bibtex_version}">
-    Copiar BibTeX
-</button>
 
-</details>
+                <span class="preprint-history-date">
+                    {version["fecha"]}
+                </span>
+
+            </div>
+
+
+            <div class="preprint-history-card-body">
+
+                <div class="preprint-history-change">
+
+                    <span class="preprint-version-meta-label">
+                        Cambios
+                    </span>
+
+                    <p>
+                        {nota_version}
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="../../archivos_preprints/{version["archivo"]}"
+                    class="md-button preprint-secondary-button">
+
+                    Ver PDF
+
+                </a>
+
+            </div>
+
+
+            <details class="preprint-history-details">
+
+                <summary>
+                    Citación y BibTeX
+                </summary>
+
+
+                <div class="preprint-history-citation-content">
+
+                    <div class="citation-box">
+
+                        <div class="citation-box-main">
+
+                            <p
+                                id="{id_cita_version}"
+                                class="citation-text">
+
+                                {cita_version}
+
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="citation-copy-button"
+                            data-target="{id_cita_version}">
+
+                            Copiar cita
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="preprint-history-bibtex">
+
+                        <p class="preprint-history-bibtex-title">
+                            BibTeX
+                        </p>
+
+
+                        <textarea
+                            id="{id_bibtex_version}"
+                            rows="7"
+                            cols="80"
+                            class="verbatim preprint-bibtex-area">{bibtex_version}</textarea>
+
+
+                        <button
+                            type="button"
+                            class="bibtex-copy-button"
+                            data-target="{id_bibtex_version}">
+
+                            Copiar BibTeX
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </details>
+
+        </article>
 
 """
 
+
+    contenido += """
+    </div>
+
+</section>
+
+"""
 
     # JavaScript para copiar citas y BibTeX
     contenido += """
