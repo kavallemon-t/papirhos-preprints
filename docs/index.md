@@ -2,7 +2,7 @@
 
 <div class="home-hero-text">
 
-<h1 class="home-title">Papirhos Preprints</h1>
+<h1 class="home-title">Texedores Preprints</h1>
 
 <p class="home-lead">
 Repositorio de prepublicaciones y materiales académicos de matemáticas del Instituto de Matemáticas, UNAM.

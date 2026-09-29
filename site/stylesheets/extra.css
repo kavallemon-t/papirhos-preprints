@@ -2224,74 +2224,238 @@ body:has(.home-hero) .md-top {
 }
 
 /* =========================================================
-   PREPRINTS — INTEGRACIÓN CON FICHAS DE PAPIRHOS DIGITAL
+   VERSIÓN ACTUAL
    ========================================================= */
 
+.preprint-current-version-card {
+  margin: 1rem 0 2rem;
+  padding: 1.4rem 1.5rem;
 
-/* Espaciado entre las secciones */
+  background: #ffffff;
 
-.preprint-resumen,
-.preprint-version-section,
-.preprint-citation-section,
-.preprint-history-section {
-  margin-bottom: 1rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 0.9rem;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
 }
 
 
-/* =========================================================
-   RESUMEN
-   ========================================================= */
+.preprint-current-version-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 
-.preprint-resumen p {
-  margin: 0;
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.preprint-current-version-label {
+  margin: 0 0 0.45rem !important;
+
+  color: #777777;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+.preprint-current-version-number {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+
+.preprint-current-version-date {
+  color: #777777;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+
+.preprint-current-version-change {
+  padding-top: 1rem;
+}
+
+
+.preprint-version-meta-label {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  color: #777777;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+
+.preprint-current-version-change p {
+  margin: 0 !important;
 
   color: #444444;
 
   font-size: 0.9rem;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 
 /* =========================================================
-   VERSIÓN ACTUAL
+   CAJA DE CITACIÓN
    ========================================================= */
 
-.preprint-version-section .preprint-current-version-card {
-  margin: 0;
-  padding: 1.2rem;
+.citation-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  margin: 1rem 0;
+  padding: 1rem 1.1rem;
+
+  background: #f8f8f8;
+
+  border: 1px solid #e2e2e2;
+  border-radius: 0.75rem;
+}
+
+
+.citation-box-featured {
+  background: #ffffff;
+
+  border-left: 4px solid #8a6a3a;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+
+.citation-box-main {
+  min-width: 0;
+  flex: 1;
+}
+
+
+.citation-text {
+  margin: 0 !important;
+
+  color: #444444;
+
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+
+.citation-copy-button,
+.bibtex-copy-button {
+  flex-shrink: 0;
+
+  padding: 0.55rem 0.8rem;
 
   background: #ffffff;
 
-  border: 1px solid #dedede;
-  border-radius: 0.65rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 0.55rem;
 
-  box-shadow: none;
+  color: #4a4a4a;
+
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.citation-copy-button:hover,
+.bibtex-copy-button:hover {
+  background: #f0f0f0;
+  border-color: #a9a9a9;
+}
+
+
+.citation-copy-button.copied,
+.bibtex-copy-button.copied {
+  border-color: #8a6a3a;
+
+  color: #8a6a3a;
 }
 
 
 /* =========================================================
-   CÓMO CITAR
+   BIBTEX DE LA VERSIÓN ACTUAL
    ========================================================= */
 
-.preprint-citation-section .citation-box-featured {
-  margin-top: 0;
+.preprint-bibtex-details {
+  margin: 0 0 2rem;
+
+  overflow: hidden;
 
   background: #ffffff;
 
-  box-shadow: none;
+  border: 1px solid #e3e3e3;
+  border-radius: 0.75rem;
 }
 
 
-.preprint-citation-section .preprint-bibtex-details {
-  margin-bottom: 0;
+.preprint-bibtex-details summary {
+  padding: 0.85rem 1rem;
+
+  color: #555555;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  cursor: pointer;
 }
 
 
-/* Usamos el estilo desplegable de Papirhos Digital */
+.preprint-bibtex-details[open] summary {
+  border-bottom: 1px solid #eeeeee;
+}
 
-.preprint-citation-section details summary,
-.preprint-history-section details summary {
-  color: #3a332d !important;
+
+.preprint-bibtex-content {
+  padding: 1rem;
+}
+
+
+.preprint-bibtex-area {
+  display: block;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  margin: 0 0 0.8rem;
+  padding: 0.9rem;
+
+  resize: vertical;
+
+  background: #f7f7f7;
+
+  border: 1px solid #dddddd;
+  border-radius: 0.55rem;
+
+  color: #444444;
+
+  font-family: monospace;
+  font-size: 0.76rem;
+  line-height: 1.5;
 }
 
 
@@ -2299,29 +2463,347 @@ body:has(.home-hero) .md-top {
    HISTORIAL
    ========================================================= */
 
-.preprint-history-section .preprint-history-intro {
-  margin: 0 0 1rem !important;
+.preprint-history-intro {
+  margin: -0.3rem 0 1.3rem !important;
 
-  color: #666666;
+  color: #777777;
 
   font-size: 0.86rem;
   line-height: 1.6;
 }
 
 
-.preprint-history-section .preprint-history-list {
-  margin-bottom: 0;
+.preprint-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin-bottom: 3rem;
 }
 
 
-.preprint-history-section .preprint-history-card {
-  box-shadow: none;
+.preprint-history-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e3e3;
+  border-radius: 0.85rem;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.025);
 }
 
 
-/* Evitamos que los details heredados tengan
-   un margen excesivo dentro de cada tarjeta */
+.preprint-history-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 
-.preprint-history-card details {
-  margin-top: 0;
+  padding: 1rem 1.2rem;
+
+  background: #f8f8f8;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.preprint-history-version {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+
+.preprint-history-number {
+  color: #3e3e3e;
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+
+.preprint-history-current {
+  display: inline-flex;
+
+  padding: 0.2rem 0.5rem;
+
+  background: #ece8e1;
+
+  border-radius: 999px;
+
+  color: #6b5840;
+
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
+.preprint-history-date {
+  color: #777777;
+
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+
+.preprint-history-card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+
+  padding: 1rem 1.2rem;
+}
+
+
+.preprint-history-change {
+  min-width: 0;
+  flex: 1;
+}
+
+
+.preprint-history-change p {
+  margin: 0 !important;
+
+  color: #4d4d4d;
+
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CITACIÓN DE CADA VERSIÓN
+   ========================================================= */
+
+.preprint-history-details {
+  border-top: 1px solid #eeeeee;
+}
+
+
+.preprint-history-details summary {
+  padding: 0.8rem 1.2rem;
+
+  color: #666666;
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+.preprint-history-details[open] summary {
+  background: #fafafa;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.preprint-history-citation-content {
+  padding: 0.2rem 1.2rem 1.2rem;
+}
+
+
+.preprint-history-bibtex {
+  margin-top: 1rem;
+}
+
+
+.preprint-history-bibtex-title {
+  margin: 0 0 0.5rem !important;
+
+  color: #666666;
+
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 620px) {
+
+  .preprint-current-version-header,
+  .preprint-history-card-body {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+
+  .preprint-current-version-header .md-button,
+  .preprint-history-card-body .md-button {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+  }
+
+
+  .citation-box {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+
+  .citation-copy-button,
+  .bibtex-copy-button {
+    width: 100%;
+  }
+
+
+  .preprint-history-card-header {
+    align-items: flex-start;
+  }
+
+}
+/* =========================================================
+   PORTADAS EN TARJETAS DE PREPRINTS
+   Página principal + búsqueda avanzada
+   ========================================================= */
+
+
+/* La tarjeta se divide en portada + contenido */
+
+.preprint-card .preprint-card-layout {
+  display: grid !important;
+  grid-template-columns: 125px minmax(0, 1fr) !important;
+
+  gap: 1.5rem !important;
+
+  align-items: start !important;
+}
+
+
+/* Contenedor de portada */
+
+.preprint-card .preprint-cover {
+  display: block !important;
+
+  width: 125px !important;
+  height: 188px !important;
+
+  min-width: 125px !important;
+  max-width: 125px !important;
+
+  overflow: hidden !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: #f1f1f1 !important;
+
+  border: 1px solid #dedede !important;
+  border-radius: 0.65rem !important;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+
+/* Imagen real */
+
+.preprint-card .preprint-cover img {
+  display: block !important;
+
+  width: 125px !important;
+  height: 188px !important;
+
+  min-width: 125px !important;
+  max-width: 125px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+
+/* Placeholder */
+
+.preprint-card .preprint-cover-placeholder {
+  display: flex !important;
+  flex-direction: column !important;
+
+  justify-content: center !important;
+  align-items: center !important;
+
+  box-sizing: border-box !important;
+
+  padding: 0.8rem !important;
+
+  text-align: center !important;
+}
+
+
+/* Contenido */
+
+.preprint-card .preprint-card-main {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 760px) {
+
+  .preprint-card .preprint-card-layout {
+    grid-template-columns: 90px minmax(0, 1fr) !important;
+
+    gap: 1rem !important;
+  }
+
+
+  .preprint-card .preprint-cover,
+  .preprint-card .preprint-cover img {
+    width: 90px !important;
+    height: 135px !important;
+
+    min-width: 90px !important;
+    max-width: 90px !important;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media screen and (max-width: 520px) {
+
+  .preprint-card .preprint-card-layout {
+    display: block !important;
+  }
+
+
+  .preprint-card .preprint-cover {
+    width: 105px !important;
+    height: 158px !important;
+
+    min-width: 105px !important;
+    max-width: 105px !important;
+
+    margin: 0 auto 1rem !important;
+  }
+
+
+  .preprint-card .preprint-cover img {
+    width: 105px !important;
+    height: 158px !important;
+
+    min-width: 105px !important;
+    max-width: 105px !important;
+  }
+
 }

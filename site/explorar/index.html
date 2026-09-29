@@ -676,32 +676,25 @@
 
 (async function () {
 
-    const {
-        origin,
-        hostname,
-        pathname
-    } = window.location;
-
-
-    // Calculamos la ruta base tanto para desarrollo local
-    // como para GitHub Pages.
-    let BASE = origin + "/";
-
-    if (hostname.endsWith(".github.io")) {
-
-        const segmentos =
-            pathname
-                .split("/")
-                .filter(Boolean);
-
-        if (segmentos.length > 0) {
-
-            BASE =
-                `${origin}/${segmentos[0]}/`;
-
-        }
-
-    }
+    /*
+     * Calculamos la raíz del sitio a partir de la página actual.
+     *
+     * Ejemplos:
+     *
+     * Local:
+     * /papirhos-preprints/explorar/
+     *          ↓
+     * /papirhos-preprints/
+     *
+     * GitHub Pages:
+     * /papirhos-preprints/explorar/
+     *          ↓
+     * /papirhos-preprints/
+     */
+    const BASE = new URL(
+        "../",
+        window.location.href
+    ).href;
 
 
     // Leemos la base de datos de preprints.
@@ -709,8 +702,30 @@
         `${BASE}data/preprints.json`
     );
 
+
+    // Si el archivo no pudo cargarse,
+    // mostramos un error claro en la consola.
+    if (!respuesta.ok) {
+
+        throw new Error(
+            `No se pudo cargar preprints.json: ${respuesta.status}`
+        );
+
+    }
+
+
     const preprints =
         await respuesta.json();
+
+
+    // Verificamos que el JSON tenga la estructura esperada.
+    if (!Array.isArray(preprints)) {
+
+        throw new Error(
+            "preprints.json no contiene una lista válida."
+        );
+
+    }
 
 
     // Atajo para querySelector.
