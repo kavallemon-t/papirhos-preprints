@@ -1,21 +1,16 @@
 ---
-title: "pap-pre-001"
+title: "pap-tex-10"
 ---
 
 <section class="preprint-detail-hero">
 
     
-            <div
-                class="preprint-detail-cover
-                       preprint-detail-cover-placeholder">
+            <div class="preprint-detail-cover">
 
-                <span>
-                    pap-pre-001
-                </span>
-
-                <small>
-                    Preprint
-                </small>
+                <img
+                    src="../../portadas_preprints/pap-tex-10.png"
+                    alt="Portada de Curso introductorio de álgebra II"
+                    loading="lazy">
 
             </div>
         
@@ -24,28 +19,28 @@ title: "pap-pre-001"
     <div class="preprint-detail-main">
 
         <p class="preprint-detail-eyebrow">
-            Preprint · pap-pre-001
+            Preprint · pap-tex-10
         </p>
 
 
         <h1>
-            Preprint de prueba
+            Curso introductorio de álgebra II
         </h1>
 
 
         <p class="preprint-detail-authors">
-            Jean-Paul Brasselet · Felipe Cano
+            Diana Avella · Gabriela Campero · Edith Corina Saenz Valadez
         </p>
 
 
         <div class="preprint-detail-version">
 
             <span class="preprint-version-badge">
-                v2 actual
+                v1 actual
             </span>
 
             <span class="preprint-detail-date">
-                2026-09-17
+                2026-09-29
             </span>
 
         </div>
@@ -55,7 +50,7 @@ title: "pap-pre-001"
 
             
             <a
-                href="../../archivos_preprints/pap-pre-001-v2.pdf"
+                href="../../archivos_preprints/pap-tex-10-v1.pdf"
                 class="md-button md-button--primary">
 
                 Ver PDF
@@ -85,7 +80,7 @@ title: "pap-pre-001"
     </h2>
 
     <p>
-        Documento utilizado para probar el sistema de prepublicaciones.
+        Resumen no disponible por el momento.
     </p>
 
 </section>
@@ -112,11 +107,11 @@ title: "pap-pre-001"
                 <div class="preprint-current-version-number">
 
                     <span class="preprint-version-badge">
-                        v2
+                        v1
                     </span>
 
                     <span class="preprint-current-version-date">
-                        2026-09-17
+                        2026-09-29
                     </span>
 
                 </div>
@@ -125,7 +120,7 @@ title: "pap-pre-001"
 
 
             <a
-                href="../../archivos_preprints/pap-pre-001-v2.pdf"
+                href="../../archivos_preprints/pap-tex-10-v1.pdf"
                 class="md-button md-button--primary">
 
                 Ver PDF
@@ -142,7 +137,7 @@ title: "pap-pre-001"
             </span>
 
             <p>
-                Correcciones menores
+                Primera versión disponible en Papirhos Preprints.
             </p>
 
         </div>
@@ -164,10 +159,10 @@ title: "pap-pre-001"
         <div class="citation-box-main">
 
             <p
-                id="cita-actual-pap-pre-001"
+                id="cita-actual-pap-tex-10"
                 class="citation-text">
 
-                Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints, pap-pre-001, v2. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/
+                Diana Avella, Gabriela Campero, Edith Corina Saenz Valadez. (2026). Curso introductorio de álgebra II. Papirhos Preprints, pap-tex-10, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-10/
 
             </p>
 
@@ -177,7 +172,7 @@ title: "pap-pre-001"
         <button
             type="button"
             class="citation-copy-button"
-            data-target="cita-actual-pap-pre-001">
+            data-target="cita-actual-pap-tex-10">
 
             Copiar cita
 
@@ -196,22 +191,22 @@ title: "pap-pre-001"
         <div class="preprint-bibtex-content">
 
             <textarea
-                id="bibtex-actual-pap-pre-001"
+                id="bibtex-actual-pap-tex-10"
                 rows="7"
                 cols="80"
-                class="verbatim preprint-bibtex-area">@misc{pap-pre-001v2,
-  author = {Jean-Paul Brasselet and Felipe Cano},
-  title = {Preprint de prueba},
+                class="verbatim preprint-bibtex-area">@misc{pap-tex-10v1,
+  author = {Diana Avella and Gabriela Campero and Edith Corina Saenz Valadez},
+  title = {Curso introductorio de álgebra II},
   year = {2026},
-  note = {Papirhos Preprints: pap-pre-001, v2},
-  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/}
+  note = {Papirhos Preprints: pap-tex-10, v1},
+  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-10/}
 }</textarea>
 
 
             <button
                 type="button"
                 class="bibtex-copy-button"
-                data-target="bibtex-actual-pap-pre-001">
+                data-target="bibtex-actual-pap-tex-10">
 
                 Copiar BibTeX
 
@@ -247,7 +242,7 @@ title: "pap-pre-001"
                 <div class="preprint-history-version">
 
                     <span class="preprint-history-number">
-                        v2
+                        v1
                     </span>
 
                     <span class="preprint-history-current">Actual</span>
@@ -256,7 +251,7 @@ title: "pap-pre-001"
 
 
                 <span class="preprint-history-date">
-                    2026-09-17
+                    2026-09-29
                 </span>
 
             </div>
@@ -271,14 +266,14 @@ title: "pap-pre-001"
                     </span>
 
                     <p>
-                        Correcciones menores
+                        Primera versión disponible en Papirhos Preprints.
                     </p>
 
                 </div>
 
 
                 <a
-                    href="../../archivos_preprints/pap-pre-001-v2.pdf"
+                    href="../../archivos_preprints/pap-tex-10-v1.pdf"
                     class="md-button preprint-secondary-button">
 
                     Ver PDF
@@ -302,10 +297,10 @@ title: "pap-pre-001"
                         <div class="citation-box-main">
 
                             <p
-                                id="cita-pap-pre-001-v2"
+                                id="cita-pap-tex-10-v1"
                                 class="citation-text">
 
-                                Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints, pap-pre-001, v2. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/
+                                Diana Avella, Gabriela Campero, Edith Corina Saenz Valadez. (2026). Curso introductorio de álgebra II. Papirhos Preprints, pap-tex-10, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-10/
 
                             </p>
 
@@ -315,7 +310,7 @@ title: "pap-pre-001"
                         <button
                             type="button"
                             class="citation-copy-button"
-                            data-target="cita-pap-pre-001-v2">
+                            data-target="cita-pap-tex-10-v1">
 
                             Copiar cita
 
@@ -332,144 +327,22 @@ title: "pap-pre-001"
 
 
                         <textarea
-                            id="bibtex-pap-pre-001-v2"
+                            id="bibtex-pap-tex-10-v1"
                             rows="7"
                             cols="80"
-                            class="verbatim preprint-bibtex-area">@misc{pap-pre-001v2,
-  author = {Jean-Paul Brasselet and Felipe Cano},
-  title = {Preprint de prueba},
+                            class="verbatim preprint-bibtex-area">@misc{pap-tex-10v1,
+  author = {Diana Avella and Gabriela Campero and Edith Corina Saenz Valadez},
+  title = {Curso introductorio de álgebra II},
   year = {2026},
-  note = {Papirhos Preprints: pap-pre-001, v2},
-  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/}
+  note = {Papirhos Preprints: pap-tex-10, v1},
+  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-10/}
 }</textarea>
 
 
                         <button
                             type="button"
                             class="bibtex-copy-button"
-                            data-target="bibtex-pap-pre-001-v2">
-
-                            Copiar BibTeX
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </details>
-
-        </article>
-
-
-        <article class="preprint-history-card">
-
-            <div class="preprint-history-card-header">
-
-                <div class="preprint-history-version">
-
-                    <span class="preprint-history-number">
-                        v1
-                    </span>
-
-                    
-
-                </div>
-
-
-                <span class="preprint-history-date">
-                    2026-09-01
-                </span>
-
-            </div>
-
-
-            <div class="preprint-history-card-body">
-
-                <div class="preprint-history-change">
-
-                    <span class="preprint-version-meta-label">
-                        Cambios
-                    </span>
-
-                    <p>
-                        Primera versión
-                    </p>
-
-                </div>
-
-
-                <a
-                    href="../../archivos_preprints/pap-pre-001-v1.pdf"
-                    class="md-button preprint-secondary-button">
-
-                    Ver PDF
-
-                </a>
-
-            </div>
-
-
-            <details class="preprint-history-details">
-
-                <summary>
-                    Citación y BibTeX
-                </summary>
-
-
-                <div class="preprint-history-citation-content">
-
-                    <div class="citation-box">
-
-                        <div class="citation-box-main">
-
-                            <p
-                                id="cita-pap-pre-001-v1"
-                                class="citation-text">
-
-                                Jean-Paul Brasselet, Felipe Cano. (2026). Preprint de prueba. Papirhos Preprints, pap-pre-001, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/
-
-                            </p>
-
-                        </div>
-
-
-                        <button
-                            type="button"
-                            class="citation-copy-button"
-                            data-target="cita-pap-pre-001-v1">
-
-                            Copiar cita
-
-                        </button>
-
-                    </div>
-
-
-                    <div class="preprint-history-bibtex">
-
-                        <p class="preprint-history-bibtex-title">
-                            BibTeX
-                        </p>
-
-
-                        <textarea
-                            id="bibtex-pap-pre-001-v1"
-                            rows="7"
-                            cols="80"
-                            class="verbatim preprint-bibtex-area">@misc{pap-pre-001v1,
-  author = {Jean-Paul Brasselet and Felipe Cano},
-  title = {Preprint de prueba},
-  year = {2026},
-  note = {Papirhos Preprints: pap-pre-001, v1},
-  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-001/}
-}</textarea>
-
-
-                        <button
-                            type="button"
-                            class="bibtex-copy-button"
-                            data-target="bibtex-pap-pre-001-v1">
+                            data-target="bibtex-pap-tex-10-v1">
 
                             Copiar BibTeX
 

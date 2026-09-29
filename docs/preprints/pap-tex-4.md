@@ -1,21 +1,16 @@
 ---
-title: "pap-pre-002"
+title: "pap-tex-4"
 ---
 
 <section class="preprint-detail-hero">
 
     
-            <div
-                class="preprint-detail-cover
-                       preprint-detail-cover-placeholder">
+            <div class="preprint-detail-cover">
 
-                <span>
-                    pap-pre-002
-                </span>
-
-                <small>
-                    Preprint
-                </small>
+                <img
+                    src="../../portadas_preprints/pap-tex-4.jpg"
+                    alt="Portada de Grupos II"
+                    loading="lazy">
 
             </div>
         
@@ -24,17 +19,17 @@ title: "pap-pre-002"
     <div class="preprint-detail-main">
 
         <p class="preprint-detail-eyebrow">
-            Preprint · pap-pre-002
+            Preprint · pap-tex-4
         </p>
 
 
         <h1>
-            Segundo preprint de prueba
+            Grupos II
         </h1>
 
 
         <p class="preprint-detail-authors">
-            Jean-Paul Brasselet
+            Diana Avella · Octavio Mendoza · Edith Corina Saenz Valadez · María José Souto
         </p>
 
 
@@ -45,7 +40,7 @@ title: "pap-pre-002"
             </span>
 
             <span class="preprint-detail-date">
-                2026-09-17
+                2026-09-29
             </span>
 
         </div>
@@ -55,7 +50,7 @@ title: "pap-pre-002"
 
             
             <a
-                href="../../archivos_preprints/pap-pre-002-v1.pdf"
+                href="../../archivos_preprints/pap-tex-4-v1.pdf"
                 class="md-button md-button--primary">
 
                 Ver PDF
@@ -85,7 +80,7 @@ title: "pap-pre-002"
     </h2>
 
     <p>
-        Segundo documento utilizado para probar el sistema de prepublicaciones.
+        Resumen no disponible por el momento.
     </p>
 
 </section>
@@ -116,7 +111,7 @@ title: "pap-pre-002"
                     </span>
 
                     <span class="preprint-current-version-date">
-                        2026-09-17
+                        2026-09-29
                     </span>
 
                 </div>
@@ -125,7 +120,7 @@ title: "pap-pre-002"
 
 
             <a
-                href="../../archivos_preprints/pap-pre-002-v1.pdf"
+                href="../../archivos_preprints/pap-tex-4-v1.pdf"
                 class="md-button md-button--primary">
 
                 Ver PDF
@@ -142,7 +137,7 @@ title: "pap-pre-002"
             </span>
 
             <p>
-                Correcciones menores
+                Primera versión disponible en Papirhos Preprints.
             </p>
 
         </div>
@@ -164,10 +159,10 @@ title: "pap-pre-002"
         <div class="citation-box-main">
 
             <p
-                id="cita-actual-pap-pre-002"
+                id="cita-actual-pap-tex-4"
                 class="citation-text">
 
-                Jean-Paul Brasselet. (2026). Segundo preprint de prueba. Papirhos Preprints, pap-pre-002, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-002/
+                Diana Avella, Octavio Mendoza, Edith Corina Saenz Valadez, María José Souto. (2026). Grupos II. Papirhos Preprints, pap-tex-4, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-4/
 
             </p>
 
@@ -177,7 +172,7 @@ title: "pap-pre-002"
         <button
             type="button"
             class="citation-copy-button"
-            data-target="cita-actual-pap-pre-002">
+            data-target="cita-actual-pap-tex-4">
 
             Copiar cita
 
@@ -196,22 +191,22 @@ title: "pap-pre-002"
         <div class="preprint-bibtex-content">
 
             <textarea
-                id="bibtex-actual-pap-pre-002"
+                id="bibtex-actual-pap-tex-4"
                 rows="7"
                 cols="80"
-                class="verbatim preprint-bibtex-area">@misc{pap-pre-002v1,
-  author = {Jean-Paul Brasselet},
-  title = {Segundo preprint de prueba},
+                class="verbatim preprint-bibtex-area">@misc{pap-tex-4v1,
+  author = {Diana Avella and Octavio Mendoza and Edith Corina Saenz Valadez and María José Souto},
+  title = {Grupos II},
   year = {2026},
-  note = {Papirhos Preprints: pap-pre-002, v1},
-  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-002/}
+  note = {Papirhos Preprints: pap-tex-4, v1},
+  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-4/}
 }</textarea>
 
 
             <button
                 type="button"
                 class="bibtex-copy-button"
-                data-target="bibtex-actual-pap-pre-002">
+                data-target="bibtex-actual-pap-tex-4">
 
                 Copiar BibTeX
 
@@ -256,7 +251,7 @@ title: "pap-pre-002"
 
 
                 <span class="preprint-history-date">
-                    2026-09-17
+                    2026-09-29
                 </span>
 
             </div>
@@ -271,14 +266,14 @@ title: "pap-pre-002"
                     </span>
 
                     <p>
-                        Correcciones menores
+                        Primera versión disponible en Papirhos Preprints.
                     </p>
 
                 </div>
 
 
                 <a
-                    href="../../archivos_preprints/pap-pre-002-v1.pdf"
+                    href="../../archivos_preprints/pap-tex-4-v1.pdf"
                     class="md-button preprint-secondary-button">
 
                     Ver PDF
@@ -302,10 +297,10 @@ title: "pap-pre-002"
                         <div class="citation-box-main">
 
                             <p
-                                id="cita-pap-pre-002-v1"
+                                id="cita-pap-tex-4-v1"
                                 class="citation-text">
 
-                                Jean-Paul Brasselet. (2026). Segundo preprint de prueba. Papirhos Preprints, pap-pre-002, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-002/
+                                Diana Avella, Octavio Mendoza, Edith Corina Saenz Valadez, María José Souto. (2026). Grupos II. Papirhos Preprints, pap-tex-4, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-4/
 
                             </p>
 
@@ -315,7 +310,7 @@ title: "pap-pre-002"
                         <button
                             type="button"
                             class="citation-copy-button"
-                            data-target="cita-pap-pre-002-v1">
+                            data-target="cita-pap-tex-4-v1">
 
                             Copiar cita
 
@@ -332,22 +327,22 @@ title: "pap-pre-002"
 
 
                         <textarea
-                            id="bibtex-pap-pre-002-v1"
+                            id="bibtex-pap-tex-4-v1"
                             rows="7"
                             cols="80"
-                            class="verbatim preprint-bibtex-area">@misc{pap-pre-002v1,
-  author = {Jean-Paul Brasselet},
-  title = {Segundo preprint de prueba},
+                            class="verbatim preprint-bibtex-area">@misc{pap-tex-4v1,
+  author = {Diana Avella and Octavio Mendoza and Edith Corina Saenz Valadez and María José Souto},
+  title = {Grupos II},
   year = {2026},
-  note = {Papirhos Preprints: pap-pre-002, v1},
-  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-pre-002/}
+  note = {Papirhos Preprints: pap-tex-4, v1},
+  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-4/}
 }</textarea>
 
 
                         <button
                             type="button"
                             class="bibtex-copy-button"
-                            data-target="bibtex-pap-pre-002-v1">
+                            data-target="bibtex-pap-tex-4-v1">
 
                             Copiar BibTeX
 

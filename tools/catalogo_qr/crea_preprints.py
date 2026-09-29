@@ -14,15 +14,36 @@ preprints = pd.read_csv(
 # Limpiamos posibles espacios en los nombres de las columnas
 preprints.columns = preprints.columns.str.strip()
 
-# Normalizamos la columna de portada
-if "portada" not in preprints.columns:
-    preprints["portada"] = ""
-else:
-    preprints["portada"] = (
-        preprints["portada"]
-        .fillna("")
-        .str.strip()
-    )
+# Normalizamos las columnas de texto.
+# Los valores vacíos se mantienen como cadenas vacías
+# en lugar de convertirse en NaN.
+
+columnas_texto = [
+    "id_preprint",
+    "titulo",
+    "coleccion",
+    "serie",
+    "num_serie",
+    "resumen",
+    "estado",
+    "portada",
+]
+
+
+for columna in columnas_texto:
+
+    if columna not in preprints.columns:
+
+        preprints[columna] = ""
+
+    else:
+
+        preprints[columna] = (
+            preprints[columna]
+            .fillna("")
+            .astype(str)
+            .str.strip()
+        )
 
 autores = pd.read_csv(
     os.path.join(BASE_DIR, "autores.csv"),

@@ -2664,3 +2664,146 @@ body:has(.home-hero) .md-top {
   }
 
 }
+/* =========================================================
+   PORTADAS EN TARJETAS DE PREPRINTS
+   Página principal + búsqueda avanzada
+   ========================================================= */
+
+
+/* La tarjeta se divide en portada + contenido */
+
+.preprint-card .preprint-card-layout {
+  display: grid !important;
+  grid-template-columns: 125px minmax(0, 1fr) !important;
+
+  gap: 1.5rem !important;
+
+  align-items: start !important;
+}
+
+
+/* Contenedor de portada */
+
+.preprint-card .preprint-cover {
+  display: block !important;
+
+  width: 125px !important;
+  height: 188px !important;
+
+  min-width: 125px !important;
+  max-width: 125px !important;
+
+  overflow: hidden !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: #f1f1f1 !important;
+
+  border: 1px solid #dedede !important;
+  border-radius: 0.65rem !important;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+
+/* Imagen real */
+
+.preprint-card .preprint-cover img {
+  display: block !important;
+
+  width: 125px !important;
+  height: 188px !important;
+
+  min-width: 125px !important;
+  max-width: 125px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+
+/* Placeholder */
+
+.preprint-card .preprint-cover-placeholder {
+  display: flex !important;
+  flex-direction: column !important;
+
+  justify-content: center !important;
+  align-items: center !important;
+
+  box-sizing: border-box !important;
+
+  padding: 0.8rem !important;
+
+  text-align: center !important;
+}
+
+
+/* Contenido */
+
+.preprint-card .preprint-card-main {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 760px) {
+
+  .preprint-card .preprint-card-layout {
+    grid-template-columns: 90px minmax(0, 1fr) !important;
+
+    gap: 1rem !important;
+  }
+
+
+  .preprint-card .preprint-cover,
+  .preprint-card .preprint-cover img {
+    width: 90px !important;
+    height: 135px !important;
+
+    min-width: 90px !important;
+    max-width: 90px !important;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media screen and (max-width: 520px) {
+
+  .preprint-card .preprint-card-layout {
+    display: block !important;
+  }
+
+
+  .preprint-card .preprint-cover {
+    width: 105px !important;
+    height: 158px !important;
+
+    min-width: 105px !important;
+    max-width: 105px !important;
+
+    margin: 0 auto 1rem !important;
+  }
+
+
+  .preprint-card .preprint-cover img {
+    width: 105px !important;
+    height: 158px !important;
+
+    min-width: 105px !important;
+    max-width: 105px !important;
+  }
+
+}
