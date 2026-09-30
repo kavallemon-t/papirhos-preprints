@@ -17,10 +17,11 @@ if [[ ! -f "$pdf.pdf" ]]; then
 	exit 1
 fi
 
- output="$1.png"
+ output="$1"
 
-echo pdftoppm -f 1 -l 1 -r 300 -png "$pdf.pdf" "$output"
+pdftoppm -f 1 -l 1 -r 300 -png "$pdf.pdf" "$output"
 
-mv "${output}-001.png" "${outputpath}${1%.*}.png"
+# mv "${inputpath}${output}-001.png" "${outputpath}${1%'-v1'}.png"
+mv "$1-001.png" "${outputpath}${1%'-v1'}.png"
 
 # echo "Cover page extracted to ${output}-001.png"
