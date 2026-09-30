@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-inputpath="../docs/assets/pdfs_src/"
-outputpath="../docs/assets/covers/"
+inputpath="../docs/archivos_preprints/"
+outputpath="../docs/portadas_preprints/"
 
 if [[ $# -ne 1 ]]; then
 	echo "Usage: $0 input.pdf" >&2
@@ -12,13 +12,14 @@ fi
 
 pdf="${inputpath}$1"
 # pdf=$1
-if [[ ! -f "$pdf" ]]; then
+if [[ ! -f "$pdf.pdf" ]]; then
 	echo "File not found: $pdf" >&2
 	exit 1
 fi
 
-output="${pdf%.*}"
-pdftoppm -f 1 -l 1 -r 300 -png "$pdf" "$output"
+ output="$1.png"
+
+echo pdftoppm -f 1 -l 1 -r 300 -png "$pdf.pdf" "$output"
 
 mv "${output}-001.png" "${outputpath}${1%.*}.png"
 
