@@ -1,19 +1,19 @@
-id_preprint,titulo,coleccion,serie,num_serie,resumen,estado,portada
-pap-not-1,"Teoría de singularidades en topología, geometría y foliaciones I",Papirhos,Notas,1,Resumen no disponible por el momento.,Activo,pap-not-1.jpg
-cuad-x-1,Combinatoria,Cuadernos de olimpiadas de matemáticas,,1,Resumen no disponible por el momento.,Activo,cuad-x-1.png
-pap-tex-6,Curso introductorio de álgebra I,Papirhos,Textos,6,Resumen no disponible por el momento.,Activo,pap-tex-6.png
-pap-tex-10,Curso introductorio de álgebra II,Papirhos,Textos,10,Resumen no disponible por el momento.,Activo,pap-tex-10.png
-pap-tex-1,Grupos I,Papirhos,Textos,1,Resumen no disponible por el momento.,Activo,pap-tex-1.png
-pap-tex-4,Grupos II,Papirhos,Textos,4,Resumen no disponible por el momento.,Activo,pap-tex-4.jpg
-pap-mix-1,Por la senda de los círculos,Papirhos,Mixbaal,1,Resumen no disponible por el momento.,Activo,pap-mix-1.jpg
-pap-ico-3,Concursos Nacionales de la Olimpiada Mexicana de Matemáticas:1987-2016,Papirhos,Icosaedro,3,Resumen no disponible por el momento.,Activo,pap-ico-3.png
-pap-tex-2,Análisis Matemático,Papirhos,Textos,2,Resumen no disponible por el momento.,Activo,pap-tex-2.png
-pap-tex-3,Topología Diferencial,Papirhos,Textos,3,Resumen no disponible por el momento.,Activo,pap-tex-3.png
-pap-tex-5,Geometría euclidiana bidimensional y su grupo de transformaciones,Papirhos,Textos,5,Resumen no disponible por el momento.,Activo,pap-tex-5.png
-pap-tex-7,Clases características,Papirhos,Textos,7,Resumen no disponible por el momento.,Activo,pap-tex-7.png
-pap-tex-9,Introducción al álgebra lineal,Papirhos,Textos,9,Resumen no disponible por el momento.,Activo,pap-tex-9.png
-pap-tex-11,Curso breve de geometría proyectiva,Papirhos,Textos,11,Resumen no disponible por el momento.,Activo,pap-tex-11.png
-pap-tex-12,Métodos topológicos en el estudio de las ecuaciones diferenciales no lineales,Papirhos,Textos,12,Resumen no disponible por el momento.,Activo,pap-tex-12.png
-pap-not-2,"Teoría de singularidades en topología, geometría y foliaciones II",Papirhos,Notas,2,Resumen no disponible por el momento.,Activo,pap-not-2.jpg
-pap-not-3,Teoría de las gráficas: algunas aportaciones desde México,Papirhos,Notas,3,Resumen no disponible por el momento.,Activo,pap-not-3.png
-pap-act-1,Proceedings of the Workshop on Holomorphic Dynamics,Papirhos,Actas,1,Resumen no disponible por el momento.,Activo,pap-act-1.png
+id_preprint,titulo,coleccion,serie,num_serie,portada
+pap-not-1,"Teoría de singularidades en topología, geometría y foliaciones I",Papirhos,Notas,1,pap-not-1.jpg
+cuad-x-1,Combinatoria,Cuadernos de olimpiadas de matemáticas,,1,cuad-x-1.png
+pap-tex-6,Curso introductorio de álgebra I,Papirhos,Textos,6,pap-tex-6.png
+pap-tex-10,Curso introductorio de álgebra II,Papirhos,Textos,10,pap-tex-10.png
+pap-tex-1,Grupos I,Papirhos,Textos,1,pap-tex-1.png
+pap-tex-4,Grupos II,Papirhos,Textos,4,pap-tex-4.jpg
+pap-mix-1,Por la senda de los círculos,Papirhos,Mixbaal,1,pap-mix-1.jpg
+pap-ico-3,Concursos Nacionales de la Olimpiada Mexicana de Matemáticas:1987-2016,Papirhos,Icosaedro,3,pap-ico-3.png
+pap-tex-2,Análisis Matemático,Papirhos,Textos,2,pap-tex-2.png
+pap-tex-3,Topología Diferencial,Papirhos,Textos,3,pap-tex-3.png
+pap-tex-5,Geometría euclidiana bidimensional y su grupo de transformaciones,Papirhos,Textos,5,pap-tex-5.png
+pap-tex-7,Clases características,Papirhos,Textos,7,pap-tex-7.png
+pap-tex-9,Introducción al álgebra lineal,Papirhos,Textos,9,pap-tex-9.png
+pap-tex-11,Curso breve de geometría proyectiva,Papirhos,Textos,11,pap-tex-11.png
+pap-tex-12,Métodos topológicos en el estudio de las ecuaciones diferenciales no lineales,Papirhos,Textos,12,pap-tex-12.png
+pap-not-2,"Teoría de singularidades en topología, geometría y foliaciones II",Papirhos,Notas,2,pap-not-2.jpg
+pap-not-3,Teoría de las gráficas: algunas aportaciones desde México,Papirhos,Notas,3,pap-not-3.png
+pap-act-1,Proceedings of the Workshop on Holomorphic Dynamics,Papirhos,Actas,1,pap-act-1.png

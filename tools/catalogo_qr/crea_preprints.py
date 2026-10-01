@@ -6,6 +6,10 @@ import json
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
+# =========================================================
+# LEEMOS LOS PREPRINTS
+# =========================================================
+
 preprints = pd.read_csv(
     os.path.join(BASE_DIR, "preprints.csv"),
     dtype=str
@@ -14,18 +18,14 @@ preprints = pd.read_csv(
 # Limpiamos posibles espacios en los nombres de las columnas
 preprints.columns = preprints.columns.str.strip()
 
-# Normalizamos las columnas de texto.
-# Los valores vacíos se mantienen como cadenas vacías
-# en lugar de convertirse en NaN.
 
+# Normalizamos las columnas de texto de preprints.
 columnas_texto = [
     "id_preprint",
     "titulo",
     "coleccion",
     "serie",
     "num_serie",
-    "resumen",
-    "estado",
     "portada",
 ]
 
@@ -45,6 +45,71 @@ for columna in columnas_texto:
             .str.strip()
         )
 
+
+# =========================================================
+# LEEMOS LOS RESÚMENES
+# =========================================================
+
+resumenes = pd.read_csv(
+    os.path.join(BASE_DIR, "resumenes.csv"),
+    dtype=str
+)
+
+resumenes.columns = resumenes.columns.str.strip()
+
+
+for columna in ["id_preprint", "resumen"]:
+
+    if columna not in resumenes.columns:
+
+        resumenes[columna] = ""
+
+    else:
+
+        resumenes[columna] = (
+            resumenes[columna]
+            .fillna("")
+            .astype(str)
+            .str.strip()
+        )
+
+
+# Unimos cada resumen con su preprint
+preprints = preprints.merge(
+    resumenes[["id_preprint", "resumen"]],
+    on="id_preprint",
+    how="left",
+    suffixes=("_anterior", "")
+)
+
+
+# Si todavía existe la columna resumen en preprints.csv,
+# ignoramos esa versión y usamos la de resumenes.csv.
+if "resumen_anterior" in preprints.columns:
+
+    preprints = preprints.drop(
+        columns=["resumen_anterior"]
+    )
+
+
+# Si algún preprint no tiene resumen, mostramos un texto provisional.
+preprints["resumen"] = (
+    preprints["resumen"]
+    .fillna("")
+    .astype(str)
+    .str.strip()
+)
+
+preprints.loc[
+    preprints["resumen"] == "",
+    "resumen"
+] = "Resumen no disponible por el momento."
+
+
+# =========================================================
+# LEEMOS AUTORES Y VERSIONES
+# =========================================================
+
 autores = pd.read_csv(
     os.path.join(BASE_DIR, "autores.csv"),
     dtype=str
@@ -60,6 +125,10 @@ versiones = pd.read_csv(
     dtype=str
 )
 
+
+# =========================================================
+# AUTORES
+# =========================================================
 
 # Creamos el nombre completo de cada autor
 autores["autor_fmt"] = (
@@ -101,6 +170,11 @@ catalogo_preprints = preprints.merge(
 print("\nCATÁLOGO DE PREPRINTS")
 print(catalogo_preprints)
 
+
+# =========================================================
+# VERSIONES
+# =========================================================
+
 # Convertimos cada fila de versiones en un diccionario
 versiones["version_info"] = versiones.apply(
     lambda fila: {
@@ -112,6 +186,7 @@ versiones["version_info"] = versiones.apply(
     },
     axis=1
 )
+
 
 # Agrupamos todas las versiones de cada preprint
 versiones_por_preprint = (
@@ -134,15 +209,25 @@ catalogo_preprints = catalogo_preprints.merge(
 print("\nCATÁLOGO COMPLETO")
 print(catalogo_preprints)
 
-# Ruta donde se guardará el JSON
+
+# =========================================================
+# GENERAMOS EL JSON
+# =========================================================
+
 PROJECT_DIR = os.path.abspath(
     os.path.join(BASE_DIR, "..", "..")
 )
 
-DATA_DIR = os.path.join(PROJECT_DIR, "docs", "data")
+DATA_DIR = os.path.join(
+    PROJECT_DIR,
+    "docs",
+    "data"
+)
 
-# Nos aseguramos de que la carpeta exista
-os.makedirs(DATA_DIR, exist_ok=True)
+os.makedirs(
+    DATA_DIR,
+    exist_ok=True
+)
 
 OUTPUT_JSON = os.path.join(
     DATA_DIR,
@@ -151,11 +236,18 @@ OUTPUT_JSON = os.path.join(
 
 
 # Convertimos el catálogo a una lista de diccionarios
-registros = catalogo_preprints.to_dict(orient="records")
+registros = catalogo_preprints.to_dict(
+    orient="records"
+)
 
 
 # Guardamos el JSON
-with open(OUTPUT_JSON, "w", encoding="utf-8") as archivo:
+with open(
+    OUTPUT_JSON,
+    "w",
+    encoding="utf-8"
+) as archivo:
+
     json.dump(
         registros,
         archivo,
@@ -163,4 +255,7 @@ with open(OUTPUT_JSON, "w", encoding="utf-8") as archivo:
         indent=2
     )
 
-print(f"\nJSON generado en: {OUTPUT_JSON}")
+
+print(
+    f"\nJSON generado en: {OUTPUT_JSON}"
+)

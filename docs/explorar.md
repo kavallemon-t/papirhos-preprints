@@ -4,7 +4,7 @@
 
     <p>
         Combina distintos criterios para localizar prepublicaciones
-        por título, autor, colección, serie, estado o fecha de actualización.
+        por título, autor, colección, serie o fecha de actualización.
     </p>
 </section>
 
@@ -23,14 +23,6 @@
         Serie:
         <select id="f-serie">
             <option value="">Todas</option>
-        </select>
-    </label>
-
-
-    <label>
-        Estado:
-        <select id="f-estado">
-            <option value="">Todos</option>
         </select>
     </label>
 
@@ -236,7 +228,6 @@
     // Referencias a los controles.
     const selColeccion = $("#f-coleccion");
     const selSerie = $("#f-serie");
-    const selEstado = $("#f-estado");
     const selAnio = $("#f-anio");
 
     const inpAutor = $("#f-autor");
@@ -285,24 +276,6 @@
                 selSerie.insertAdjacentHTML(
                     "beforeend",
                     `<option>${serie}</option>`
-                );
-
-            }
-        );
-
-
-    unique(
-        preprints.map(
-            preprint => preprint.estado
-        )
-    )
-        .sort()
-        .forEach(
-            estado => {
-
-                selEstado.insertAdjacentHTML(
-                    "beforeend",
-                    `<option>${estado}</option>`
                 );
 
             }
@@ -396,7 +369,6 @@
                 preprint.resumen,
                 preprint.coleccion,
                 preprint.serie,
-                preprint.estado,
                 ...(preprint.autores || [])
             ].join(" ")
         );
@@ -777,14 +749,6 @@
                                                     : ""
                                             }
 
-                                            ${
-                                                preprint.estado
-                                                    ? `<span>
-                                                        <strong>Estado:</strong>
-                                                        ${preprint.estado}
-                                                       </span>`
-                                                    : ""
-                                            }
 
                                         </div>
 
@@ -849,9 +813,6 @@
         const serie =
             selSerie.value;
 
-        const estado =
-            selEstado.value;
-
         const anio =
             selAnio.value;
 
@@ -891,14 +852,6 @@
                             String(
                                 preprint.serie || ""
                             ) === String(serie)
-                        )
-
-                        &&
-
-                        (
-                            !estado ||
-                            preprint.estado ===
-                                estado
                         )
 
                         &&
@@ -955,11 +908,6 @@
         filtrar
     );
 
-    selEstado.addEventListener(
-        "change",
-        filtrar
-    );
-
     selAnio.addEventListener(
         "change",
         filtrar
@@ -994,7 +942,6 @@
 
         selColeccion.value = "";
         selSerie.value = "";
-        selEstado.value = "";
         selAnio.value = "";
 
         inpAutor.value = "";
