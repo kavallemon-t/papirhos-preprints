@@ -17,8 +17,11 @@
         <link rel="next" href="../acerca/">
       
       
+        
+      
+      
       <link rel="icon" href="../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -26,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -56,7 +59,6 @@
     
       
 
-    
     
     
   </head>
@@ -371,9 +373,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Inicio
+  
+
     
   </span>
+  
   
 
       </a>
@@ -393,9 +400,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Preprints
+  
+
     
   </span>
+  
   
 
       </a>
@@ -422,9 +434,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Búsqueda avanzada
+  
+
     
   </span>
+  
   
 
       </a>
@@ -445,9 +462,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Acerca de
+  
+
     
   </span>
+  
   
 
       </a>
@@ -467,9 +489,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     TUL
+  
+
     
   </span>
+  
   
 
       </a>
@@ -489,9 +516,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Contacto
+  
+
     
   </span>
+  
   
 
       </a>
@@ -525,6 +557,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -537,7 +570,7 @@
 
     <p>
         Combina distintos criterios para localizar prepublicaciones
-        por título, autor, colección, serie, estado o fecha de actualización.
+        por título, autor, colección, serie o fecha de actualización.
     </p>
 </section>
 
@@ -555,14 +588,6 @@
         Serie:
         <select id="f-serie">
             <option value="">Todas</option>
-        </select>
-    </label>
-
-
-    <label>
-        Estado:
-        <select id="f-estado">
-            <option value="">Todos</option>
         </select>
     </label>
 
@@ -765,7 +790,6 @@
     // Referencias a los controles.
     const selColeccion = $("#f-coleccion");
     const selSerie = $("#f-serie");
-    const selEstado = $("#f-estado");
     const selAnio = $("#f-anio");
 
     const inpAutor = $("#f-autor");
@@ -814,24 +838,6 @@
                 selSerie.insertAdjacentHTML(
                     "beforeend",
                     `<option>${serie}</option>`
-                );
-
-            }
-        );
-
-
-    unique(
-        preprints.map(
-            preprint => preprint.estado
-        )
-    )
-        .sort()
-        .forEach(
-            estado => {
-
-                selEstado.insertAdjacentHTML(
-                    "beforeend",
-                    `<option>${estado}</option>`
                 );
 
             }
@@ -925,7 +931,6 @@
                 preprint.resumen,
                 preprint.coleccion,
                 preprint.serie,
-                preprint.estado,
                 ...(preprint.autores || [])
             ].join(" ")
         );
@@ -1306,14 +1311,6 @@
                                                     : ""
                                             }
 
-                                            ${
-                                                preprint.estado
-                                                    ? `<span>
-                                                        <strong>Estado:</strong>
-                                                        ${preprint.estado}
-                                                       </span>`
-                                                    : ""
-                                            }
 
                                         </div>
 
@@ -1378,9 +1375,6 @@
         const serie =
             selSerie.value;
 
-        const estado =
-            selEstado.value;
-
         const anio =
             selAnio.value;
 
@@ -1420,14 +1414,6 @@
                             String(
                                 preprint.serie || ""
                             ) === String(serie)
-                        )
-
-                        &&
-
-                        (
-                            !estado ||
-                            preprint.estado ===
-                                estado
                         )
 
                         &&
@@ -1484,11 +1470,6 @@
         filtrar
     );
 
-    selEstado.addEventListener(
-        "change",
-        filtrar
-    );
-
     selAnio.addEventListener(
         "change",
         filtrar
@@ -1523,7 +1504,6 @@
 
         selColeccion.value = "";
         selSerie.value = "";
-        selEstado.value = "";
         selAnio.value = "";
 
         inpAutor.value = "";
@@ -1654,10 +1634,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../js/config.js"></script>
       

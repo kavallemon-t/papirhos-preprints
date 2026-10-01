@@ -1,11 +1,6 @@
 {
     "python-envs.pythonProjects": [
         {
-            "path": "tools/pipeline_archivos.py",
-            "envManager": "ms-python.python:venv",
-            "packageManager": "ms-python.python:pip"
-        },
-        {
             "path": "tools/catalogo_qr/crea_preprints.py",
             "envManager": "ms-python.python:venv",
             "packageManager": "ms-python.python:pip"
