@@ -1,35 +1,54 @@
-Básicos de mkdocs:
-  mkdocs serve:  
-  mkdocs build: 
+## Básicos de MkDocs
 
-En esta carpeta se encuentran los scripts de python usados para generar los archivos de la página. El script central es *pipeline_archivos.py*. 
+- `mkdocs serve`: inicia un servidor local para visualizar los cambios del sitio antes de publicarlos.
+- `mkdocs build --clean`: genera el sitio completo y permite comprobar que no existan errores de construcción.
+- `mkdocs gh-deploy`: construye el sitio y publica la versión actual en GitHub Pages.
 
-pipeline_archivos: 
-    Accede a data/catalogo.csv y lee cada una de las entradas.  
-    Escribe el catálogo y lo guarda en docs/catalogo.md 
-    Genera un json en docs/data/catalogo.json este se usa para generar el buscador. 
-    Crea las páginas de cada libro en docs/libros/id.md (por cada id de cada libro)
+## Generación de datos y páginas
 
-crea_paginas.py:
-    Dada una entrada de libro, escribe su página y la guarda en docs/libros/id.md con id el identificador único para cada libro
+En `tools/catalogo_qr/` se encuentran los archivos de datos y los scripts de Python utilizados para generar la información del sitio.
 
-escribe_metadatos.py:
-    Recibe informacion de una entrada y escribe una tabla de metadatos
+Las principales bases de datos son:
 
-escritor_bibtex.py:
-    Dados los datos de una entrada regresa un texto para crear la tabla de bibtex
+- `preprints.csv`: contiene la información general de cada preprint, como identificador, título, colección, serie y portada.
+- `resumenes.csv`: contiene el resumen correspondiente a cada preprint.
+- `autores.csv`: contiene la información de los autores.
+- `preprints_autores.csv`: relaciona cada preprint con uno o más autores.
+- `versiones.csv`: contiene las distintas versiones de cada preprint, incluyendo fecha, archivo PDF y nota de versión.
 
-escritor_catalogo.py:
-    Dada una lista de datos, crea una lista donde cada entrada es una línea del catálogo de libros
+### crea_preprints.py
 
-extractidatos.py:
-    Dada una entrada de la base de datos ya procesada, extrae todos los datos de la misma y los almacena en variables locales (autores, anio, etc...)
+Lee las bases de datos de `tools/catalogo_qr/` y combina la información correspondiente a cada preprint.
 
-genera_json.py:
-    Dada una fila de datos, los extrae y genera un diccionario para generar un archivo JSON.
+Entre otras cosas:
 
-mostrador_pdf.py:
-    Escribe los bloques de texto necesarios para mostrar los PDFs de los libros
+- Relaciona los preprints con sus autores.
+- Añade el resumen correspondiente a cada preprint.
+- Agrupa las distintas versiones de cada preprint.
+- Genera el archivo:
 
-watermark_to_book_folders.py:
-    Dado un archivo PDF, regresa un PDF con una marca de agua (es ajustable). Lo guarda en docs/libros/id/id_mark.pdf
+```text
+docs/data/preprints.json
+
+## Flujo para actualizar y revisar cambios
+
+Cuando se modifica información de los preprints y se quiere revisar cómo quedó el sitio, se deben ejecutar los siguientes comandos desde la carpeta principal del proyecto.
+
+### Si se modificaron los datos de los preprints
+
+Por ejemplo:
+
+- `preprints.csv`
+- `resumenes.csv`
+- `autores.csv`
+- `preprints_autores.csv`
+- `versiones.csv`
+- se añadió o cambió una portada
+- se añadió o cambió un PDF
+
+Ejecutar:
+
+```powershell
+python tools/catalogo_qr/crea_preprints.py
+python tools/catalogo_qr/crea_paginas_preprints.py
+mkdocs serve

@@ -139,7 +139,7 @@
 
 
                         <p class="preprint-summary">
-                            Resumen no disponible por el momento.
+                            Este trabajo presenta una introducción general a distintos problemas matemáticos y sus posibles aplicaciones. Se describen algunas ideas principales, ejemplos sencillos y herramientas utilizadas para analizar los resultados. El objetivo es ofrecer una referencia accesible que permita comprender los conceptos fundamentales y sirva como punto de partida para estudios posteriores.
                         </p>
 
                     </div>
