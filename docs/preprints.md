@@ -1728,6 +1728,97 @@
 
         </article>
 
+        <article class="preprint-card">
+
+            <div class="preprint-card-layout">
+
+                
+            <div class="preprint-cover">
+
+                <img
+                    src="../portadas_preprints/apor-tex-12.png"
+                    alt="Portada de Introducción a la teoría de redes"
+                    loading="lazy">
+
+            </div>
+        
+
+
+                <div class="preprint-card-main">
+
+
+                    <div class="preprint-card-top">
+
+                        <span class="preprint-id">
+                            apor-tex-12
+                        </span>
+
+                        <span class="preprint-date">
+                            Actualizado 2026-09-29
+                        </span>
+
+                    </div>
+
+
+                    <div class="preprint-card-content">
+
+                        <h3 class="preprint-title">
+
+                            <a href="apor-tex-12/">
+                                Introducción a la teoría de redes
+                            </a>
+
+                        </h3>
+
+
+                        <p class="preprint-authors">
+                            María del Carmen Hernández Ayuso
+                        </p>
+
+
+                        <p class="preprint-summary">
+                            Este libro está enfocado a los temas básicos de teoría de redes. Se presentan tanto teoría general y características de los problemas de optimización de esta rama como algoritmos para resolverlos.</br>Se exponen cuatro problemas básicos: árbol de peso mínimo, ruta más corta, flujo máximo y flujo a costo mínimo; estos problemas han sido resueltos principalmente mediante dos enfoques generales. Uno consiste en especializar los algoritmos de programación lineal aprovechando la estructura de cada problema y el otro en aplicar resultados de teoría de gráficas. En los primeros cinco capítulos se presentan algunos algoritmos para resolver problemas de flujo en redes según el enfoque clásico de la programación lineal. En los últimos dos capítulos se presentan generalizaciones de dos de estos problemas según el enfoque de coloración en gráficas.</br>La teoría de dualidad ha sido estudiada para el caso de los modelos de redes; con esto se han generado algoritmos de solución simultánea para el par de problemas duales. Este es el caso de los problemas de flujo máximo y de cadena mínima.</br>En cada capítulo se incluyen conceptos, resultados teóricos rigurosamente demostrados, técnicas, ejemplos numéricos y una series de ejercicios propuestos.
+                        </p>
+
+                    </div>
+
+
+                    <div class="preprint-card-footer">
+
+                        <div class="preprint-version-info">
+
+                            <span class="preprint-version-badge">
+                                v1
+                            </span>
+
+                            <span class="preprint-version-count">
+                                1 versión
+                            </span>
+
+                        </div>
+
+
+                        <div class="preprint-actions">
+
+                            <a
+                                href="apor-tex-12/"
+                                class="md-button md-button--primary">
+                                Ver ficha
+                            </a>
+
+                            <a href="../archivos_preprints/apor-tex-12-v1.pdf" class="md-button preprint-secondary-button">Ver PDF</a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </article>
+
     </section>
 
 </div>
