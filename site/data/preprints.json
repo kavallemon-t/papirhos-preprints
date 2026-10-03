@@ -433,5 +433,47 @@
         "nota_version": "Primera versión disponible en Papirhos Preprints."
       }
     ]
+  },
+  {
+    "id_preprint": "pap-tex-17",
+    "titulo": "Curso de Topología",
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "num_serie": "17",
+    "portada": "pap-tex-17.png",
+    "resumen": "Resumen no disponible por el momento.",
+    "autores": [
+      "Sergey A. Antonyan"
+    ],
+    "versiones": [
+      {
+        "id_version": "pap-tex-17-v1",
+        "version": "1",
+        "fecha": "2026-09-29",
+        "archivo": "pap-tex-17-v1.pdf",
+        "nota_version": "Primera versión disponible en Papirhos Preprints."
+      }
+    ]
+  },
+  {
+    "id_preprint": "pap-tex-18",
+    "titulo": "Métodos variacionales en ecuaciones diferenciales parciales no lineales",
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "num_serie": "18",
+    "portada": "pap-tex-18.png",
+    "resumen": "Resumen no disponible por el momento.",
+    "autores": [
+      "Mónica Clapp"
+    ],
+    "versiones": [
+      {
+        "id_version": "pap-tex-18-v1",
+        "version": "1",
+        "fecha": "2026-09-29",
+        "archivo": "pap-tex-18-v1.pdf",
+        "nota_version": "Primera versión disponible en Papirhos Preprints."
+      }
+    ]
   }
 ]
