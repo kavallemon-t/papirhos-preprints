@@ -1956,9 +1956,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Este libro está enfocado a los temas básicos de teoría de redes. Se presentan tanto teoría general y características de los problemas de optimización de esta rama como algoritmos para resolverlos.</br>Se exponen cuatro problemas básicos: árbol de peso mínimo, ruta más corta, flujo máximo y flujo a costo mínimo; estos problemas han sido resueltos principalmente mediante dos enfoques generales. Uno consiste en especializar los algoritmos de programación lineal aprovechando la estructura de cada problema y el otro en aplicar resultados de teoría de gráficas. En los primeros cinco capítulos se presentan algunos algoritmos para resolver problemas de flujo en redes según el enfoque clásico de la programación lineal. En los últimos dos capítulos se presentan generalizaciones de dos de estos problemas según el enfoque de coloración en gráficas.</br>La teoría de dualidad ha sido estudiada para el caso de los modelos de redes; con esto se han generado algoritmos de solución simultánea para el par de problemas duales. Este es el caso de los problemas de flujo máximo y de cadena mínima.</br>En cada capítulo se incluyen conceptos, resultados teóricos rigurosamente demostrados, técnicas, ejemplos numéricos y una series de ejercicios propuestos.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Este libro está enfocado a los temas básicos de teoría de redes. Se presentan tanto teoría general y características de los problemas de optimización de esta rama como algoritmos para resolverlos.</br>Se exponen cuatro problemas básicos: árbol de peso mínimo, ruta más corta, flujo máximo y flujo a costo mínimo; estos problemas han sido resueltos principalmente mediante dos enfoques generales. Uno consiste en especializar los algoritmos de programación lineal aprovechando la estructura de cada problema y el otro en aplicar resultados de teoría de gráficas. En los primeros cinco capítulos se presentan algunos algoritmos para resolver problemas de flujo en redes según el enfoque clásico de la programación lineal. En los últimos dos capítulos se presentan generalizaciones de dos de estos problemas según el enfoque de coloración en gráficas.</br>La teoría de dualidad ha sido estudiada para el caso de los modelos de redes; con esto se han generado algoritmos de solución simultánea para el par de problemas duales. Este es el caso de los problemas de flujo máximo y de cadena mínima.</br>En cada capítulo se incluyen conceptos, resultados teóricos rigurosamente demostrados, técnicas, ejemplos numéricos y una series de ejercicios propuestos.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -2047,9 +2057,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -2138,9 +2158,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -2210,7 +2240,7 @@
     // RESÚMENES EXPANDIBLES
     // =====================================================
 
-    function prepararResumenes() {
+    function actualizarBotonesResumenes() {
 
         const wrappers =
             document.querySelectorAll(
@@ -2237,58 +2267,163 @@
 
 
             /*
-             * Si el resumen completo ya cabe dentro
-             * de las líneas visibles, ocultamos
-             * el botón "Ver más".
+             * Guardamos el estado actual del resumen.
              */
-            requestAnimationFrame(() => {
 
-                if (
-                    resumen.scrollHeight <=
-                    resumen.clientHeight + 2
-                ) {
-
-                    boton.hidden = true;
-
-                }
-
-            });
+            const estabaCerrado =
+                resumen.classList.contains(
+                    "preprint-summary-collapsed"
+                );
 
 
-            boton.addEventListener(
-                "click",
-                () => {
+            /*
+             * Medimos cuánto ocupa cuando está
+             * reducido a cuatro líneas.
+             */
 
-                    const estaCerrado =
-                        resumen.classList.contains(
-                            "preprint-summary-collapsed"
-                        );
-
-
-                    if (estaCerrado) {
-
-                        resumen.classList.remove(
-                            "preprint-summary-collapsed"
-                        );
-
-                        boton.textContent =
-                            "Ver menos";
-
-                    } else {
-
-                        resumen.classList.add(
-                            "preprint-summary-collapsed"
-                        );
-
-                        boton.textContent =
-                            "Ver más";
-
-                    }
-
-                }
+            resumen.classList.add(
+                "preprint-summary-collapsed"
             );
 
+            const alturaReducida =
+                resumen.getBoundingClientRect().height;
+
+
+            /*
+             * Quitamos temporalmente el límite
+             * para medir la altura completa.
+             */
+
+            resumen.classList.remove(
+                "preprint-summary-collapsed"
+            );
+
+            const alturaCompleta =
+                resumen.getBoundingClientRect().height;
+
+
+            /*
+             * Restauramos el estado que tenía.
+             */
+
+            if (estabaCerrado) {
+
+                resumen.classList.add(
+                    "preprint-summary-collapsed"
+                );
+
+            }
+
+
+            /*
+             * Si el texto completo cabe dentro
+             * de las cuatro líneas, no necesitamos
+             * mostrar el botón.
+             */
+
+            if (
+                alturaCompleta <=
+                alturaReducida + 2
+            ) {
+
+                boton.hidden = true;
+
+            } else {
+
+                boton.hidden = false;
+
+            }
+
         });
+
+    }
+
+
+    const botonesResumen =
+        document.querySelectorAll(
+            ".preprint-summary-toggle"
+        );
+
+
+    botonesResumen.forEach((boton) => {
+
+        boton.addEventListener(
+            "click",
+            () => {
+
+                const wrapper =
+                    boton.closest(
+                        ".preprint-summary-wrapper"
+                    );
+
+
+                if (!wrapper) {
+                    return;
+                }
+
+
+                const resumen =
+                    wrapper.querySelector(
+                        ".preprint-summary"
+                    );
+
+
+                if (!resumen) {
+                    return;
+                }
+
+
+                const estaCerrado =
+                    resumen.classList.contains(
+                        "preprint-summary-collapsed"
+                    );
+
+
+                if (estaCerrado) {
+
+                    resumen.classList.remove(
+                        "preprint-summary-collapsed"
+                    );
+
+                    boton.textContent =
+                        "Ver menos";
+
+                } else {
+
+                    resumen.classList.add(
+                        "preprint-summary-collapsed"
+                    );
+
+                    boton.textContent =
+                        "Ver más";
+
+                }
+
+            }
+        );
+
+    });
+
+
+    /*
+     * Esperamos a que el navegador haya calculado
+     * correctamente tamaños y tipografías antes
+     * de decidir qué resúmenes necesitan botón.
+     */
+
+    requestAnimationFrame(
+        actualizarBotonesResumenes
+    );
+
+
+    if (
+        document.fonts &&
+        document.fonts.ready
+    ) {
+
+        document.fonts.ready.then(
+            actualizarBotonesResumenes
+        );
 
     }
 
@@ -2372,11 +2507,8 @@
 
 
     // =====================================================
-    // EVENTOS
+    // EVENTOS DEL BUSCADOR
     // =====================================================
-
-    prepararResumenes();
-
 
     if (input) {
 
