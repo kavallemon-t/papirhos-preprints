@@ -242,6 +242,127 @@
     const btnClear = $("#btn-clear");
 
 
+// =====================================================
+// RESÚMENES EXPANDIBLES
+// =====================================================
+
+function actualizarBotonesResumenes() {
+
+    const wrappers =
+        contenedor.querySelectorAll(
+            ".preprint-summary-wrapper"
+        );
+
+
+    wrappers.forEach((wrapper) => {
+
+        const resumen =
+            wrapper.querySelector(
+                ".preprint-summary"
+            );
+
+        const boton =
+            wrapper.querySelector(
+                ".preprint-summary-toggle"
+            );
+
+
+        if (!resumen || !boton) {
+            return;
+        }
+
+
+        /*
+         * Comprobamos si realmente existe texto
+         * oculto por el límite de cuatro líneas.
+         *
+         * Si todo el resumen ya cabe, ocultamos
+         * el botón Ver más.
+         */
+        if (
+            resumen.scrollHeight <=
+            resumen.clientHeight + 2
+        ) {
+
+            boton.hidden = true;
+
+        } else {
+
+            boton.hidden = false;
+
+        }
+
+    });
+
+}
+
+
+contenedor.addEventListener(
+    "click",
+    (event) => {
+
+        const boton =
+            event.target.closest(
+                ".preprint-summary-toggle"
+            );
+
+
+        if (!boton) {
+            return;
+        }
+
+
+        const wrapper =
+            boton.closest(
+                ".preprint-summary-wrapper"
+            );
+
+
+        if (!wrapper) {
+            return;
+        }
+
+
+        const resumen =
+            wrapper.querySelector(
+                ".preprint-summary"
+            );
+
+
+        if (!resumen) {
+            return;
+        }
+
+
+        const estaCerrado =
+            resumen.classList.contains(
+                "preprint-summary-collapsed"
+            );
+
+
+        if (estaCerrado) {
+
+            resumen.classList.remove(
+                "preprint-summary-collapsed"
+            );
+
+            boton.textContent =
+                "Ver menos";
+
+        } else {
+
+            resumen.classList.add(
+                "preprint-summary-collapsed"
+            );
+
+            boton.textContent =
+                "Ver más";
+
+        }
+
+    }
+);
+
     // =====================================================
     // LLENAMOS LOS SELECTS
     // =====================================================
@@ -872,6 +993,7 @@
 
                 }
             ).join("");
+            requestAnimationFrame(actualizarBotonesResumenes);
 
     }
 
