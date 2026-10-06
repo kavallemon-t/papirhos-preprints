@@ -2807,3 +2807,50 @@ body:has(.home-hero) .md-top {
   }
 
 }
+
+/* =========================================================
+   RESÚMENES EXPANDIBLES
+   ========================================================= */
+
+.preprint-summary-wrapper {
+  margin-top: 0.7rem;
+}
+
+.preprint-summary {
+  margin-bottom: 0.35rem;
+}
+
+.preprint-summary-collapsed {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+
+  overflow: hidden;
+}
+
+.preprint-summary-toggle {
+  display: inline-block;
+
+  padding: 0;
+  margin: 0;
+
+  background: none;
+  border: none;
+
+  color: #6b625a;
+
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.preprint-summary-toggle:hover {
+  color: #8a6a3a;
+  text-decoration: underline;
+}
+
+.preprint-summary-toggle[hidden] {
+  display: none;
+}

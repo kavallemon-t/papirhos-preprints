@@ -535,6 +535,69 @@
     // RENDER
     // =====================================================
 
+    function prepararResumenes() {
+
+    const wrappers =
+        contenedor.querySelectorAll(
+            ".preprint-summary-wrapper"
+        );
+
+
+    wrappers.forEach((wrapper) => {
+
+        const resumen =
+            wrapper.querySelector(
+                ".preprint-summary"
+            );
+
+        const boton =
+            wrapper.querySelector(
+                ".preprint-summary-toggle"
+            );
+
+
+        if (!resumen || !boton) {
+            return;
+        }
+
+
+        if (
+            resumen.scrollHeight <=
+            resumen.clientHeight + 2
+        ) {
+
+            boton.hidden = true;
+
+        }
+
+
+        boton.addEventListener(
+            "click",
+            () => {
+
+                const estaCerrado =
+                    resumen.classList.contains(
+                        "preprint-summary-collapsed"
+                    );
+
+
+                resumen.classList.toggle(
+                    "preprint-summary-collapsed"
+                );
+
+
+                boton.textContent =
+                    estaCerrado
+                        ? "Ver menos"
+                        : "Ver más";
+
+            }
+        );
+
+    });
+
+}
+
     function render(lista) {
 
         if (!Array.isArray(lista)) {
@@ -722,11 +785,23 @@
                                         </p>
 
 
-                                        <p class="preprint-summary">
+                                        <div class="preprint-summary-wrapper">
 
-                                            ${preprint.resumen || ""}
+                                            <p class="preprint-summary preprint-summary-collapsed">
 
-                                        </p>
+                                                ${preprint.resumen || ""}
+
+                                            </p>
+
+                                            <button
+                                                type="button"
+                                                class="preprint-summary-toggle">
+
+                                                Ver más
+
+                                            </button>
+
+                                        </div>
 
 
                                         <div class="busqueda-preprint-meta">

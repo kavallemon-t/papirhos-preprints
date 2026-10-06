@@ -923,9 +923,19 @@ for preprint in preprints:
                         </p>
 
 
-                        <p class="preprint-summary">
-                            {resumen}
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                {resumen}
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -977,11 +987,12 @@ contenido_indice += """
 
 
 # =========================================================
-# BUSCADOR DE PREPRINTS
+# BUSCADOR Y RESÚMENES EXPANDIBLES
 # =========================================================
 
 contenido_indice += """
 <script>
+
 (() => {
 
     const input = document.getElementById(
@@ -1000,6 +1011,97 @@ contenido_indice += """
         "preprints-no-results"
     );
 
+
+    // =====================================================
+    // RESÚMENES EXPANDIBLES
+    // =====================================================
+
+    function prepararResumenes() {
+
+        const wrappers =
+            document.querySelectorAll(
+                ".preprint-summary-wrapper"
+            );
+
+
+        wrappers.forEach((wrapper) => {
+
+            const resumen =
+                wrapper.querySelector(
+                    ".preprint-summary"
+                );
+
+            const boton =
+                wrapper.querySelector(
+                    ".preprint-summary-toggle"
+                );
+
+
+            if (!resumen || !boton) {
+                return;
+            }
+
+
+            /*
+             * Si el resumen completo ya cabe dentro
+             * de las líneas visibles, ocultamos
+             * el botón "Ver más".
+             */
+            requestAnimationFrame(() => {
+
+                if (
+                    resumen.scrollHeight <=
+                    resumen.clientHeight + 2
+                ) {
+
+                    boton.hidden = true;
+
+                }
+
+            });
+
+
+            boton.addEventListener(
+                "click",
+                () => {
+
+                    const estaCerrado =
+                        resumen.classList.contains(
+                            "preprint-summary-collapsed"
+                        );
+
+
+                    if (estaCerrado) {
+
+                        resumen.classList.remove(
+                            "preprint-summary-collapsed"
+                        );
+
+                        boton.textContent =
+                            "Ver menos";
+
+                    } else {
+
+                        resumen.classList.add(
+                            "preprint-summary-collapsed"
+                        );
+
+                        boton.textContent =
+                            "Ver más";
+
+                    }
+
+                }
+            );
+
+        });
+
+    }
+
+
+    // =====================================================
+    // BUSCADOR
+    // =====================================================
 
     function normalizar(texto) {
 
@@ -1075,6 +1177,13 @@ contenido_indice += """
     }
 
 
+    // =====================================================
+    // EVENTOS
+    // =====================================================
+
+    prepararResumenes();
+
+
     if (input) {
 
         input.addEventListener(
@@ -1090,6 +1199,7 @@ contenido_indice += """
     );
 
 })();
+
 </script>
 """
 

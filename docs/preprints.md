@@ -138,9 +138,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Este trabajo presenta una introducción general a distintos problemas matemáticos y sus posibles aplicaciones. Se describen algunas ideas principales, ejemplos sencillos y herramientas utilizadas para analizar los resultados. El objetivo es ofrecer una referencia accesible que permita comprender los conceptos fundamentales y sirva como punto de partida para estudios posteriores.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Este trabajo presenta una introducción general a distintos problemas matemáticos y sus posibles aplicaciones. Se describen algunas ideas principales, ejemplos sencillos y herramientas utilizadas para analizar los resultados. El objetivo es ofrecer una referencia accesible que permita comprender los conceptos fundamentales y sirva como punto de partida para estudios posteriores.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -229,9 +239,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -320,9 +340,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            El presente texto está dirigido a estudiantes del primer semestre de carreras en ciencias exactas. Contiene temas que los introducen al Álgebra y busca incorporar, a través de su tratamiento, una descripción minuciosa y rigurosa de los procedimientos de demostración y deducción necesarios para formar a los estudiantes en el pensamiento matemático abstracto. Conforme se presenta el material, se introduce al lector no sólo en el lenguaje de las matemáticas, sino en la forma de estructurar las ideas, desarrollarlas y escribir los diversos resultados. Es un texto con un grado elevado de rigor, claridad y pedagogía, que puede ser utilizado de manera autodidacta o como un complemento necesario para las clases en aula.</br> Este primer tomo está conformado por seis capítulos, cada uno con diversas secciones y un bloque de ejercicios cuidadosamente seleccionados; incluye nociones de lógica matemática y una introducción al manejo correcto de los conjuntos. Se expone también el concepto matemático de relación, dando un especial énfasis a las relaciones de equivalencia, y se aborda a profundidad el concepto de función. El capítulo quinto se centra en los números naturales, sus operaciones y su orden, inspeccionando detenidamente los principios de inducción y del buen orden, con numerosas demostraciones. El último capítulo versa sobre combinatoria finita, incorporando primero el concepto de cardinalidad en conjuntos finitos y los principios formales para contar de manera correcta.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                El presente texto está dirigido a estudiantes del primer semestre de carreras en ciencias exactas. Contiene temas que los introducen al Álgebra y busca incorporar, a través de su tratamiento, una descripción minuciosa y rigurosa de los procedimientos de demostración y deducción necesarios para formar a los estudiantes en el pensamiento matemático abstracto. Conforme se presenta el material, se introduce al lector no sólo en el lenguaje de las matemáticas, sino en la forma de estructurar las ideas, desarrollarlas y escribir los diversos resultados. Es un texto con un grado elevado de rigor, claridad y pedagogía, que puede ser utilizado de manera autodidacta o como un complemento necesario para las clases en aula.</br> Este primer tomo está conformado por seis capítulos, cada uno con diversas secciones y un bloque de ejercicios cuidadosamente seleccionados; incluye nociones de lógica matemática y una introducción al manejo correcto de los conjuntos. Se expone también el concepto matemático de relación, dando un especial énfasis a las relaciones de equivalencia, y se aborda a profundidad el concepto de función. El capítulo quinto se centra en los números naturales, sus operaciones y su orden, inspeccionando detenidamente los principios de inducción y del buen orden, con numerosas demostraciones. El último capítulo versa sobre combinatoria finita, incorporando primero el concepto de cardinalidad en conjuntos finitos y los principios formales para contar de manera correcta.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -411,9 +441,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -502,9 +542,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -593,9 +643,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -684,9 +744,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -775,9 +845,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -866,9 +946,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -957,9 +1047,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -1048,9 +1148,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -1139,9 +1249,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -1230,9 +1350,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -1321,9 +1451,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -1412,9 +1552,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -1503,9 +1653,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -1594,9 +1754,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -1685,9 +1855,19 @@
                         </p>
 
 
-                        <p class="preprint-summary">
-                            Resumen no disponible por el momento.
-                        </p>
+                        <div class="preprint-summary-wrapper">
+
+                            <p class="preprint-summary preprint-summary-collapsed">
+                                Resumen no disponible por el momento.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="preprint-summary-toggle">
+                                Ver más
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -1733,6 +1913,7 @@
 </div>
 
 <script>
+
 (() => {
 
     const input = document.getElementById(
@@ -1751,6 +1932,97 @@
         "preprints-no-results"
     );
 
+
+    // =====================================================
+    // RESÚMENES EXPANDIBLES
+    // =====================================================
+
+    function prepararResumenes() {
+
+        const wrappers =
+            document.querySelectorAll(
+                ".preprint-summary-wrapper"
+            );
+
+
+        wrappers.forEach((wrapper) => {
+
+            const resumen =
+                wrapper.querySelector(
+                    ".preprint-summary"
+                );
+
+            const boton =
+                wrapper.querySelector(
+                    ".preprint-summary-toggle"
+                );
+
+
+            if (!resumen || !boton) {
+                return;
+            }
+
+
+            /*
+             * Si el resumen completo ya cabe dentro
+             * de las líneas visibles, ocultamos
+             * el botón "Ver más".
+             */
+            requestAnimationFrame(() => {
+
+                if (
+                    resumen.scrollHeight <=
+                    resumen.clientHeight + 2
+                ) {
+
+                    boton.hidden = true;
+
+                }
+
+            });
+
+
+            boton.addEventListener(
+                "click",
+                () => {
+
+                    const estaCerrado =
+                        resumen.classList.contains(
+                            "preprint-summary-collapsed"
+                        );
+
+
+                    if (estaCerrado) {
+
+                        resumen.classList.remove(
+                            "preprint-summary-collapsed"
+                        );
+
+                        boton.textContent =
+                            "Ver menos";
+
+                    } else {
+
+                        resumen.classList.add(
+                            "preprint-summary-collapsed"
+                        );
+
+                        boton.textContent =
+                            "Ver más";
+
+                    }
+
+                }
+            );
+
+        });
+
+    }
+
+
+    // =====================================================
+    // BUSCADOR
+    // =====================================================
 
     function normalizar(texto) {
 
@@ -1826,6 +2098,13 @@
     }
 
 
+    // =====================================================
+    // EVENTOS
+    // =====================================================
+
+    prepararResumenes();
+
+
     if (input) {
 
         input.addEventListener(
@@ -1841,4 +2120,5 @@
     );
 
 })();
+
 </script>
