@@ -1,5 +1,5 @@
 ---
-title: "pap-tex-2"
+title: "pap-tex-8"
 ---
 
 <section class="preprint-detail-hero">
@@ -8,8 +8,8 @@ title: "pap-tex-2"
             <div class="preprint-detail-cover">
 
                 <img
-                    src="../../portadas_preprints/pap-tex-2.png"
-                    alt="Portada de Análisis Matemático"
+                    src="../../portadas_preprints/pap-tex-8.png"
+                    alt="Portada de Introducción a la teoría de Galois"
                     loading="lazy">
 
             </div>
@@ -19,17 +19,17 @@ title: "pap-tex-2"
     <div class="preprint-detail-main">
 
         <p class="preprint-detail-eyebrow">
-            Preprint · pap-tex-2
+            Preprint · pap-tex-8
         </p>
 
 
         <h1>
-            Análisis Matemático
+            Introducción a la teoría de Galois
         </h1>
 
 
         <p class="preprint-detail-authors">
-            Mónica Clapp
+            Felipe Zaldivar
         </p>
 
 
@@ -40,7 +40,7 @@ title: "pap-tex-2"
             </span>
 
             <span class="preprint-detail-date">
-                2026-09-29
+                2026-10-07
             </span>
 
         </div>
@@ -50,7 +50,7 @@ title: "pap-tex-2"
 
             
             <a
-                href="../../archivos_preprints/pap-tex-2-v1.pdf"
+                href="../../archivos_preprints/pap-tex-8-v1.pdf"
                 class="md-button md-button--primary">
 
                 Ver PDF
@@ -80,7 +80,7 @@ title: "pap-tex-2"
     </h2>
 
     <p>
-        Este libro tan esperado en la Facultad de Ciencias de la Universidad Nacional Autónoma de México, y en diversas universidades de México y de países hispanoparlantes, es el resultado de muchos años de experiencia docente y de investigación por parte de la autora. Reúne material clave en la formación en análisis de los estudiantes dematemáticas y de otras carreras afines.<br>Motivándolos por un problema concreto —la existencia de trayectorias de longitud mínima— la obra introduce gradualmente los conceptos básicos del análisis hasta llegar a los teoremas de punto fijo de Banach y de Arzelà-Azcoli, así como a diversas aplicaciones de ellos a la existencia de soluciones de ecuaciones diferenciales e integrales. Posteriormente presenta el concepto de diferenciabilidad en espacios de Banach y demuestra el teorema de la función implícita, que permite introducir el concepto de variedad y el estudio de problemas de minimización en variedades. La última parte de este texto se dedica a la teoría de integración de Lebesgue; introduce los espacios de Lebesgue y de Sobolev para concluir con algunas aplicaciones a la existencia de soluciones de problemas elípticos con condición de frontera.
+        La teoría de Galois, cuyos orígenes se encuentran en el problema de la solubilidad de ecuaciones polinomiales mediante radicales, es una parte de la matemática con conexiones profundas a otras partes de la misma, como teoría de grupos, álgebra lineal, teoría de números y geometría algebraica, lo cual le da una riqueza y elegancia inigualables.<br>En este libro se comienza introduciendo los resultados básicos de la teoría de anillos y campos eligiendo los aspectos que serán de utilidad en los temas de teoría de Galois que se tratan en el texto. El libro incluye ejemplos escogidos cuidadosamente para ilustrar la teoría desarrollada y motivar desarrollos posteriores. También se tiene un buen número de ejercicios que invitan al lector a participar activamente, ya sea en un curso de licenciatura o como auxiliar en autoestudio.
     </p>
 
 </section>
@@ -111,7 +111,7 @@ title: "pap-tex-2"
                     </span>
 
                     <span class="preprint-current-version-date">
-                        2026-09-29
+                        2026-10-07
                     </span>
 
                 </div>
@@ -120,7 +120,7 @@ title: "pap-tex-2"
 
 
             <a
-                href="../../archivos_preprints/pap-tex-2-v1.pdf"
+                href="../../archivos_preprints/pap-tex-8-v1.pdf"
                 class="md-button md-button--primary">
 
                 Ver PDF
@@ -159,10 +159,10 @@ title: "pap-tex-2"
         <div class="citation-box-main">
 
             <p
-                id="cita-actual-pap-tex-2"
+                id="cita-actual-pap-tex-8"
                 class="citation-text">
 
-                Mónica Clapp. (2026). Análisis Matemático. Papirhos Preprints, pap-tex-2, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-2/
+                Felipe Zaldivar. (2026). Introducción a la teoría de Galois. Papirhos Preprints, pap-tex-8, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-8/
 
             </p>
 
@@ -172,7 +172,7 @@ title: "pap-tex-2"
         <button
             type="button"
             class="citation-copy-button"
-            data-target="cita-actual-pap-tex-2">
+            data-target="cita-actual-pap-tex-8">
 
             Copiar cita
 
@@ -191,22 +191,22 @@ title: "pap-tex-2"
         <div class="preprint-bibtex-content">
 
             <textarea
-                id="bibtex-actual-pap-tex-2"
+                id="bibtex-actual-pap-tex-8"
                 rows="7"
                 cols="80"
-                class="verbatim preprint-bibtex-area">@misc{pap-tex-2v1,
-  author = {Mónica Clapp},
-  title = {Análisis Matemático},
+                class="verbatim preprint-bibtex-area">@misc{pap-tex-8v1,
+  author = {Felipe Zaldivar},
+  title = {Introducción a la teoría de Galois},
   year = {2026},
-  note = {Papirhos Preprints: pap-tex-2, v1},
-  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-2/}
+  note = {Papirhos Preprints: pap-tex-8, v1},
+  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-8/}
 }</textarea>
 
 
             <button
                 type="button"
                 class="bibtex-copy-button"
-                data-target="bibtex-actual-pap-tex-2">
+                data-target="bibtex-actual-pap-tex-8">
 
                 Copiar BibTeX
 
@@ -251,7 +251,7 @@ title: "pap-tex-2"
 
 
                 <span class="preprint-history-date">
-                    2026-09-29
+                    2026-10-07
                 </span>
 
             </div>
@@ -273,7 +273,7 @@ title: "pap-tex-2"
 
 
                 <a
-                    href="../../archivos_preprints/pap-tex-2-v1.pdf"
+                    href="../../archivos_preprints/pap-tex-8-v1.pdf"
                     class="md-button preprint-secondary-button">
 
                     Ver PDF
@@ -297,10 +297,10 @@ title: "pap-tex-2"
                         <div class="citation-box-main">
 
                             <p
-                                id="cita-pap-tex-2-v1"
+                                id="cita-pap-tex-8-v1"
                                 class="citation-text">
 
-                                Mónica Clapp. (2026). Análisis Matemático. Papirhos Preprints, pap-tex-2, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-2/
+                                Felipe Zaldivar. (2026). Introducción a la teoría de Galois. Papirhos Preprints, pap-tex-8, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-8/
 
                             </p>
 
@@ -310,7 +310,7 @@ title: "pap-tex-2"
                         <button
                             type="button"
                             class="citation-copy-button"
-                            data-target="cita-pap-tex-2-v1">
+                            data-target="cita-pap-tex-8-v1">
 
                             Copiar cita
 
@@ -327,22 +327,22 @@ title: "pap-tex-2"
 
 
                         <textarea
-                            id="bibtex-pap-tex-2-v1"
+                            id="bibtex-pap-tex-8-v1"
                             rows="7"
                             cols="80"
-                            class="verbatim preprint-bibtex-area">@misc{pap-tex-2v1,
-  author = {Mónica Clapp},
-  title = {Análisis Matemático},
+                            class="verbatim preprint-bibtex-area">@misc{pap-tex-8v1,
+  author = {Felipe Zaldivar},
+  title = {Introducción a la teoría de Galois},
   year = {2026},
-  note = {Papirhos Preprints: pap-tex-2, v1},
-  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-2/}
+  note = {Papirhos Preprints: pap-tex-8, v1},
+  url = {https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-8/}
 }</textarea>
 
 
                         <button
                             type="button"
                             class="bibtex-copy-button"
-                            data-target="bibtex-pap-tex-2-v1">
+                            data-target="bibtex-pap-tex-8-v1">
 
                             Copiar BibTeX
 
