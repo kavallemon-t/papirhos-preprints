@@ -77,7 +77,7 @@
     "serie": "Textos",
     "num_serie": "10",
     "portada": "pap-tex-10.png",
-    "resumen": "Resumen no disponible por el momento.",
+    "resumen": "El presente texto, segundo tomo de la serie, está dirigido a estudiantes del primer semestre de carreras en ciencias exactas. Contiene temas que los introducen al Álgebra y busca incorporar, a través de su tratamiento, una descripción minuciosa y rigurosa de los procedimientos de demostración y deducción necesarios para formar a los estudiantes en el pensamiento matemático abstracto. Es un texto con un grado elevado de rigor, claridad y pedagogía, que puede ser utilizado de manera autodidacta o como un complemento necesario para las clases en aula.<br> Este tomo está conformado por cuatro capítulos; cada capítulo contiene bloques de ejercicios cuidadosamente seleccionados. En ellos se desarrolla la construcción de los números enteros y temas relacionados con esta estructura numérica. Una vez expuesta dicha construcción, se describen a detalle las características que lo llevan a ser un dominio entero. Posteriormente damos una introducción a estructuras algebraicas como son un grupo, un anillo y un dominio entero. El tercer capítulo versa sobre la noción de divisibilidad en los enteros, que incluye una exposición del algoritmo de la división, los conceptos de máximo común divisor, de mínimo común múltiplo, y de número primo. El cuarto capítulo expone el tema de congruencias en los enteros, visitando el anillo formado por las clases de equivalencia de los enteros módulo un entero positivo, además de explorar las ecuaciones con congruencias y sistemas formados con estas ecuaciones.",
     "autores": [
       "Diana Avella",
       "Gabriela Campero",
@@ -87,7 +87,7 @@
       {
         "id_version": "pap-tex-10-v1",
         "version": "1",
-        "fecha": "2026-09-29",
+        "fecha": "2026-10-07",
         "archivo": "pap-tex-10-v1.pdf",
         "nota_version": "Primera versión disponible en Papirhos Preprints."
       }
@@ -123,8 +123,8 @@
     "coleccion": "Papirhos",
     "serie": "Textos",
     "num_serie": "4",
-    "portada": "pap-tex-4.jpg",
-    "resumen": "Resumen no disponible por el momento.",
+    "portada": "pap-tex-4.png",
+    "resumen": "Grupos II es el segundo libro dedicado a un área fascinante de las matemáticas: la Teoría de Grupos. Este volumen está dirigido a estudiantes de matemáticas, física y otras áreas científicas en las que tengan ya cierto conocimiento del tema y deseen ahondar en él. Consta de cinco capítulos: <i>Acciones de grupos en conjuntos, Acciones especiales de grupos en conjuntos, Teoremas de Sylow, Grupos abelianos finitos</i> y, por último, <i>Grupos solubles y nilpotentes.</i><br> En este texto, los autores profundizan el estudio del tema de los grupos, presentando algunos conceptos y resultados que se plantean usualmente al final de un curso básico de licenciatura de Teoría de Grupos, junto con otros que son más apropiados para un curso avanzado de la materia, de acuerdo con el parecer de los autores. Los capítulos <i>Acciones de grupos</i> y <i>Teoremas de Sylow</i> fueron escritos con la intención de completar el material del primer curso de Álgebra Moderna de la licenciatura en matemáticas.<br> Si bien el estudio de la estructura de los grupos abelianos finitos se puede iniciar en un curso de nivel licenciatura, el material presentado en el capítulo correspondiente se aborda con una profundidad que va mucho más allá de ese primer encuentro. De manera similar, el último capítulo de grupos solubles y nilpotentes puede ser utilizado para un curso avanzado de teoría de grupos.<br> Al igual que en el primer tomo, los autores desarrollan con detalle la mayoría de las demostraciones de los resultados enunciados, incluyendo una variedad de ejemplos que ilustran los teoremas analizados, y proponen una lista de ejercicios como trabajo complementario al final de cada sección. Al final del libro, los autores han incluido una nota histórica acerca de los temas que se tratan, con la idea de motivar al lector y proporcionarle información acerca del contexto en el que algunos de los resultados presentados se desarrollaron a lo largo de los años.",
     "autores": [
       "Diana Avella",
       "Octavio Mendoza",
@@ -135,7 +135,7 @@
       {
         "id_version": "pap-tex-4-v1",
         "version": "1",
-        "fecha": "2026-09-29",
+        "fecha": "2026-10-07",
         "archivo": "pap-tex-4-v1.pdf",
         "nota_version": "Primera versión disponible en Papirhos Preprints."
       }
@@ -201,7 +201,7 @@
       {
         "id_version": "pap-tex-2-v1",
         "version": "1",
-        "fecha": "2026-09-29",
+        "fecha": "2026-10-07",
         "archivo": "pap-tex-2-v1.pdf",
         "nota_version": "Primera versión disponible en Papirhos Preprints."
       }
