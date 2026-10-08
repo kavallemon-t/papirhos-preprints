@@ -96,7 +96,7 @@ body{
   max-width: none;
   width: 100%;
   margin: 0;
-  height: 80px !important;
+  height: 120px !important;
 }
 
 #encabezado > div#logoizq:hover {
@@ -128,7 +128,7 @@ body{
   display: block;
   position: absolute;
   left: 50%;
-  background-image: url("../assets/logos/logo-papirhos-digital.svg");
+  background-image: url("../assets/logos/logo-texedores.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

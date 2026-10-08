@@ -29,7 +29,7 @@ title: "pap-tex-1"
 
 
         <p class="preprint-detail-authors">
-            Diana Avella · Octavio Mendoza · Edith Corina Saenz Valadez · María José Souto
+            Diana Avella · Octavio Mendoza · Edith Corina Sáenz · María José Souto
         </p>
 
 
@@ -162,7 +162,7 @@ title: "pap-tex-1"
                 id="cita-actual-pap-tex-1"
                 class="citation-text">
 
-                Diana Avella, Octavio Mendoza, Edith Corina Saenz Valadez, María José Souto. (2026). Grupos I. Papirhos Preprints, pap-tex-1, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-1/
+                Diana Avella, Octavio Mendoza, Edith Corina Sáenz, María José Souto. (2026). Grupos I. Papirhos Preprints, pap-tex-1, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-1/
 
             </p>
 
@@ -195,7 +195,7 @@ title: "pap-tex-1"
                 rows="7"
                 cols="80"
                 class="verbatim preprint-bibtex-area">@misc{pap-tex-1v1,
-  author = {Diana Avella and Octavio Mendoza and Edith Corina Saenz Valadez and María José Souto},
+  author = {Diana Avella and Octavio Mendoza and Edith Corina Sáenz and María José Souto},
   title = {Grupos I},
   year = {2026},
   note = {Papirhos Preprints: pap-tex-1, v1},
@@ -300,7 +300,7 @@ title: "pap-tex-1"
                                 id="cita-pap-tex-1-v1"
                                 class="citation-text">
 
-                                Diana Avella, Octavio Mendoza, Edith Corina Saenz Valadez, María José Souto. (2026). Grupos I. Papirhos Preprints, pap-tex-1, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-1/
+                                Diana Avella, Octavio Mendoza, Edith Corina Sáenz, María José Souto. (2026). Grupos I. Papirhos Preprints, pap-tex-1, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-1/
 
                             </p>
 
@@ -331,7 +331,7 @@ title: "pap-tex-1"
                             rows="7"
                             cols="80"
                             class="verbatim preprint-bibtex-area">@misc{pap-tex-1v1,
-  author = {Diana Avella and Octavio Mendoza and Edith Corina Saenz Valadez and María José Souto},
+  author = {Diana Avella and Octavio Mendoza and Edith Corina Sáenz and María José Souto},
   title = {Grupos I},
   year = {2026},
   note = {Papirhos Preprints: pap-tex-1, v1},

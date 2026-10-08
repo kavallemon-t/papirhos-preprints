@@ -29,7 +29,7 @@ title: "pap-tex-10"
 
 
         <p class="preprint-detail-authors">
-            Diana Avella · Gabriela Campero · Edith Corina Saenz Valadez
+            Diana Avella · Gabriela Campero · Edith Corina Sáenz
         </p>
 
 
@@ -162,7 +162,7 @@ title: "pap-tex-10"
                 id="cita-actual-pap-tex-10"
                 class="citation-text">
 
-                Diana Avella, Gabriela Campero, Edith Corina Saenz Valadez. (2026). Curso introductorio de álgebra II. Papirhos Preprints, pap-tex-10, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-10/
+                Diana Avella, Gabriela Campero, Edith Corina Sáenz. (2026). Curso introductorio de álgebra II. Papirhos Preprints, pap-tex-10, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-10/
 
             </p>
 
@@ -195,7 +195,7 @@ title: "pap-tex-10"
                 rows="7"
                 cols="80"
                 class="verbatim preprint-bibtex-area">@misc{pap-tex-10v1,
-  author = {Diana Avella and Gabriela Campero and Edith Corina Saenz Valadez},
+  author = {Diana Avella and Gabriela Campero and Edith Corina Sáenz},
   title = {Curso introductorio de álgebra II},
   year = {2026},
   note = {Papirhos Preprints: pap-tex-10, v1},
@@ -300,7 +300,7 @@ title: "pap-tex-10"
                                 id="cita-pap-tex-10-v1"
                                 class="citation-text">
 
-                                Diana Avella, Gabriela Campero, Edith Corina Saenz Valadez. (2026). Curso introductorio de álgebra II. Papirhos Preprints, pap-tex-10, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-10/
+                                Diana Avella, Gabriela Campero, Edith Corina Sáenz. (2026). Curso introductorio de álgebra II. Papirhos Preprints, pap-tex-10, v1. https://kavallemon-t.github.io/papirhos-preprints/preprints/pap-tex-10/
 
                             </p>
 
@@ -331,7 +331,7 @@ title: "pap-tex-10"
                             rows="7"
                             cols="80"
                             class="verbatim preprint-bibtex-area">@misc{pap-tex-10v1,
-  author = {Diana Avella and Gabriela Campero and Edith Corina Saenz Valadez},
+  author = {Diana Avella and Gabriela Campero and Edith Corina Sáenz},
   title = {Curso introductorio de álgebra II},
   year = {2026},
   note = {Papirhos Preprints: pap-tex-10, v1},
