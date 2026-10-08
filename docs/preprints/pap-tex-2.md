@@ -40,7 +40,7 @@ title: "pap-tex-2"
             </span>
 
             <span class="preprint-detail-date">
-                2026-09-29
+                2026-10-07
             </span>
 
         </div>
@@ -111,7 +111,7 @@ title: "pap-tex-2"
                     </span>
 
                     <span class="preprint-current-version-date">
-                        2026-09-29
+                        2026-10-07
                     </span>
 
                 </div>
@@ -251,7 +251,7 @@ title: "pap-tex-2"
 
 
                 <span class="preprint-history-date">
-                    2026-09-29
+                    2026-10-07
                 </span>
 
             </div>
