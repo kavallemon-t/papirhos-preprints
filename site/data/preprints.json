@@ -1,49 +1,69 @@
 [
   {
-    "id_preprint": "pap-not-1",
-    "titulo": "Teoría de singularidades en topología, geometría y foliaciones I",
+    "id_preprint": "pap-tex-1",
+    "titulo": "Grupos I",
     "coleccion": "Papirhos",
-    "serie": "Notas",
+    "serie": "Textos",
     "num_serie": "1",
-    "portada": "pap-not-1.jpg",
-    "resumen": "Este trabajo presenta una introducción general a distintos problemas matemáticos y sus posibles aplicaciones. Se describen algunas ideas principales, ejemplos sencillos y herramientas utilizadas para analizar los resultados. El objetivo es ofrecer una referencia accesible que permita comprender los conceptos fundamentales y sirva como punto de partida para estudios posteriores.",
+    "portada": "pap-tex-1.png",
+    "resumen": "Grupos I es el primero de dos libros dedicados a uno de los hitos que revolucionaron el pensamiento matemático de su época, y que hasta nuestros días juega un papel esencial en el estudio sistemático de las ciencias: la Teoría de Grupos.<br>En este tomo, los autores se dirigen al público en general al explicar de manera accesible algunos de los resultados clásicos de dicha teoría. Con años de experiencia docente, introducen también a los lectores en la abstracción y el arte de las demostraciones rigurosas. Además, el texto contiene una gran cantidad de notas históricas, ejemplos trabajados y ejercicios: inicia al revisar el conjunto de los números enteros que forman un grupo con la suma usual y, de manera paulatina, desarrolla una travesía por este apasionante tema.<br>El presente volumen abarca la aritmética en el conjunto de los números enteros, por ejemplo, la divisibilidad, el algoritmo de la división y el de Euclides, las congruencias y la función φ de Euler. Asimismo, se analizan los grupos de permutaciones, los cíclicos, los normales y el grupo cociente. Finalmente, se introduce el concepto de homomorfismo de grupos y se demuestran los —tan usados en matemáticas— teoremas de isomorfismo.",
     "autores": [
-      "Jean-Paul Brasselet",
-      "Felipe Cano",
-      "Dominique Cerveau",
-      "Dung Tráng Lê",
-      "Frank Loray",
-      "Mutsuo Oka",
-      "José Seade",
-      "Mark Spivakovsky"
+      "Diana Avella",
+      "Octavio Mendoza",
+      "Edith Corina Sáenz",
+      "María José Souto"
     ],
     "versiones": [
       {
-        "id_version": "pap-not-1-v1",
+        "id_version": "pap-tex-1-v1",
         "version": "1",
         "fecha": "2026-09-29",
-        "archivo": "pap-not-1-v1.pdf",
+        "archivo": "pap-tex-1-v1.pdf",
         "nota_version": "Primera versión disponible en Papirhos Preprints."
       }
     ]
   },
   {
-    "id_preprint": "cuad-x-1",
-    "titulo": "Combinatoria",
-    "coleccion": "Cuadernos de olimpiadas de matemáticas",
-    "serie": "",
-    "num_serie": "1",
-    "portada": "cuad-x-1.png",
-    "resumen": "Resumen no disponible por el momento.",
+    "id_preprint": "pap-tex-2",
+    "titulo": "Análisis Matemático",
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "num_serie": "2",
+    "portada": "pap-tex-2.png",
+    "resumen": "Este libro tan esperado en la Facultad de Ciencias de la Universidad Nacional Autónoma de México, y en diversas universidades de México y de países hispanoparlantes, es el resultado de muchos años de experiencia docente y de investigación por parte de la autora. Reúne material clave en la formación en análisis de los estudiantes dematemáticas y de otras carreras afines.<br>Motivándolos por un problema concreto —la existencia de trayectorias de longitud mínima— la obra introduce gradualmente los conceptos básicos del análisis hasta llegar a los teoremas de punto fijo de Banach y de Arzelà-Azcoli, así como a diversas aplicaciones de ellos a la existencia de soluciones de ecuaciones diferenciales e integrales. Posteriormente presenta el concepto de diferenciabilidad en espacios de Banach y demuestra el teorema de la función implícita, que permite introducir el concepto de variedad y el estudio de problemas de minimización en variedades. La última parte de este texto se dedica a la teoría de integración de Lebesgue; introduce los espacios de Lebesgue y de Sobolev para concluir con algunas aplicaciones a la existencia de soluciones de problemas elípticos con condición de frontera.",
     "autores": [
-      "Maria Luisa Pérez Seguí"
+      "Mónica Clapp"
     ],
     "versiones": [
       {
-        "id_version": "cuad-x-1-v1",
+        "id_version": "pap-tex-2-v1",
         "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "cuad-x-1-v1.pdf",
+        "fecha": "2026-10-07",
+        "archivo": "pap-tex-2-v1.pdf",
+        "nota_version": "Primera versión disponible en Papirhos Preprints."
+      }
+    ]
+  },
+  {
+    "id_preprint": "pap-tex-4",
+    "titulo": "Grupos II",
+    "coleccion": "Papirhos",
+    "serie": "Textos",
+    "num_serie": "4",
+    "portada": "pap-tex-4.png",
+    "resumen": "Grupos II es el segundo libro dedicado a un área fascinante de las matemáticas: la Teoría de Grupos. Este volumen está dirigido a estudiantes de matemáticas, física y otras áreas científicas en las que tengan ya cierto conocimiento del tema y deseen ahondar en él. Consta de cinco capítulos: <i>Acciones de grupos en conjuntos, Acciones especiales de grupos en conjuntos, Teoremas de Sylow, Grupos abelianos finitos</i> y, por último, <i>Grupos solubles y nilpotentes.</i><br> En este texto, los autores profundizan el estudio del tema de los grupos, presentando algunos conceptos y resultados que se plantean usualmente al final de un curso básico de licenciatura de Teoría de Grupos, junto con otros que son más apropiados para un curso avanzado de la materia, de acuerdo con el parecer de los autores. Los capítulos <i>Acciones de grupos</i> y <i>Teoremas de Sylow</i> fueron escritos con la intención de completar el material del primer curso de Álgebra Moderna de la licenciatura en matemáticas.<br> Si bien el estudio de la estructura de los grupos abelianos finitos se puede iniciar en un curso de nivel licenciatura, el material presentado en el capítulo correspondiente se aborda con una profundidad que va mucho más allá de ese primer encuentro. De manera similar, el último capítulo de grupos solubles y nilpotentes puede ser utilizado para un curso avanzado de teoría de grupos.<br> Al igual que en el primer tomo, los autores desarrollan con detalle la mayoría de las demostraciones de los resultados enunciados, incluyendo una variedad de ejemplos que ilustran los teoremas analizados, y proponen una lista de ejercicios como trabajo complementario al final de cada sección. Al final del libro, los autores han incluido una nota histórica acerca de los temas que se tratan, con la idea de motivar al lector y proporcionarle información acerca del contexto en el que algunos de los resultados presentados se desarrollaron a lo largo de los años.",
+    "autores": [
+      "Diana Avella",
+      "Octavio Mendoza",
+      "Edith Corina Sáenz",
+      "María José Souto"
+    ],
+    "versiones": [
+      {
+        "id_version": "pap-tex-4-v1",
+        "version": "1",
+        "fecha": "2026-10-07",
+        "archivo": "pap-tex-4-v1.pdf",
         "nota_version": "Primera versión disponible en Papirhos Preprints."
       }
     ]
@@ -71,209 +91,6 @@
     ]
   },
   {
-    "id_preprint": "pap-tex-10",
-    "titulo": "Curso introductorio de álgebra II",
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "num_serie": "10",
-    "portada": "pap-tex-10.png",
-    "resumen": "El presente texto, segundo tomo de la serie, está dirigido a estudiantes del primer semestre de carreras en ciencias exactas. Contiene temas que los introducen al Álgebra y busca incorporar, a través de su tratamiento, una descripción minuciosa y rigurosa de los procedimientos de demostración y deducción necesarios para formar a los estudiantes en el pensamiento matemático abstracto. Es un texto con un grado elevado de rigor, claridad y pedagogía, que puede ser utilizado de manera autodidacta o como un complemento necesario para las clases en aula.<br> Este tomo está conformado por cuatro capítulos; cada capítulo contiene bloques de ejercicios cuidadosamente seleccionados. En ellos se desarrolla la construcción de los números enteros y temas relacionados con esta estructura numérica. Una vez expuesta dicha construcción, se describen a detalle las características que lo llevan a ser un dominio entero. Posteriormente damos una introducción a estructuras algebraicas como son un grupo, un anillo y un dominio entero. El tercer capítulo versa sobre la noción de divisibilidad en los enteros, que incluye una exposición del algoritmo de la división, los conceptos de máximo común divisor, de mínimo común múltiplo, y de número primo. El cuarto capítulo expone el tema de congruencias en los enteros, visitando el anillo formado por las clases de equivalencia de los enteros módulo un entero positivo, además de explorar las ecuaciones con congruencias y sistemas formados con estas ecuaciones.",
-    "autores": [
-      "Diana Avella",
-      "Gabriela Campero",
-      "Edith Corina Saenz Valadez"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-10-v1",
-        "version": "1",
-        "fecha": "2026-10-07",
-        "archivo": "pap-tex-10-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-tex-1",
-    "titulo": "Grupos I",
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "num_serie": "1",
-    "portada": "pap-tex-1.png",
-    "resumen": "Grupos I es el primero de dos libros dedicados a uno de los hitos que revolucionaron el pensamiento matemático de su época, y que hasta nuestros días juega un papel esencial en el estudio sistemático de las ciencias: la Teoría de Grupos.<br>En este tomo, los autores se dirigen al público en general al explicar de manera accesible algunos de los resultados clásicos de dicha teoría. Con años de experiencia docente, introducen también a los lectores en la abstracción y el arte de las demostraciones rigurosas. Además, el texto contiene una gran cantidad de notas históricas, ejemplos trabajados y ejercicios: inicia al revisar el conjunto de los números enteros que forman un grupo con la suma usual y, de manera paulatina, desarrolla una travesía por este apasionante tema.<br>El presente volumen abarca la aritmética en el conjunto de los números enteros, por ejemplo, la divisibilidad, el algoritmo de la división y el de Euclides, las congruencias y la función φ de Euler. Asimismo, se analizan los grupos de permutaciones, los cíclicos, los normales y el grupo cociente. Finalmente, se introduce el concepto de homomorfismo de grupos y se demuestran los —tan usados en matemáticas— teoremas de isomorfismo.",
-    "autores": [
-      "Diana Avella",
-      "Octavio Mendoza",
-      "Edith Corina Saenz Valadez",
-      "María José Souto"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-1-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-tex-1-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-tex-4",
-    "titulo": "Grupos II",
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "num_serie": "4",
-    "portada": "pap-tex-4.png",
-    "resumen": "Grupos II es el segundo libro dedicado a un área fascinante de las matemáticas: la Teoría de Grupos. Este volumen está dirigido a estudiantes de matemáticas, física y otras áreas científicas en las que tengan ya cierto conocimiento del tema y deseen ahondar en él. Consta de cinco capítulos: <i>Acciones de grupos en conjuntos, Acciones especiales de grupos en conjuntos, Teoremas de Sylow, Grupos abelianos finitos</i> y, por último, <i>Grupos solubles y nilpotentes.</i><br> En este texto, los autores profundizan el estudio del tema de los grupos, presentando algunos conceptos y resultados que se plantean usualmente al final de un curso básico de licenciatura de Teoría de Grupos, junto con otros que son más apropiados para un curso avanzado de la materia, de acuerdo con el parecer de los autores. Los capítulos <i>Acciones de grupos</i> y <i>Teoremas de Sylow</i> fueron escritos con la intención de completar el material del primer curso de Álgebra Moderna de la licenciatura en matemáticas.<br> Si bien el estudio de la estructura de los grupos abelianos finitos se puede iniciar en un curso de nivel licenciatura, el material presentado en el capítulo correspondiente se aborda con una profundidad que va mucho más allá de ese primer encuentro. De manera similar, el último capítulo de grupos solubles y nilpotentes puede ser utilizado para un curso avanzado de teoría de grupos.<br> Al igual que en el primer tomo, los autores desarrollan con detalle la mayoría de las demostraciones de los resultados enunciados, incluyendo una variedad de ejemplos que ilustran los teoremas analizados, y proponen una lista de ejercicios como trabajo complementario al final de cada sección. Al final del libro, los autores han incluido una nota histórica acerca de los temas que se tratan, con la idea de motivar al lector y proporcionarle información acerca del contexto en el que algunos de los resultados presentados se desarrollaron a lo largo de los años.",
-    "autores": [
-      "Diana Avella",
-      "Octavio Mendoza",
-      "Edith Corina Saenz Valadez",
-      "María José Souto"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-4-v1",
-        "version": "1",
-        "fecha": "2026-10-07",
-        "archivo": "pap-tex-4-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-mix-1",
-    "titulo": "Por la senda de los círculos",
-    "coleccion": "Papirhos",
-    "serie": "Mixbaal",
-    "num_serie": "1",
-    "portada": "pap-mix-1.jpg",
-    "resumen": "Resumen no disponible por el momento.",
-    "autores": [
-      "Cecilia Neve Jimenez",
-      "Laura Rosales Ortiz"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-mix-1-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-mix-1-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-ico-3",
-    "titulo": "Concursos Nacionales de la Olimpiada Mexicana de Matemáticas:1987-2016",
-    "coleccion": "Papirhos",
-    "serie": "Icosaedro",
-    "num_serie": "3",
-    "portada": "pap-ico-3.png",
-    "resumen": "Resumen no disponible por el momento.",
-    "autores": [
-      "Jose Antonio Gómez Ortega",
-      "Carlos Jacob Rubio Barrios",
-      "Rogelio Valdez Delgado"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-ico-3-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-ico-3-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-tex-2",
-    "titulo": "Análisis Matemático",
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "num_serie": "2",
-    "portada": "pap-tex-2.png",
-    "resumen": "Este libro tan esperado en la Facultad de Ciencias de la Universidad Nacional Autónoma de México, y en diversas universidades de México y de países hispanoparlantes, es el resultado de muchos años de experiencia docente y de investigación por parte de la autora. Reúne material clave en la formación en análisis de los estudiantes dematemáticas y de otras carreras afines.<br>Motivándolos por un problema concreto —la existencia de trayectorias de longitud mínima— la obra introduce gradualmente los conceptos básicos del análisis hasta llegar a los teoremas de punto fijo de Banach y de Arzelà-Azcoli, así como a diversas aplicaciones de ellos a la existencia de soluciones de ecuaciones diferenciales e integrales. Posteriormente presenta el concepto de diferenciabilidad en espacios de Banach y demuestra el teorema de la función implícita, que permite introducir el concepto de variedad y el estudio de problemas de minimización en variedades. La última parte de este texto se dedica a la teoría de integración de Lebesgue; introduce los espacios de Lebesgue y de Sobolev para concluir con algunas aplicaciones a la existencia de soluciones de problemas elípticos con condición de frontera.",
-    "autores": [
-      "Mónica Clapp"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-2-v1",
-        "version": "1",
-        "fecha": "2026-10-07",
-        "archivo": "pap-tex-2-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-tex-3",
-    "titulo": "Topología Diferencial",
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "num_serie": "3",
-    "portada": "pap-tex-3.png",
-    "resumen": "Resumen no disponible por el momento.",
-    "autores": [
-      "Victor Guillemin",
-      "Allan Pollack"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-3-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-tex-3-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-tex-5",
-    "titulo": "Geometría euclidiana bidimensional y su grupo de transformaciones",
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "num_serie": "5",
-    "portada": "pap-tex-5.png",
-    "resumen": "Resumen no disponible por el momento.",
-    "autores": [
-      "Manuel Cruz",
-      "Montserrat García"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-5-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-tex-5-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-tex-7",
-    "titulo": "Clases características",
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "num_serie": "7",
-    "portada": "pap-tex-7.png",
-    "resumen": "Resumen no disponible por el momento.",
-    "autores": [
-      "John Milnor",
-      "James Stasheff"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-7-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-tex-7-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
     "id_preprint": "pap-tex-8",
     "titulo": "Introducción a la teoría de Galois",
     "coleccion": "Papirhos",
@@ -295,162 +112,24 @@
     ]
   },
   {
-    "id_preprint": "pap-tex-9",
-    "titulo": "Introducción al álgebra lineal",
+    "id_preprint": "pap-tex-10",
+    "titulo": "Curso introductorio de álgebra II",
     "coleccion": "Papirhos",
     "serie": "Textos",
-    "num_serie": "9",
-    "portada": "pap-tex-9.png",
-    "resumen": "Resumen no disponible por el momento.",
+    "num_serie": "10",
+    "portada": "pap-tex-10.png",
+    "resumen": "El presente texto, segundo tomo de la serie, está dirigido a estudiantes del primer semestre de carreras en ciencias exactas. Contiene temas que los introducen al Álgebra y busca incorporar, a través de su tratamiento, una descripción minuciosa y rigurosa de los procedimientos de demostración y deducción necesarios para formar a los estudiantes en el pensamiento matemático abstracto. Es un texto con un grado elevado de rigor, claridad y pedagogía, que puede ser utilizado de manera autodidacta o como un complemento necesario para las clases en aula.<br> Este tomo está conformado por cuatro capítulos; cada capítulo contiene bloques de ejercicios cuidadosamente seleccionados. En ellos se desarrolla la construcción de los números enteros y temas relacionados con esta estructura numérica. Una vez expuesta dicha construcción, se describen a detalle las características que lo llevan a ser un dominio entero. Posteriormente damos una introducción a estructuras algebraicas como son un grupo, un anillo y un dominio entero. El tercer capítulo versa sobre la noción de divisibilidad en los enteros, que incluye una exposición del algoritmo de la división, los conceptos de máximo común divisor, de mínimo común múltiplo, y de número primo. El cuarto capítulo expone el tema de congruencias en los enteros, visitando el anillo formado por las clases de equivalencia de los enteros módulo un entero positivo, además de explorar las ecuaciones con congruencias y sistemas formados con estas ecuaciones.",
     "autores": [
-      "Felipe Zaldivar"
+      "Diana Avella",
+      "Gabriela Campero",
+      "Edith Corina Sáenz"
     ],
     "versiones": [
       {
-        "id_version": "pap-tex-9-v1",
+        "id_version": "pap-tex-10-v1",
         "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-tex-9-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-tex-11",
-    "titulo": "Curso breve de geometría proyectiva",
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "num_serie": "11",
-    "portada": "pap-tex-11.png",
-    "resumen": "Resumen no disponible por el momento.",
-    "autores": [
-      "Felipe Cano",
-      "Beatriz Molina-Samper",
-      "Fernando Sanz"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-11-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-tex-11-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-tex-12",
-    "titulo": "Métodos topológicos en el estudio de las ecuaciones diferenciales no lineales",
-    "coleccion": "Papirhos",
-    "serie": "Textos",
-    "num_serie": "12",
-    "portada": "pap-tex-12.png",
-    "resumen": "Resumen no disponible por el momento.",
-    "autores": [
-      "Pablo Amster"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-12-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-tex-12-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-not-2",
-    "titulo": "Teoría de singularidades en topología, geometría y foliaciones II",
-    "coleccion": "Papirhos",
-    "serie": "Notas",
-    "num_serie": "2",
-    "portada": "pap-not-2.jpg",
-    "resumen": "Resumen no disponible por el momento.",
-    "autores": [
-      "Jean-Paul Brasselet",
-      "Felipe Cano",
-      "Dominique Cerveau",
-      "Dung Tráng Lê",
-      "Frank Loray",
-      "Mutsuo Oka",
-      "José Seade",
-      "Mark Spivakovsky"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-not-2-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-not-2-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-not-3",
-    "titulo": "Teoría de las gráficas: algunas aportaciones desde México",
-    "coleccion": "Papirhos",
-    "serie": "Notas",
-    "num_serie": "3",
-    "portada": "pap-not-3.png",
-    "resumen": "Resumen no disponible por el momento.",
-    "autores": [
-      "Julian Fresán",
-      "Ilán Goldfeder",
-      "Nahid Javier",
-      "Rita Zuazua"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-not-3-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-not-3-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "pap-act-1",
-    "titulo": "Proceedings of the Workshop on Holomorphic Dynamics",
-    "coleccion": "Papirhos",
-    "serie": "Actas",
-    "num_serie": "1",
-    "portada": "pap-act-1.png",
-    "resumen": "Resumen no disponible por el momento.",
-    "autores": [
-      "Patricia Dominguez Soto",
-      "Peter Makienko",
-      "Carlos Cabrera Ocañas"
-    ],
-    "versiones": [
-      {
-        "id_version": "pap-act-1-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-act-1-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
-  },
-  {
-    "id_preprint": "apor-tex-12",
-    "titulo": "Introducción a la teoría de redes",
-    "coleccion": "Aportaciones Matemáticas",
-    "serie": "Textos",
-    "num_serie": "12",
-    "portada": "apor-tex-12.png",
-    "resumen": "Este libro está enfocado a los temas básicos de teoría de redes. Se presentan tanto teoría general y características de los problemas de optimización de esta rama como algoritmos para resolverlos.<br>Se exponen cuatro problemas básicos: árbol de peso mínimo, ruta más corta, flujo máximo y flujo a costo mínimo; estos problemas han sido resueltos principalmente mediante dos enfoques generales. Uno consiste en especializar los algoritmos de programación lineal aprovechando la estructura de cada problema y el otro en aplicar resultados de teoría de gráficas. En los primeros cinco capítulos se presentan algunos algoritmos para resolver problemas de flujo en redes según el enfoque clásico de la programación lineal. En los últimos dos capítulos se presentan generalizaciones de dos de estos problemas según el enfoque de coloración en gráficas.<br>La teoría de dualidad ha sido estudiada para el caso de los modelos de redes; con esto se han generado algoritmos de solución simultánea para el par de problemas duales. Este es el caso de los problemas de flujo máximo y de cadena mínima.<br>En cada capítulo se incluyen conceptos, resultados teóricos rigurosamente demostrados, técnicas, ejemplos numéricos y una series de ejercicios propuestos.",
-    "autores": [
-      "María del Carmen Hernández Ayuso"
-    ],
-    "versiones": [
-      {
-        "id_version": "apor-tex-12-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "apor-tex-12-v1.pdf",
+        "fecha": "2026-10-07",
+        "archivo": "pap-tex-10-v1.pdf",
         "nota_version": "Primera versión disponible en Papirhos Preprints."
       }
     ]
@@ -493,6 +172,27 @@
         "version": "1",
         "fecha": "2026-09-29",
         "archivo": "pap-tex-18-v1.pdf",
+        "nota_version": "Primera versión disponible en Papirhos Preprints."
+      }
+    ]
+  },
+  {
+    "id_preprint": "apor-tex-12",
+    "titulo": "Introducción a la teoría de redes",
+    "coleccion": "Aportaciones Matemáticas",
+    "serie": "Textos",
+    "num_serie": "12",
+    "portada": "apor-tex-12.png",
+    "resumen": "Este libro está enfocado a los temas básicos de teoría de redes. Se presentan tanto teoría general y características de los problemas de optimización de esta rama como algoritmos para resolverlos.<br>Se exponen cuatro problemas básicos: árbol de peso mínimo, ruta más corta, flujo máximo y flujo a costo mínimo; estos problemas han sido resueltos principalmente mediante dos enfoques generales. Uno consiste en especializar los algoritmos de programación lineal aprovechando la estructura de cada problema y el otro en aplicar resultados de teoría de gráficas. En los primeros cinco capítulos se presentan algunos algoritmos para resolver problemas de flujo en redes según el enfoque clásico de la programación lineal. En los últimos dos capítulos se presentan generalizaciones de dos de estos problemas según el enfoque de coloración en gráficas.<br>La teoría de dualidad ha sido estudiada para el caso de los modelos de redes; con esto se han generado algoritmos de solución simultánea para el par de problemas duales. Este es el caso de los problemas de flujo máximo y de cadena mínima.<br>En cada capítulo se incluyen conceptos, resultados teóricos rigurosamente demostrados, técnicas, ejemplos numéricos y una series de ejercicios propuestos.",
+    "autores": [
+      "María del Carmen Hernández Ayuso"
+    ],
+    "versiones": [
+      {
+        "id_version": "apor-tex-12-v1",
+        "version": "1",
+        "fecha": "2026-09-29",
+        "archivo": "apor-tex-12-v1.pdf",
         "nota_version": "Primera versión disponible en Papirhos Preprints."
       }
     ]
