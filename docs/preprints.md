@@ -38,14 +38,6 @@
 
             </div>
 
-            <label class="preprints-sort-control" for="preprints-sort-order">
-                <span>Ordenar por</span>
-                <select id="preprints-sort-order">
-                    <option value="newest">Más recientes</option>
-                    <option value="oldest">Más antiguos</option>
-                </select>
-            </label>
-
         </div>
 
 
@@ -1031,35 +1023,6 @@
         "preprints-no-results"
     );
 
-    const sortOrder = document.getElementById(
-        "preprints-sort-order"
-    );
-
-    const preprintsList = document.querySelector(
-        ".preprints-list"
-    );
-
-    function ordenarPreprints() {
-
-        if (!preprintsList || !sortOrder) return;
-
-        const direction =
-            sortOrder.value === "oldest" ? 1 : -1;
-
-        const orderedCards = [...cards].sort((first, second) => {
-            const firstDate = first
-                .querySelector(".preprint-date")
-                ?.textContent.match(/\d{4}-\d{2}-\d{2}/)?.[0] || "";
-            const secondDate = second
-                .querySelector(".preprint-date")
-                ?.textContent.match(/\d{4}-\d{2}-\d{2}/)?.[0] || "";
-
-            return firstDate.localeCompare(secondDate) * direction;
-        });
-
-        preprintsList.append(...orderedCards);
-    }
-
 
     // =====================================================
     // RESÚMENES EXPANDIBLES
@@ -1341,17 +1304,6 @@
             "input",
             filtrarPreprints
         );
-
-    }
-
-    if (sortOrder) {
-
-        sortOrder.addEventListener(
-            "change",
-            ordenarPreprints
-        );
-
-        ordenarPreprints();
 
     }
 
